@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/projects/1_start_projects.css">
+    <link rel="stylesheet" href="js/home.js">
+    <title>Сайт-портфолио</title>
+</head>
+<body>
+        <header> <!--id="header"-->
+        <div class="header">
+            <div class="absorbing_block">
+                <div class="header_block">
+                    <div class="hd_sector">
+                        <div id="hd_link1" class="hd_link">
+                            <div class="hd_link_content">
+                                <div class="hh"></div>
+                                <p class="text">PTS-STUDIO</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hd_sector">
+                        <a href="1_home.html" id="hd_link2" class="hd_link">
+                            <div class="hd_link_content">
+                                <div class="dropdown_section">
+                                    <li class="text">Главная</li>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="2_works.html" id="hd_link3" class="hd_link">
+                            <div class="hd_link_content">
+                                <div class="dropdown_section">
+                                    <li class="text">Портфолио</li>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#contacts" id="hd_link4" class="hd_link">
+                            <div class="hd_link_content">
+                                <div class="dropdown_section">
+                                    <li class="text">Контакты</li>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#news" id="hd_link5" class="hd_link">
+                            <div class="hd_link_content">
+                                <div class="dropdown_section">
+                                    <li class="text">Новости</li>
+                                </div>
+                            </div>
+                        </a>
+                        <button class="menu-button" id="menuBtn">Меню</button>
+                        <div class="menu" id="menu">
+                            <div class="menu-content">
+                                <div class="mobile_menu_content">
+                                    <li class="mobile_menu_content_list">
+                                        <a href="1_home.html" class="link_mobile">
+                                            <p class="text">Главная</p>
+                                            <img src="images/strelka.svg" alt="" class="strelka">
+                                        </a>
+                                    </li>
+                                    <li class="mobile_menu_content_list">
+                                        <a href="2_works.html" class="link_mobile">
+                                            <p class="text">Портфолио</p>
+                                            <img src="images/strelka.svg" alt="" class="strelka">
+                                        </a>
+                                    </li>
+                                    <li class="mobile_menu_content_list">
+                                        <a href="#3" class="link_mobile">
+                                            <p class="text">Контакты</p>
+                                            <img src="images/strelka.svg" alt="" class="strelka">
+                                        </a>
+                                    </li>
+                                    <li class="mobile_menu_content_list">
+                                        <a href="#4" class="link_mobile">
+                                            <p class="text">Новости</p>
+                                            <img src="images/strelka.svg" alt="" class="strelka">
+                                        </a>
+                                    </li>
+                                    <div class="button10">
+                                        <p>информация о сайте</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <p class="text">Тема</p>
+                            <div class="dropdown" style="z-index: 999999;">
+                                <div class="chsja" style="border-radius: 10px 10px; border: 1px solid var(--border); display: flex; flex-wrap: wrap;">
+                                    <button id="lightBtn">Т</button>
+                                    <button id="darkBtn">С</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="header_block_mobile">
+                    <div class="hd_sector_mobile">
+                        <div class="hd_link" id="hd_link1">
+                            <div class="hd_link_content">
+                                <div class="hh"></div>
+                                <p class="text">PTS-STUDIO</p>
+                            </div>
+                        </div>
+                        <div class="hd_sector">
+                            <button class="menu-button" id="menuBtn">Меню</button>
+                            <div class="menu-item">
+                                <p class="text">Тема</p>
+                                <div class="dropdown">
+                                    <div class="chsja" style="border-radius: 10px 10px; border: 1px solid #363636; display: flex; flex-wrap: wrap;">
+                                        <button id="lightBtn">Т</button>
+                                        <button id="darkBtn">С</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu" id="menu">
+                            <div class="menu-content">
+                                <div class="mobile_menu_content">
+                                    <li class="mobile_menu_content_list">
+                                        <a href="1_home.html" class="link_mobile">
+                                            <p>Главная</p>
+                                            <img src="images/strelka.svg" alt="" class="strelka">
+                                        </a>
+                                    </li>
+                                    <li class="mobile_menu_content_list">
+                                        <a href="2_works.html" class="link_mobile">
+                                            <p>Портфолио</p>
+                                            <img src="images/strelka.svg" alt="" class="strelka">
+                                        </a>
+                                    </li>
+                                    <li class="mobile_menu_content_list">
+                                        <a href="#3" class="link_mobile">
+                                            <p>Контакты</p>
+                                            <img src="images/strelka.svg" alt="" class="strelka">
+                                        </a>
+                                    </li>
+                                    <li class="mobile_menu_content_list">
+                                        <a href="#4" class="link_mobile">
+                                            <p>Новости</p>
+                                            <img src="images/strelka.svg" alt="" class="strelka">
+                                        </a>
+                                    </li>
+                                    <div class="button10">
+                                        <p style="color: black;">информация о сайте</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <div class="center_block">
+        <div class="aside_main">
+            <aside>
+                <div class="aside_block">
+                    <img src="images/Aside/h7.svg" alt="" style="width: 18px; height: 18px; position: absolute;">
+                    <a href="#about_web" class="aside_sector_contect2" style="padding: 20px; background: #161616; border: 1px solid #363636; border-radius: 10px; height: 60px;">О сайте</a>
+                    <div class="aside_sector">
+                        <div class="top" style="width: 100%;">
+                            <div class="aside_sector_contect" style="border-radius: 10px 10px 0 0;">
+                                <img src="images/Aside/h2.svg" alt="" style="width: 18px; height: 18px; position: absolute;">
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Статистика</a>
+                            </div>
+                            <div class="aside_sector_contect">
+                                <img src="images/Aside/h3.svg" alt="" style="width: 18px; height: 18px; position: absolute;">
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Отчеты</a>
+                            </div>
+                            <div class="aside_sector_contect">
+                                <img src="images/Aside/h1.svg" alt="" style="width: 18px; height: 18px; position: absolute;">
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Настройки</a>
+                            </div>
+                            <div class="aside_sector_contect">
+                                <img src="images/Aside/h5.svg" alt="" style="width: 18px; height: 18px; position: absolute;">
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Справка</a>
+                            </div>
+                            <div class="aside_sector_contect">
+                                <img src="images/Aside/h4.svg" alt="" style="width: 18px; height: 18px; position: absolute;">
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Оставить отзыв</a>
+                            </div>
+                        </div>
+                        <div class="bottom" style="width: 100%;">
+                            <div class="aside_sector_contect" style="border-bottom: none; border-radius: 0 0 10px 10px; border-top: 1px solid var(--border)">
+                                <p href="" style="cursor: default; font-size: 13px;">© 2025 Путилин Андрей. Все права защищены.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main style="width: 100%;">
+                <div class="project_menu_block">
+                    <div class="selection_menu_block">
+                        <input checked id="radio-button-1" type="radio" onclick="showTab('content-1')">
+                        <label for="radio-button-1" id="pm_button1" class="radio-button">Все проекты</label>
+
+                        <input id="radio-button-2" id="pm_button2" type="radio" onclick="showTab('content-2')">
+                        <label for="radio-button-2" class="radio-button">Web-разработка</label>
+
+                        <input id="radio-button-3" type="radio" onclick="showTab('content-3')">
+                        <label for="radio-button-3" id="pm_button3" class="radio-button">Python-разработка</label>
+                    </div>
+                    <div class="project_output_block">
+                        <div class="tab-content" id="content-1">
+                            <div class="card_project">
+                                <div class="img_kard">
+                                    <img src="images/Сайт1.png" alt="" style="width: 100%; height: 100%; border-radius: 10px 10px 0 0; object-fit: contain;">
+                                </div>
+                                <div class="cp_bottom">
+                                    <div class="pkc" style="display: flex; width: 60%;">
+                                        <div class="yusa" style="width: auto; display: flex; flex-wrap: wrap; align-items: center;">
+                                            <div class="imd" style="width: 35px; height: 35px; background: white; border-radius: 5px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+                                                <img src="images/HeaderMenu/Group8.svg" alt="" style="width: 25px; height: 25px;">
+                                            </div>
+                                        </div>
+                                        <div class="yusa" style="width: auto; display: flex; flex-wrap: wrap; margin-left: 20px;">
+                                            <p>Сайт-портфолио PTS</p>
+                                            <div class="dr" style="width: 100%; height: auto; align-items: center; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
+                                                <div class="button_po">HTML</div>
+                                                <div class="button_po">CSS</div>
+                                                <div class="button_po">JS</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pkc" style="width: 40%;">
+                                        v.1.0.2007.025
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card_project">
+                                <div class="img_kard"></div>
+                                <div class="cp_bottom">
+                                    <div class="pkc"></div>
+                                    <div class="pkc"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" id="content-2">
+                            Содержимое 2...
+                        </div>
+                        <div class="tab-content" id="content-3">
+                            Содержимое 3...
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_block">
+                    <div class="f_top_block" style="border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0 30px;">
+                        <p>PTS</p>
+                        <a href="#news">
+                            <img src="images/footer/Exclude.png" alt="" style="width: 100px; height: auto; filter: brightness(80%);">
+                        </a>
+                    </div>
+                    <div class="f_bottom_block">
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Обо мне</h1>
+                            <p>Главная</p>
+                            <p>Проекты</p>
+                            <p>Опыт</p>
+                            <p>Вопросы</p>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Портфолио</h1>
+                            <p>Все проекты</p>
+                            <p>Статьи</p>
+                            <p>Публикации</p>
+                            <p>Лучшее</p>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Связь</h1>
+                            <p>Форма обратной связи</p>
+                            <p>GitHub</p>
+                            <p>RuTube</p>
+                            <p>ВКонтакте</p>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Документы</h1>
+                            <p>Политика конфиденциальности</p>
+                            <p>Антиспам политика</p>
+                            <p>Авторские права</p>
+                            <p>Политика Cookie</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <script>
+                function showTab(tabId) {
+                // Сначала скрываем все вкладки
+                let tabs = document.querySelectorAll('.tab-content');
+                tabs.forEach(tab => tab.classList.remove('active'));
+
+                // Затем показываем нужную вкладку
+                document.getElementById(tabId).classList.add('active');
+                }
+
+                // Показать первую вкладку при загрузке страницы
+                document.addEventListener('DOMContentLoaded', () => {
+                showTab('content-1'); // По умолчанию отображаем content-1
+                });
+            </script>
+        </div>
+    </div>
+<script src="js/home.js"></script>
+<script src="js/home2.js"></script> 
+<script>
+  const body = document.body;
+
+  // Проверяем наличие сохранённой темы
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark');
+  } else if (savedTheme === 'light') {
+    body.classList.remove('dark');
+  }
+
+  // Обработчики для кнопок
+  document.getElementById('lightBtn').addEventListener('click', () => {
+    body.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+  });
+  document.getElementById('darkBtn').addEventListener('click', () => {
+    body.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  });
+</script>
+</body>
+</html>

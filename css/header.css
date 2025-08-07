@@ -1,0 +1,472 @@
+/*
+=============================================================
+    header.css --> home.html --> home.js
+    header.css <-> home.js
+=============================================================
+    Автор: Путилин А.
+    ДатаР: 13.04.2025
+=============================================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  letter-spacing: 0.6px;
+  line-height: 22px;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  text-decoration: none;
+  list-style: none;
+  scrollbar-color: #383838 #121212;
+  scrollbar-width:thin; /*none*/
+  scrollbar-gutter: stable;
+}
+
+:root {
+  --block-bg: #161616;
+  --body-bg: #121212;
+  --hover-bg: #1b1b1b;
+  --cover-bg: #2e2e2e;
+  --but-bg: #292929;
+  --border: #4b4b4b;
+  --footer-bg: #1c1c1c;
+
+  --img-logo: url(../images/HeaderMenu/logotip2.svg);
+  --color: #ffffff;
+  --color2: #d7d7d7;
+  --border-color: #333333;
+}
+
+/* Темная тема - применяется через класс .dark */
+.dark {
+  --block-bg: #ffffff;
+  --body-bg: #e4e4e4;
+  --hover-bg: #f3f3f3;
+  --cover-bg: #ffe3ff;
+  --but-bg: #eaeaea;
+  --border: #c4c4c4;
+  --border-but: #cdcdcd;
+  --footer-bg: #eaeaea;
+
+  --img-logo: url(../images/HeaderMenu/Group8.svg);
+  --color: #000000;
+  --color2: #545454;
+  --border-color: #b9b9b9;
+}
+h1 {
+  color: var(--color);
+}
+p {
+  color: var(--color2);
+}
+body {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--body-bg);
+  color: var(--color);
+  transition: background-color 0.5s, color 0.5s;
+}
+.center_block {
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+/*
+=============================================================
+  ШАПКА САЙТА (PC)
+=============================================================
+*/
+header {
+  top: 0;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  transition: transform 0.3s ease;
+  z-index: 9999999;
+}
+.header {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  z-index: 9999999;
+}
+header.hidden {
+  transform: translateY(-100%);
+}
+.content {
+  height: 2000px;
+  padding: 20px;
+  background-color: var(--block-bg);
+}
+.absorbing_block {
+  width: 1280px;
+  height: 80px;
+  margin: 0 20px 0 20px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+  align-items: center;
+
+  background-color: var(--body-bg);
+  color: var(--color);
+
+  /* background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png);
+  background-size: 200px 200px; */
+}
+.header_block {
+  width: 100%;
+  height: 60px;
+  margin: 20px 0 0 0;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+  align-items: center;
+  background: #161616;
+  border: 1px solid #363636;
+  z-index: 9999;
+
+  border: 1px solid var(--border);
+  background-color: var(--block-bg);
+  color: var(--color);
+  /* transition: background-color 0.5s, color 0.5s; */
+  /* background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png);
+  background-size: 200px 200px; */
+}
+.hd_sector {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#hd_link1 {
+  border-radius: 10px 0 0 10px;
+}
+#hd_link2 {
+  border-left: 1px solid var(--border);
+}
+#hd_link5 {
+  border-radius: 0;
+  border-right: 1px solid var(--border);
+}
+.hd_link {
+  height: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+}
+.hd_link:hover {
+  background-color: var(--hover-bg);
+}
+.hd_link_content {
+  padding: 0 20px 0 20px;
+  height: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logotip-pts {
+  width: 30px;
+  height: 30px;
+}
+.hh {
+  width: 30px;
+  height: 30px;
+  background: var(--img-logo);
+  background-size: contain;
+  background-repeat: no-repeat; /* Важно! */
+  background-position: center;  /* Опционально, но обычно желательно */
+}
+/*_Анимация появления меню______________*/
+@keyframes anim {
+  0% {transform: translateY(-5%);}
+  100% {transform: translateY(0);}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.text {
+  color: var(--color);
+}
+/*
+=============================================================
+  ШАПКА САЙТА (MOBILE)
+=============================================================
+*/
+
+.header_block_mobile {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0 0 0;
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 9999;
+  /* background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png); */
+  background-size: 200px 200px;
+  border: 1px solid var(--border);
+  background-color: var(--block-bg);
+  color: var(--color);
+}
+.hd_sector_mobile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 99999;
+}
+.menu-button {
+  display: none;
+  background: none;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: none;
+  border-top: none;
+  color: var(--color);
+  padding: 0 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: var(--hover-bg);
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  transform: translateY(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Добавлена opacity в transition */
+  /* display: flex; */
+  flex-direction: column;
+  z-index: 9;
+  opacity: 0; /* Изначально невидимый */
+  pointer-events: none; /* Запрещаем взаимодействие, когда невидимый */
+}
+
+.menu.open {
+  transform: translateY(0);
+  opacity: 1; /* Делаем видимым */
+  pointer-events: auto; /* Разрешаем взаимодействие */
+}
+
+/* Контент внутри меню */
+.menu-content {
+  margin: 10px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: auto;
+  background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png);
+  background-size: 200px 200px;
+  border: 1px solid var(--border);
+  background-color: var(--block-bg);
+}
+
+.mobile_menu_content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  scrollbar-color: black;
+  padding: 0 14px 0 14px;
+}
+.mobile_menu_content_list {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #363636;
+}
+.link_mobile {
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  color: white;
+  line-height: 1.5rem;
+}
+.link_mobile:hover {
+  background-color: var(--hover-bg);
+}
+.strelka {
+  width: 10px;
+  height: 10px;
+  transform: rotate(-90deg);
+}
+.button10 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px 12px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--block-bg);
+  margin-bottom: 20px;
+  margin-top: 50px;
+  transition: 0.2s;
+}
+.button10:hover {
+  background: var(--hover-bg);
+}
+.menu-item {
+  width: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* display: inline-block; */
+  color: #fff;
+  /* background: #161616; */
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+.menu-item:hover {
+  background-color: var(--hover-bg);
+}
+
+/* Самое выпадающее меню, скрытое по умолчанию */
+.dropdown {
+  position: absolute;
+  top: 100%; /* позиционируем подродительским элементом по вертикали */
+  right: 0;  /* у края родителя */
+  display: none;
+  width: 60px;
+  z-index: -1;
+  /* background: #383838; */
+}
+
+/* Показать при наведении на родительский пункт */
+.menu-item:hover .dropdown {
+  display: block;
+}
+.menu-item:hover .chsja {
+  opacity: 0;
+  animation: ani 0.3s forwards;
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.chsja {
+  margin-top: 21px;
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+}
+.ch-hov {
+  border-radius: 10px 10px 0 0;
+  transition: 0.2s;
+}
+.ch-hov2 {
+  border-radius: 0 0 10px 10px;
+  transition: 0.2s;
+}
+.ch-hov:hover {
+  background-color: var(--hover-bg);
+}
+.ch-hov2:hover {
+  background-color: var(--hover-bg);
+}
+#lightBtn {
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 10px 10px 0 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--border);
+  background: var(--block-bg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#darkBtn {
+  width: 100%;
+  padding: 20px 0;
+  background: var(--block-bg);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+#lightBtn:hover {
+  background: var(--hover-bg);
+}
+#darkBtn:hover {
+  background: var(--hover-bg);
+}
+/*
+=============================================================
+  Анимация появления бургер меню (MOBILE)
+=============================================================
+*/
+@keyframes anim2 {
+  0% {transform: translateY(100%);}
+  100% {transform: translateY(0);}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@media (max-width: 950px) {
+  .modal-content {
+    width: 100%;
+    margin: 0 20px 0 20px;
+  }
+}
+/*_Изменение шапки на Мобильную версию__*/
+@media (max-width: 850px) {
+  .absorbing_block {
+    height: 60px;
+    margin: 0 10px 0 10px;
+  }
+  .header_block {
+    height: 50px;
+    margin: 10px 0 0 0;
+  }
+  #hd_link2, #hd_link3, #hd_link4, #hd_link5 {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  .menu {
+    display: flex;
+  }
+  /* .header_block_mobile {
+    display: block;
+  } */
+}
+@media (max-width: 280px) {
+  .hd_link_content p {
+    display: none;
+  }
+}

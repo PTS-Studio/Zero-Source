@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовая страница с заставкой</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            overflow: hidden; /* Предотвращает прокрутку, пока видна заставка */
+        }
+
+        /* Стили заставки */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out; /* Плавное исчезновение */
+        }
+
+        #logo {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite alternate; /* Пульсирующая анимация логотипа */
+        }
+
+        #copyright {
+            font-size: 0.8em;
+            position: absolute;
+            bottom: 20px;
+        }
+
+        /* Стили содержимого страницы */
+        #content {
+            padding: 20px;
+            display: none; /* Скрыто до исчезновения заставки */
+        }
+
+        /* Анимация пульсации логотипа */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Заставка -->
+    <div id="splash-screen">
+        <div id="logo">GeekBot Inc.</div>
+        <div id="copyright">© 2025 PTS-Studio All rights reserved.</div>
+    </div>
+
+    <!-- Содержимое страницы -->
+    <div id="content">
+        <h1>Добро пожаловать на тестовую страницу!</h1>
+        <p>Это пример страницы с заставкой, которая исчезает через несколько секунд.</p>
+        <p>Здесь может быть любой контент, который вам нужен.</p>
+        <h2>Список возможностей:</h2>
+        <ul>
+            <li>Плавное исчезновение заставки</li>
+            <li>Анимация логотипа (пульсация)</li>
+            <li>Оптимизированная производительность</li>
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const splashScreen = document.getElementById('splash-screen');
+            const content = document.getElementById('content');
+
+            // Функция для скрытия заставки
+            function hideSplashScreen() {
+                splashScreen.style.opacity = '0'; // Запускаем исчезновение
+                setTimeout(() => {
+                    splashScreen.style.display = 'none'; // Скрываем заставку
+                    content.style.display = 'block'; // Показываем контент
+                    document.body.style.overflow = 'auto'; // Восстанавливаем прокрутку
+                }, 500); // Задержка должна соответствовать времени transition в CSS
+            }
+
+            // Задержка перед скрытием заставки (например, 3 секунды)
+            setTimeout(hideSplashScreen, 3000);
+        });
+    </script>
+
+</body>
+</html>
