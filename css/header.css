@@ -29,11 +29,18 @@
   --cover-bg: #2e2e2e;
   --but-bg: #292929;
   --border: #2e2e2e;
+  --border-but: #161616;
   --footer-bg: #1c1c1c;
   --color: #ffffff;
   --color2: #d7d7d7;
   --img-logo: url(../images/HeaderMenu/logotip2.svg);
   --img-logo2: url(../images/strelka.svg);
+
+  --img-a1: url(../images/Aside/a1w.svg);
+  --img-a2: url(../images/Aside/a2w.svg);
+  --img-a3: url(../images/Aside/a3w.svg);
+  --img-a4: url(../images/Aside/a4w.svg);
+  --img-a5: url(../images/Aside/a5w.svg);
 }
 
 .dark {
@@ -49,6 +56,12 @@
   --color2: #545454;
   --img-logo: url(../images/HeaderMenu/Group8.svg);
   --img-logo2: url(../images/strelka2.svg);
+
+  --img-a1: url(../images/Aside/a1d.svg);
+  --img-a2: url(../images/Aside/a2d.svg);
+  --img-a3: url(../images/Aside/a3d.svg);
+  --img-a4: url(../images/Aside/a4d.svg);
+  --img-a5: url(../images/Aside/a5d.svg);
 }
 h1 {
   color: var(--color);
@@ -193,6 +206,28 @@ header.hidden {
   background-size: contain;
   background-repeat: no-repeat; /* Важно! */
   background-position: center;  /* Опционально, но обычно желательно */
+}
+.hh3 {
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat; /* Важно! */
+  background-position: center;  /* Опционально, но обычно желательно */
+}
+#img-1 {
+  background-image: var(--img-a1);
+}
+#img-2 {
+  background-image: var(--img-a2);
+}
+#img-3 {
+  background-image: var(--img-a3);
+}
+#img-4 {
+  background-image: var(--img-a4);
+}
+#img-5 {
+  background-image: var(--img-a5);
 }
 /*_Анимация появления меню______________*/
 @keyframes anim {
