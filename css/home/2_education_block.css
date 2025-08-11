@@ -3,12 +3,11 @@
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  /* background: #161616; */
   background: var(--block-bg);
   border-radius: 10px;
   border: 1px solid var(--border);
-  /* border-top: none; */
   justify-content: space-between;
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
 }
 .ed_heading_block {
   width: 100%;

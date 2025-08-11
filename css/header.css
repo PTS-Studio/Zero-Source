@@ -18,27 +18,24 @@
   font-optical-sizing: auto;
   text-decoration: none;
   list-style: none;
-  scrollbar-color: #383838 #121212;
-  scrollbar-width:thin; /*none*/
+  scrollbar-color: #383838 var(--body-bg);
+  scrollbar-width:thin;
   scrollbar-gutter: stable;
 }
-
 :root {
   --block-bg: #161616;
   --body-bg: #121212;
   --hover-bg: #1b1b1b;
   --cover-bg: #2e2e2e;
   --but-bg: #292929;
-  --border: #4b4b4b;
+  --border: #2e2e2e;
   --footer-bg: #1c1c1c;
-
-  --img-logo: url(../images/HeaderMenu/logotip2.svg);
   --color: #ffffff;
   --color2: #d7d7d7;
-  --border-color: #333333;
+  --img-logo: url(../images/HeaderMenu/logotip2.svg);
+  --img-logo2: url(../images/strelka.svg);
 }
 
-/* Темная тема - применяется через класс .dark */
 .dark {
   --block-bg: #ffffff;
   --body-bg: #e4e4e4;
@@ -48,11 +45,10 @@
   --border: #c4c4c4;
   --border-but: #cdcdcd;
   --footer-bg: #eaeaea;
-
-  --img-logo: url(../images/HeaderMenu/Group8.svg);
   --color: #000000;
   --color2: #545454;
-  --border-color: #b9b9b9;
+  --img-logo: url(../images/HeaderMenu/Group8.svg);
+  --img-logo2: url(../images/strelka2.svg);
 }
 h1 {
   color: var(--color);
@@ -190,6 +186,14 @@ header.hidden {
   background-repeat: no-repeat; /* Важно! */
   background-position: center;  /* Опционально, но обычно желательно */
 }
+.hh2 {
+  width: 10px;
+  height: 10px;
+  background: var(--img-logo2);
+  background-size: contain;
+  background-repeat: no-repeat; /* Важно! */
+  background-position: center;  /* Опционально, но обычно желательно */
+}
 /*_Анимация появления меню______________*/
 @keyframes anim {
   0% {transform: translateY(-5%);}
@@ -290,7 +294,7 @@ header.hidden {
   width: 100%;
   height: 100%;
   overflow: auto;
-  scrollbar-color: black;
+  /* scrollbar-color: black; */
   padding: 0 14px 0 14px;
 }
 .mobile_menu_content_list {

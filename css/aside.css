@@ -114,11 +114,12 @@ main.hidden {
     border-radius: 10px;
     padding: 0;
     justify-content: space-between;
-    flex-direction: column;
+    /* flex-direction: column; */
     border: 1px solid var(--border);
     background: var(--block-bg);
     transition: 0.2s;
     box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+    overflow: auto;
 }
 .aside_sector_contect {
     padding: 20px;
@@ -158,20 +159,20 @@ main.hidden {
     font-size: 15px;
 }
 @media (max-width: 1080px) {
-    .aside_block {
+    /* .aside_block {
         display: none;
     }
     main {
         margin: 0 150px 0 150px;
-    }
+    } */
 }
 @media (max-width: 900px) {
-    .aside_block {
+    /* .aside_block {
         display: none;
     }
     main {
         margin: 0 80px 0 80px;
-    }
+    } */
 }
 @media (max-width: 700px) {
     .aside_block {
@@ -182,10 +183,13 @@ main.hidden {
     }
 }
 @media (max-width: 850px) {
+    /* .aside_block {
+        display: none;
+    }
     .aside_main {
         margin: 10px 10px 0 10px;
     }
     main {
         gap: 10px;
-    }
+    } */
   }
