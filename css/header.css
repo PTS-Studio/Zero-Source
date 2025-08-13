@@ -239,6 +239,11 @@ header.hidden {
 .text {
   color: var(--color);
 }
+@media (max-width: 330px) {
+  .text-logo {
+    display: none;
+  }
+}
 /*
 =============================================================
   ШАПКА САЙТА (MOBILE)
