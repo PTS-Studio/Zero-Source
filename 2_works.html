@@ -144,131 +144,69 @@
                 </div>
             </aside>
             <main style="width: 100%;">
-                <!-- <div class="project_menu_block"> -->
-                    <div class="selection_menu_block">
-                        <!-- <div class="search-panel"> -->
-                            <div class="search-form">
-                                <input 
-                                    type="text" 
-                                    id="searchInput" 
-                                    class="search-input" 
-                                    placeholder="Введите название проекта или ключевое слово..."
-                                >
-                                <select id="categorySelect" class="category-select">
-                                    <option value="">Все категории</option>
-                                    <option value="веб-разработка">Веб-разработка</option>
-                                    <option value="мобильные приложения">Мобильные приложения</option>
-                                    <option value="искусственный интеллект">Искусственный интеллект</option>
-                                    <option value="игры">Игры</option>
-                                    <option value="дизайн">Дизайн</option>
-                                    <option value="блокчейн">Блокчейн</option>
-                                </select>
-                                <button type="button" id="searchBtn" class="search-btn">Поиск</button>
-                                <button type="button" id="clearBtn" class="clear-btn">Очистить</button>
-                            </div>
-                            <div class="results-info" id="resultsInfo"></div>
-                            <div class="projects-grid" id="projectsGrid">
-                                <!-- Проекты будут добавлены через JavaScript -->
-                            </div>
-                        <!-- </div> -->
-                        <!-- <div class="nvs" style="width: 80%; height: 100%; display: flex; overflow-x: auto; scrollbar-width:none; border-right: 1px solid #363636;">
-                            <input checked id="radio-button-1" type="radio" onclick="showTab('content-1')">
-                            <label for="radio-button-1" id="pm_button1" class="radio-button">Все проекты</label>
-
-                            <input id="radio-button-2" id="pm_button2" type="radio" onclick="showTab('content-2')">
-                            <label for="radio-button-2" class="radio-button">Web-разработка</label>
-
-                            <input id="radio-button-3" type="radio" onclick="showTab('content-3')">
-                            <label for="radio-button-3" id="pm_button3" class="radio-button">Python-разработка</label>
+                <div class="search-panel">
+                    <div class="search-form">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Введите название проекта или ключевое слово..."
+                        >
+                        <select id="categorySelect" class="category-select">
+                            <option value="">Все категории</option>
+                            <option value="веб-разработка">Веб-разработка</option>
+                            <option value="мобильные приложения">Мобильные приложения</option>
+                            <option value="искусственный интеллект">Искусственный интеллект</option>
+                            <option value="игры">Игры</option>
+                            <option value="дизайн">Дизайн</option>
+                            <option value="блокчейн">Блокчейн</option>
+                        </select>
+                        <button type="button" id="searchBtn" class="search-btn">Поиск</button>
+                        <button type="button" id="clearBtn" class="clear-btn">Очистить</button>
+                    </div>
+                    <!-- <div class="results-info" id="resultsInfo"></div> -->
+                    <div class="projects-grid" id="projectsGrid">
+                        <!-- Проекты будут добавлены через JavaScript -->
+                    </div>
+                </div>
+                <div class="footer_block">
+                    <div class="f_top_block" style="border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0 30px;">
+                        <p>PTS</p>
+                        <a href="#news">
+                            <img src="images/footer/Exclude.png" alt="" style="width: 100px; height: auto; filter: brightness(80%);">
+                        </a>
+                    </div>
+                    <div class="f_bottom_block">
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Обо мне</h1>
+                            <p>Главная</p>
+                            <p>Проекты</p>
+                            <p>Опыт</p>
+                            <p>Вопросы</p>
                         </div>
-                        <div class="nvs2" style="width: 20%; height: 100%; border-radius: 10px; display: flex; flex-wrap: wrap;">
-                            <div class="search-container">
-                                <i class="fas fa-search search-icon"></i>
-                                <input type="text" id="searchInput" placeholder="Поиск валют..." class="search-input">
-                            </div>
-                        </div> -->
-                        <div class="footer_block" style="margin: 20px 0 20px 0;">
-                            <div class="f_top_block" style="border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0 30px;">
-                                <p>PTS</p>
-                                <a href="#news">
-                                    <img src="images/footer/Exclude.png" alt="" style="width: 100px; height: auto; filter: brightness(80%);">
-                                </a>
-                            </div>
-                            <div class="f_bottom_block">
-                                <div class="f_column_block">
-                                    <h1 class="h1-2-text" style="margin-bottom: 10px;">Обо мне</h1>
-                                    <p>Главная</p>
-                                    <p>Проекты</p>
-                                    <p>Опыт</p>
-                                    <p>Вопросы</p>
-                                </div>
-                                <div class="f_column_block">
-                                    <h1 class="h1-2-text" style="margin-bottom: 10px;">Портфолио</h1>
-                                    <p>Все проекты</p>
-                                    <p>Статьи</p>
-                                    <p>Публикации</p>
-                                    <p>Лучшее</p>
-                                </div>
-                                <div class="f_column_block">
-                                    <h1 class="h1-2-text" style="margin-bottom: 10px;">Связь</h1>
-                                    <p>Форма обратной связи</p>
-                                    <p>GitHub</p>
-                                    <p>RuTube</p>
-                                    <p>ВКонтакте</p>
-                                </div>
-                                <div class="f_column_block">
-                                    <h1 class="h1-2-text" style="margin-bottom: 10px;">Документы</h1>
-                                    <p>Политика конфиденциальности</p>
-                                    <p>Антиспам политика</p>
-                                    <p>Авторские права</p>
-                                    <p>Политика Cookie</p>
-                                </div>
-                            </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Портфолио</h1>
+                            <p>Все проекты</p>
+                            <p>Статьи</p>
+                            <p>Публикации</p>
+                            <p>Лучшее</p>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Связь</h1>
+                            <p>Форма обратной связи</p>
+                            <p>GitHub</p>
+                            <p>RuTube</p>
+                            <p>ВКонтакте</p>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Документы</h1>
+                            <p>Политика конфиденциальности</p>
+                            <p>Антиспам политика</p>
+                            <p>Авторские права</p>
+                            <p>Политика Cookie</p>
                         </div>
                     </div>
-                    <!-- <div class="project_output_block">
-                        <div class="tab-content" id="content-1">
-                            <div class="card_project">
-                                <div class="img_kard">
-                                    <img src="images/Сайт1.png" alt="" style="width: 100%; height: 100%; border-radius: 10px 10px 0 0; object-fit: contain;">
-                                </div>
-                                <div class="cp_bottom">
-                                    <div class="pkc" style="display: flex; width: 60%; gap: 10px;">
-                                        <div class="yusa" style="width: auto; display: flex; flex-wrap: wrap; align-items: center;">
-                                            <div class="imd" style="width: 35px; height: 35px; background: white; border-radius: 5px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
-                                                <img src="images/HeaderMenu/Group8.svg" alt="" style="width: 25px; height: 25px;">
-                                            </div>
-                                        </div>
-                                        <div class="yusa" style="width: auto; display: flex; flex-wrap: wrap; align-items: center;">
-                                            <p>Сайт-портфолио PTS</p>
-                                            <div class="dr" style="width: 100%; height: auto; align-items: center; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
-                                                <div class="button_po">HTML</div>
-                                                <div class="button_po">CSS</div>
-                                                <div class="button_po">JS</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pkc" style="display: flex; flex-wrap: wrap; width: 40%; align-items: center;">
-                                        v.1.0.2007.025
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card_project">
-                                <div class="img_kard"></div>
-                                <div class="cp_bottom">
-                                    <div class="pkc"></div>
-                                    <div class="pkc"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content" id="content-2">
-                            Содержимое 2...
-                        </div>
-                        <div class="tab-content" id="content-3">
-                            Содержимое 3...
-                        </div>
-                    </div> -->
-                <!-- </div> -->
+                </div>
             </main>
             <script>
                 function showTab(tabId) {

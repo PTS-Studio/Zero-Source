@@ -33,3 +33,8 @@
     flex-direction: column;
     flex: 1 1 220px;
 }
+@media (max-width: 850px) {
+    .footer_block {
+        margin-bottom: 10px;
+    }
+}
