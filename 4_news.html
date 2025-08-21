@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/Group 8.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/projects/1_start_projects.css">
+    <link rel="stylesheet" href="css/home/1_titul_block.css">
+    <link rel="stylesheet" href="css/home/2_education_block.css">
+    <link rel="stylesheet" href="css/home/3_experience_works.css">
+    <link rel="stylesheet" href="css/home/4_question_block.css">
+    <link rel="stylesheet" href="css/news/1_news_paper_block.css">
     <link rel="stylesheet" href="js/home.js">
-    <link rel="stylesheet" href="js/search_panel.js">
     <title>Сайт-портфолио</title>
 </head>
 <body>
+    <!-- <div id="splash-screen">
+        <div id="logo">
+            <img src="images/HeaderMenu/logotip2.svg" alt="" style="width: 150px; height: auto;">
+            PTS-STUDIO
+        </div>
+        <div id="copyright">© 2025 PTS-Studio All rights reserved.</div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const splashScreen = document.getElementById('splash-screen');
+            const content = document.getElementById('content');
+
+            // Функция для скрытия заставки
+            function hideSplashScreen() {
+                splashScreen.style.opacity = '0'; // Запускаем исчезновение
+                setTimeout(() => {
+                    splashScreen.style.display = 'none'; // Скрываем заставку
+                    content.style.display = 'block'; // Показываем контент
+                    document.body.style.overflow = 'auto'; // Восстанавливаем прокрутку
+                }, 500); // Задержка должна соответствовать времени transition в CSS
+            }
+
+            // Задержка перед скрытием заставки (например, 3 секунды)
+            setTimeout(hideSplashScreen, 3000);
+        });
+    </script> -->
     <header> <!--id="header"-->
         <div class="header">
             <div class="absorbing_block">
@@ -143,30 +173,63 @@
                     </div>
                 </div>
             </aside>
-            <main style="width: 100%;">
-                <div class="search-panel">
-                    <div class="search-form">
-                        <input 
-                            type="text" 
-                            id="searchInput" 
-                            class="search-input" 
-                            placeholder="Введите название проекта или ключевое слово..."
-                        >
-                        <select id="categorySelect" class="category-select">
-                            <option value="">Все категории</option>
-                            <option value="веб-разработка">Веб-разработка</option>
-                            <option value="мобильные приложения">Мобильные приложения</option>
-                            <option value="искусственный интеллект">Искусственный интеллект</option>
-                            <option value="игры">Игры</option>
-                            <option value="дизайн">Дизайн</option>
-                            <option value="блокчейн">Блокчейн</option>
-                        </select>
-                        <button type="button" id="searchBtn" class="search-btn">Поиск</button>
-                        <button type="button" id="clearBtn" class="clear-btn">Очистить</button>
+            <main>
+                <div class="news_paper_block">
+                    <div class="news_card">
+                        <h1>Открытие сайта PTS</h1>
+                        <p>Совсем недавно 20 августа 2025 года я смог выложить свой сайт в публичный доступ. В процессе разработки мне удалось спроектировать свой уникальный дизайн и установить авторское право</p>
                     </div>
-                    <!-- <div class="results-info" id="resultsInfo"></div> -->
-                    <div class="projects-grid" id="projectsGrid">
-                        <!-- Проекты будут добавлены через JavaScript -->
+                    <div class="news_card">
+                        <h1>Релиз PTS</h1>
+                    </div>
+                    <div class="card">
+                        <div class="column-left">
+                            <div class="years">
+                                <p class="date">2024-2025</p>
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="name">
+                                <p class="text-h2p">Сайт портфолио</p>
+                            </div>
+                            <div class="description">
+                                <p class="text-pp">В результате работы я создал цифровой сайт портфолио, который стал внутренним хабом моих работ. На сегодняшний день сайт всячески обновляеся и модернизируется.</p>
+                            </div>
+                            <div class="technologies">
+                                <div class="tech">
+                                    <p class="color-purple">Figma</p>
+                                </div>
+                                <div class="tech">
+                                    <p class="color-purple">HTML</p>
+                                </div>
+                                <div class="tech">
+                                    <p class="color-purple">CSS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="column-left">
+                            <div class="years">
+                                <p class="date">2025</p>
+                            </div>
+                        </div>
+                        <div class="column-right">
+                            <div class="name">
+                                <p class="text-h2p">Расширение PDELL</p>
+                            </div>
+                            <div class="description">
+                                <p class="text-pp">Пока данных нет, но могу сказать о расширении по анализу неиспользуемого пула классов из HTML файла в CSS. Результат работ станет виден после завершения разработки.</p>
+                            </div>
+                            <div class="technologies">
+                                <div class="tech">
+                                    <p class="color-purple">HLL</p>
+                                </div>
+                                <div class="tech">
+                                    <p class="color-purple">VS Code</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="footer_block">
@@ -208,25 +271,9 @@
                     </div>
                 </div>
             </main>
-            <script>
-                function showTab(tabId) {
-                // Сначала скрываем все вкладки
-                let tabs = document.querySelectorAll('.tab-content');
-                tabs.forEach(tab => tab.classList.remove('active'));
-
-                // Затем показываем нужную вкладку
-                document.getElementById(tabId).classList.add('active');
-                }
-
-                // Показать первую вкладку при загрузке страницы
-                document.addEventListener('DOMContentLoaded', () => {
-                showTab('content-1'); // По умолчанию отображаем content-1
-                });
-            </script>
         </div>
     </div>
 <script src="js/home.js"></script>
-<script src="js/search_panel.js"></script> 
 <script>
   const body = document.body;
 
