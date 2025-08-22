@@ -104,3 +104,8 @@
         display: block;
     }
 }
+@media (max-width: 850px) {
+    .news_paper_block {
+        gap: 10px;
+    }
+}

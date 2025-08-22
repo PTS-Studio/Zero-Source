@@ -123,18 +123,18 @@
 .project-title {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #2d3748;
+    color: var(--color);
     margin-bottom: 10px;
 }
 
 .project-category {
     display: inline-block;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
+    background: var(--but-bg);
+    border: 1px solid var(--border-but);
+    color: var(--color);
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 0.85rem;
-    font-weight: 600;
     margin-bottom: 15px;
 }
 
@@ -154,7 +154,7 @@
     background: var(--but-bg);
     color: var(--color);
     padding: 4px 10px;
-    border-radius: 15px;
+    border-radius: 5px;
     font-size: 0.8rem;
     border: 1px solid var(--border);
 }

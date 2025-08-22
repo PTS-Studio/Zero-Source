@@ -1,0 +1,11 @@
+.contact_form {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    width: 50%;
+    background: var(--block-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 20px 30px;
+}
