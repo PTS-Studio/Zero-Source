@@ -35,7 +35,16 @@
     padding: 0 0 40px;
     box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
 }
-
+.column_block {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 220px;
+}
+.list-style2 li {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--color2);
+}
 .news_block {
     padding: 20px;
     margin-bottom: 20px;

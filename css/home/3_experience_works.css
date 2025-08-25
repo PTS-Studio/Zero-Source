@@ -91,6 +91,9 @@
 }
 
 @media (max-width: 1076px) {
+    #re {
+        justify-content: flex-start;
+    }
     #hm-1 {
         display: none;
     }
