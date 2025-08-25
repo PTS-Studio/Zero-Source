@@ -22,6 +22,9 @@
   scrollbar-width:thin;
   scrollbar-gutter: stable;
 }
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --block-bg: #161616;
   --body-bg: #121212;

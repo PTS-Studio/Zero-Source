@@ -2,6 +2,14 @@
 // Данные проектов
 const projects = [
     {
+        id: 13,
+        title: "Сайт-Портфолио",
+        category: "веб-разработка",
+        description: "Динамичная платформа для показа профессиональных навыков, проектов и достижений.",
+        technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+        link: "#"
+    },
+    {
         id: 1,
         title: "E-commerce платформа",
         category: "веб-разработка",

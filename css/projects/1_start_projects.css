@@ -43,7 +43,7 @@
     border: 0;
     border-left: 1px solid var(--border);
     /* border-radius: 10px; */
-    font-size: 16px;
+    /* font-size: 16px; */
     background: var(--block-bg);
     color: var(--color);
     cursor: pointer;
@@ -121,18 +121,18 @@
 }
 
 .project-title {
-    font-size: 1.4rem;
-    font-weight: 700;
+    /* font-size: 1.4rem; */
+    /* font-weight: 700; */
     color: var(--color);
     margin-bottom: 10px;
 }
 
 .project-category {
     display: inline-block;
-    background: var(--but-bg);
-    border: 1px solid var(--border-but);
+    background: #bbc7ff;
+    /* border-top: 1px solid var(--color); */
     color: var(--color);
-    padding: 5px 10px;
+    padding: 2px 10px;
     border-radius: 5px;
     font-size: 0.85rem;
     margin-bottom: 15px;
