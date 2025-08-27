@@ -9,102 +9,102 @@ const projects = [
         technologies: ["React", "Node.js", "MongoDB", "Stripe"],
         link: "#"
     },
-    {
-        id: 1,
-        title: "E-commerce платформа",
-        category: "веб-разработка",
-        description: "Современная платформа для онлайн-торговли с интеграцией платежных систем и системой управления заказами.",
-        technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-        link: "#"
-    },
-    {
-        id: 2,
-        title: "Мобильное приложение для фитнеса",
-        category: "мобильные приложения",
-        description: "Приложение для отслеживания тренировок, питания и прогресса с социальными функциями.",
-        technologies: ["React Native", "Firebase", "Redux"],
-        link: "#"
-    },
-    {
-        id: 3,
-        title: "Чат-бот с ИИ",
-        category: "искусственный интеллект",
-        description: "Интеллектуальный чат-бот для автоматизации клиентской поддержки с обработкой естественного языка.",
-        technologies: ["Python", "TensorFlow", "OpenAI API", "Flask"],
-        link: "#"
-    },
-    {
-        id: 4,
-        title: "2D платформер",
-        category: "игры",
-        description: "Увлекательная 2D игра-платформер с уникальной механикой и красочной графикой.",
-        technologies: ["Unity", "C#", "Photoshop"],
-        link: "#"
-    },
-    {
-        id: 5,
-        title: "Система дизайна",
-        category: "дизайн",
-        description: "Комплексная система дизайна для корпоративных приложений с библиотекой компонентов.",
-        technologies: ["Figma", "Sketch", "Storybook", "CSS"],
-        link: "#"
-    },
-    {
-        id: 6,
-        title: "DeFi протокол",
-        category: "блокчейн",
-        description: "Децентрализованный протокол для кредитования и заимствования криптовалют.",
-        technologies: ["Solidity", "Web3.js", "Ethereum", "React"],
-        link: "#"
-    },
-    {
-        id: 7,
-        title: "CRM система",
-        category: "веб-разработка",
-        description: "Система управления взаимоотношениями с клиентами для малого и среднего бизнеса.",
-        technologies: ["Vue.js", "Laravel", "MySQL", "Docker"],
-        link: "#"
-    },
-    {
-        id: 8,
-        title: "Приложение для медитации",
-        category: "мобильные приложения",
-        description: "Мобильное приложение с гайдами по медитации, звуками природы и трекингом прогресса.",
-        technologies: ["Flutter", "Dart", "Firebase"],
-        link: "#"
-    },
-    {
-        id: 9,
-        title: "Система распознавания изображений",
-        category: "искусственный интеллект",
-        description: "ИИ-система для автоматического распознавания и классификации изображений в реальном времени.",
-        technologies: ["Python", "PyTorch", "OpenCV", "FastAPI"],
-        link: "#"
-    },
-    {
-        id: 10,
-        title: "Многопользовательская онлайн-игра",
-        category: "игры",
-        description: "MMO игра с открытым миром, системой гильдий и PvP сражениями.",
-        technologies: ["Unreal Engine", "C++", "PostgreSQL"],
-        link: "#"
-    },
-    {
-        id: 11,
-        title: "UI Kit для мобильных приложений",
-        category: "дизайн",
-        description: "Набор готовых UI компонентов и шаблонов для быстрой разработки мобильных приложений.",
-        technologies: ["Figma", "Principle", "Adobe XD"],
-        link: "#"
-    },
-    {
-        id: 12,
-        title: "NFT маркетплейс",
-        category: "блокчейн",
-        description: "Платформа для создания, покупки и продажи NFT с интеграцией различных блокчейнов.",
-        technologies: ["Solidity", "React", "IPFS", "Polygon"],
-        link: "#"
-    }
+    // {
+    //     id: 1,
+    //     title: "E-commerce платформа",
+    //     category: "веб-разработка",
+    //     description: "Современная платформа для онлайн-торговли с интеграцией платежных систем и системой управления заказами.",
+    //     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 2,
+    //     title: "Мобильное приложение для фитнеса",
+    //     category: "мобильные приложения",
+    //     description: "Приложение для отслеживания тренировок, питания и прогресса с социальными функциями.",
+    //     technologies: ["React Native", "Firebase", "Redux"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 3,
+    //     title: "Чат-бот с ИИ",
+    //     category: "искусственный интеллект",
+    //     description: "Интеллектуальный чат-бот для автоматизации клиентской поддержки с обработкой естественного языка.",
+    //     technologies: ["Python", "TensorFlow", "OpenAI API", "Flask"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 4,
+    //     title: "2D платформер",
+    //     category: "игры",
+    //     description: "Увлекательная 2D игра-платформер с уникальной механикой и красочной графикой.",
+    //     technologies: ["Unity", "C#", "Photoshop"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 5,
+    //     title: "Система дизайна",
+    //     category: "дизайн",
+    //     description: "Комплексная система дизайна для корпоративных приложений с библиотекой компонентов.",
+    //     technologies: ["Figma", "Sketch", "Storybook", "CSS"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 6,
+    //     title: "DeFi протокол",
+    //     category: "блокчейн",
+    //     description: "Децентрализованный протокол для кредитования и заимствования криптовалют.",
+    //     technologies: ["Solidity", "Web3.js", "Ethereum", "React"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 7,
+    //     title: "CRM система",
+    //     category: "веб-разработка",
+    //     description: "Система управления взаимоотношениями с клиентами для малого и среднего бизнеса.",
+    //     technologies: ["Vue.js", "Laravel", "MySQL", "Docker"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 8,
+    //     title: "Приложение для медитации",
+    //     category: "мобильные приложения",
+    //     description: "Мобильное приложение с гайдами по медитации, звуками природы и трекингом прогресса.",
+    //     technologies: ["Flutter", "Dart", "Firebase"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 9,
+    //     title: "Система распознавания изображений",
+    //     category: "искусственный интеллект",
+    //     description: "ИИ-система для автоматического распознавания и классификации изображений в реальном времени.",
+    //     technologies: ["Python", "PyTorch", "OpenCV", "FastAPI"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 10,
+    //     title: "Многопользовательская онлайн-игра",
+    //     category: "игры",
+    //     description: "MMO игра с открытым миром, системой гильдий и PvP сражениями.",
+    //     technologies: ["Unreal Engine", "C++", "PostgreSQL"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 11,
+    //     title: "UI Kit для мобильных приложений",
+    //     category: "дизайн",
+    //     description: "Набор готовых UI компонентов и шаблонов для быстрой разработки мобильных приложений.",
+    //     technologies: ["Figma", "Principle", "Adobe XD"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 12,
+    //     title: "NFT маркетплейс",
+    //     category: "блокчейн",
+    //     description: "Платформа для создания, покупки и продажи NFT с интеграцией различных блокчейнов.",
+    //     technologies: ["Solidity", "React", "IPFS", "Polygon"],
+    //     link: "#"
+    // }
 ];
 
 // Элементы DOM

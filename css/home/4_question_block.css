@@ -58,7 +58,7 @@
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid var(--border);
-  background: var(--block-bg);
+  background: var(--dark-bg);
   padding: 20px 30px;
   display: none;
   position: absolute;
