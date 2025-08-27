@@ -1,11 +1,34 @@
 .contact_form {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    width: 50%;
-    background: var(--block-bg);
+    width: 100%;
+    background: rgba(216, 78, 78, 0.4);
     border-radius: 10px;
-    border: 1px solid var(--border);
+    border: 1px solid red;
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
     padding: 20px 30px;
+    gap: 30px;
+}
+.cf_left_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
+}
+.cf_phone {
+    background: #eee;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.cf-img {
+    width: 20px;
+    height: 20px;
+}
+.cf_right_block {
+    flex: 1 1 230px;
 }

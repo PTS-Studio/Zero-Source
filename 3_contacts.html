@@ -8,37 +8,11 @@
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home/1_titul_block.css">
-    <link rel="stylesheet" href="contacts/contact_form.css">
+    <link rel="stylesheet" href="css/contacts/contact_form.css">
     <link rel="stylesheet" href="js/home.js">
     <title>Сайт-портфолио</title>
 </head>
 <body>
-    <!-- <div id="splash-screen">
-        <div id="logo">
-            <img src="images/HeaderMenu/logotip2.svg" alt="" style="width: 150px; height: auto;">
-            PTS-STUDIO
-        </div>
-        <div id="copyright">© 2025 PTS-Studio All rights reserved.</div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const splashScreen = document.getElementById('splash-screen');
-            const content = document.getElementById('content');
-
-            // Функция для скрытия заставки
-            function hideSplashScreen() {
-                splashScreen.style.opacity = '0'; // Запускаем исчезновение
-                setTimeout(() => {
-                    splashScreen.style.display = 'none'; // Скрываем заставку
-                    content.style.display = 'block'; // Показываем контент
-                    document.body.style.overflow = 'auto'; // Восстанавливаем прокрутку
-                }, 500); // Задержка должна соответствовать времени transition в CSS
-            }
-
-            // Задержка перед скрытием заставки (например, 3 секунды)
-            setTimeout(hideSplashScreen, 3000);
-        });
-    </script> -->
     <header> <!--id="header"-->
         <div class="header">
             <div class="absorbing_block">
@@ -138,27 +112,22 @@
                         <div class="top" style="width: 100%; height: auto;">
                             <div class="aside_sector_contect" id="mrt">
                                 <div class="hh3" id="img-1"></div>
-                                <!-- <img src="images/Aside/h2.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Статистика</a>
                             </div>
                             <div class="aside_sector_contect">
                                 <div class="hh3" id="img-2"></div>
-                                <!-- <img src="images/Aside/h3.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Отчеты</a>
                             </div>
                             <div class="aside_sector_contect">
                                 <div class="hh3" id="img-3"></div>
-                                <!-- <img src="images/Aside/h1.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Настройки</a>
                             </div>
                             <div class="aside_sector_contect">
                                 <div class="hh3" id="img-4"></div>
-                                <!-- <img src="images/Aside/h5.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Справка</a>
                             </div>
                             <div class="aside_sector_contect">
                                 <div class="hh3" id="img-5"></div>
-                                <!-- <img src="images/Aside/h4.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Оставить отзыв</a>
                             </div>
                         </div>
@@ -172,9 +141,15 @@
             </aside>
             <main>
                 <div class="contact_form">
-                    <img src="images/Bez_foto_2.jpg" class="avatar" alt="" style="top: 0;">
-                    <h1 style="width: 100%; text-align: center;">Форма контактной связи</h1>
-                    <p style="width: 100%; text-align: center;">Имя</p>
+                    <div class="cf_left_block">
+                        <div class="cf_phone">
+                            <img src="images/security.svg" alt="" class="cf-img">
+                        </div>
+                    </div>
+                    <div class="cf_right_block">
+                        <h1>Защита данных</h1>
+                        <p>В целях обеспечения безопасности и защиты личных данных пользователей, прямая связь через контактные формы временно недоступна. Вместо этого вы можете найти меня на указанных ниже платформах или в социальных сетях.</p>
+                    </div>
                 </div>
                 <div class="footer_block">
                     <div class="f_top_block" style="border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0 30px;">
