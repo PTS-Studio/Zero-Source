@@ -9,6 +9,16 @@
     margin-bottom: 20px;
     box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
 }
+.f-link {
+    color: inherit;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    transition: 0.2s;
+}
+.f-link:hover{
+    background: var(--hover-bg);
+    padding-left: 20px;
+}
 .f_top_block {
     width: 100%;
     height: 60px;
@@ -16,7 +26,7 @@
     background: var(--footer-bg);
 }
 .f_bottom_block {
-    padding: 30px 0;
+    padding: 30px 30px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -26,8 +36,8 @@
 }
 .f_column_block {
     /* text-align: center; */
-    padding-left: 30px;
-    border-right: 1px solid var(--border);
+    /* padding-left: 30px; */
+    /* border-right: 1px solid var(--border); */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

@@ -49,6 +49,10 @@ html {
   --img-b1: url(../images/d1.svg);
   --img-b2: url(../images/d2.svg);
   --img-b3: url(../images/d3.svg);
+
+  --img-security: url(../images/contacts/security_w.svg);
+  --img-github: url(../images/contacts/github_w.svg);
+  --img-rutube: url(../images/contacts/rutube_w.svg);
 }
 
 .dark {
@@ -75,6 +79,10 @@ html {
   --img-b1: url(../images/c1.svg);
   --img-b2: url(../images/c2.svg);
   --img-b3: url(../images/c3.svg);
+
+  --img-security: url(../images/contacts/security_d.svg);
+  --img-github: url(../images/contacts/github_d.svg);
+  --img-rutube: url(../images/contacts/rutube_d.svg);
 }
 h1 {
   color: var(--color);
@@ -234,6 +242,13 @@ header.hidden {
   background-repeat: no-repeat; /* Важно! */
   background-position: center;  /* Опционально, но обычно желательно */
 }
+.hh5 {
+  width:25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat; /* Важно! */
+  background-position: center;  /* Опционально, но обычно желательно */
+}
 #img-1 {
   background-image: var(--img-a1);
 }
@@ -258,6 +273,16 @@ header.hidden {
 }
 #img-b3 {
     background-image: var(--img-b3)
+}
+
+#img-security {
+  background-image: var(--img-security);
+}
+#img-github {
+  background-image: var(--img-github);
+}
+#img-rutube {
+  background-image: var(--img-rutube);
 }
 /*_Анимация появления меню______________*/
 @keyframes anim {

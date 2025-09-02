@@ -7,7 +7,7 @@ const projects = [
         category: "веб-разработка",
         description: "Динамичная платформа для показа профессиональных навыков, проектов и достижений.",
         technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-        link: "#"
+        link: "https://github.com/PTS-Studio",
     },
     // {
     //     id: 1,
@@ -126,7 +126,7 @@ function createProjectCard(project) {
             <div class="project-tech">
                 ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
             </div>
-            <a href="${project.link}" class="project-link">Подробнее →</a>
+            <a href="${project.link}" class="project-link" target="_blank">Подробнее →</a>
         </div>
     `;
 }
