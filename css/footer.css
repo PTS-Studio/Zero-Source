@@ -14,8 +14,14 @@
     border-bottom: 1px solid var(--border);
     padding: 10px 0;
     transition: 0.2s;
+
+    white-space: nowrap; /* Запрещаем перенос строки */
+    overflow: hidden;      /* Скрываем выходящий текст */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    display: block;         /* Важно: делаем элемент блочным */
 }
 .f-link:hover{
+    border-radius: 5px;
     background: var(--hover-bg);
     padding-left: 20px;
 }
@@ -30,18 +36,14 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
     justify-content: space-between;
     gap: 20px;
 }
 .f_column_block {
-    /* text-align: center; */
-    /* padding-left: 30px; */
-    /* border-right: 1px solid var(--border); */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    flex: 1 1 220px;
+    flex: 1 1 200px;
 }
 @media (max-width: 850px) {
     .footer_block {

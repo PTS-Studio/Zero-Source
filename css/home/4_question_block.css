@@ -20,9 +20,8 @@
   justify-content: center;
   -webkit-box-align: center;
   flex-direction: column;
-  border: 1px solid var(--border);
-  background: var(--block-bg);
   border-radius: 10px;
+  gap: 20px;
 }
 .toggler {
   width: 100%;
