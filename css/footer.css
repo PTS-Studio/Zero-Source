@@ -26,10 +26,12 @@
     padding-left: 20px;
 }
 .f_top_block {
+    position: relative;
     width: 100%;
     height: 60px;
     border-radius: 10px;
-    background: var(--footer-bg);
+    /* background: #191919; */
+    /* background: var(--footer-bg); */
 }
 .f_bottom_block {
     padding: 30px 30px;

@@ -13,7 +13,7 @@
     background: var(--block-bg);
     border: 1px solid var(--border);
     box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
-    transition: 0.2s;
+    transition: 0.1s;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -21,6 +21,8 @@
     background: var(--hover-bg);
 }
 .news_page_block {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 #np_page1, #np_page3 {
@@ -91,10 +93,11 @@
     border: 1px solid var(--border);
     background: var(--block-bg);
     box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
-.card:hover {
+/* .card:hover {
     background: var(--hover-bg);
-}
+} */
 .text-h2p {
     color: #e2e8f0;
     width: 100%;

@@ -17,114 +17,72 @@
     <title>Сайт-портфолио</title>
 </head>
 <body>
-    <!-- <div id="splash-screen">
-        <div id="logo">
-            <img src="images/HeaderMenu/logotip2.svg" alt="" style="width: 150px; height: auto;">
-            PTS-STUDIO
-        </div>
-        <div id="copyright">© 2025 PTS-Studio All rights reserved.</div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const splashScreen = document.getElementById('splash-screen');
-            const content = document.getElementById('content');
+    <header class="header"> <!--id="header"-->
+        <div class="absorbing_block">
+            <div class="header_block">
 
-            // Функция для скрытия заставки
-            function hideSplashScreen() {
-                splashScreen.style.opacity = '0'; // Запускаем исчезновение
-                setTimeout(() => {
-                    splashScreen.style.display = 'none'; // Скрываем заставку
-                    content.style.display = 'block'; // Показываем контент
-                    document.body.style.overflow = 'auto'; // Восстанавливаем прокрутку
-                }, 500); // Задержка должна соответствовать времени transition в CSS
-            }
+                <!-- Ссылка студии -->
+                <div class="hd_sector">
+                    <a href="4_news.html" class="hd_link" id="hd_link1">
+                        <div class="hh"></div>
+                        <p class="text-logo">PTS-STUDIO</p>
+                    </a>
+                </div>
 
-            // Задержка перед скрытием заставки (например, 3 секунды)
-            setTimeout(hideSplashScreen, 3000);
-        });
-    </script> -->
-    <header> <!--id="header"-->
-        <div class="header">
-            <div class="absorbing_block">
-                <div class="header_block">
-                    <div class="hd_sector">
-                        <div id="hd_link1" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="hh"></div>
-                                <p class="text-logo">PTS-STUDIO</p>
+                <!-- Ссылки для HEADER -->
+                <div class="hd_sector">
+                    <a href="1_home.html" class="hd_link" id="hd_link2">
+                        <p class="text-bright">Главная</p>
+                    </a>
+                    <a href="2_works.html"class="hd_link" id="hd_link3">
+                        <p class="text-bright">Портфолио</p>
+                    </a>
+                    <a href="3_contacts.html" class="hd_link" id="hd_link4">
+                        <p class="text-bright">Контакты</p>
+                    </a>
+                    <a href="4_news.html" class="hd_link" id="hd_link5">
+                        <p class="text-bright">Новости</p>
+                    </a>
+                    <button class="menu-button" id="menuBtn">Меню</button>
+
+                    <!-- Появляющееся меню -->
+                    <div class="menu" id="menu">
+                        <div class="menu_bagget">
+                            <div class="menu_content">
+                                <a href="1_home.html" class="hd_link_mobile">
+                                    <p class="text-bright">Главная</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="2_works.html" class="hd_link_mobile">
+                                    <p class="text-bright">Портфолио</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="3_contacts.html" class="hd_link_mobile">
+                                    <p class="text-bright">Контакты</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="4_news.html" class="hd_link_mobile">
+                                    <p class="text-bright">Новости</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <div class="button10">
+                                    <p>информация о сайте</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hd_sector">
-                        <a href="1_home.html" id="hd_link2" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="dropdown_section">
-                                    <li class="text">Главная</li>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="2_works.html" id="hd_link3" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="dropdown_section">
-                                    <li class="text">Портфолио</li>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="3_contacts.html" id="hd_link4" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="dropdown_section">
-                                    <li class="text">Контакты</li>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="4_news.html" id="hd_link5" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="dropdown_section">
-                                    <li class="text">Новости</li>
-                                </div>
-                            </div>
-                        </a>
-                        <button class="menu-button" id="menuBtn">Меню</button>
-                        <div class="menu" id="menu">
-                            <div class="menu-content">
-                                <div class="mobile_menu_content">
-                                    <li class="mobile_menu_content_list">
-                                        <a href="1_home.html" class="link_mobile">
-                                            <p class="text">Главная</p>
-                                            <img src="images/strelka.svg" alt="" class="strelka">
-                                        </a>
-                                    </li>
-                                    <li class="mobile_menu_content_list">
-                                        <a href="2_works.html" class="link_mobile">
-                                            <p class="text">Портфолио</p>
-                                            <img src="images/strelka.svg" alt="" class="strelka">
-                                        </a>
-                                    </li>
-                                    <li class="mobile_menu_content_list">
-                                        <a href="3_contacts.html" class="link_mobile">
-                                            <p class="text">Контакты</p>
-                                            <img src="images/strelka.svg" alt="" class="strelka">
-                                        </a>
-                                    </li>
-                                    <li class="mobile_menu_content_list">
-                                        <a href="4_news.html" class="link_mobile">
-                                            <p class="text">Новости</p>
-                                            <img src="images/strelka.svg" alt="" class="strelka">
-                                        </a>
-                                    </li>
-                                    <div class="button10">
-                                        <p>информация о сайте</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <p class="text">Тема</p>
-                            <div class="dropdown" style="z-index: 999999;">
-                                <div class="chsja" style="border-radius: 10px 10px; border: 1px solid var(--border); display: flex; flex-wrap: wrap;">
-                                    <button id="lightBtn" style="color: var(--color);">Т</button>
-                                    <button id="darkBtn" style="color: var(--color);">С</button>
-                                </div>
+
+                    <!-- Кнопка смены цветовой темы -->
+                    <div class="menu-item">
+                        <p class="text-bright">Тема</p>
+                        <div class="dropdown" style="z-index: 999999;">
+                            <div class="chsja" style="border-radius: 10px 10px; border: 1px solid var(--border); display: flex; flex-wrap: wrap;">
+                                <button id="darkBtn">
+                                    <div class="img-light-theme"></div>
+                                </button>
+                                <button id="lightBtn">
+                                    <div class="img-dark-theme"></div>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -142,27 +100,22 @@
                         <div class="top" style="width: 100%; height: auto;">
                             <div class="aside_sector_contect" id="mrt">
                                 <div class="hh3" id="img-1"></div>
-                                <!-- <img src="images/Aside/h2.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Статистика</a>
                             </div>
                             <div class="aside_sector_contect">
                                 <div class="hh3" id="img-2"></div>
-                                <!-- <img src="images/Aside/h3.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Отчеты</a>
                             </div>
                             <div class="aside_sector_contect">
                                 <div class="hh3" id="img-3"></div>
-                                <!-- <img src="images/Aside/h1.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Настройки</a>
                             </div>
                             <div class="aside_sector_contect">
                                 <div class="hh3" id="img-4"></div>
-                                <!-- <img src="images/Aside/h5.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Справка</a>
                             </div>
                             <div class="aside_sector_contect">
                                 <div class="hh3" id="img-5"></div>
-                                <!-- <img src="images/Aside/h4.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
                                 <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Оставить отзыв</a>
                             </div>
                         </div>
@@ -177,15 +130,15 @@
             <main>
                 <div class="news_paper_block">
                     <button class="np_category" data-block="np_page1">
-                        <h1>Обновления сайта</h1>
+                        <h1 class="h2-1" style="padding-top: 0;">Обновления сайта</h1>
                         <p class="text-top10">В данном разделе представлена актуальная информация о ключевых нововведениях и улучшениях, внедренных на сайте</p>
                     </button>
                     <button class="np_category" data-block="np_page2">
-                        <h1>Релизы</h1>
+                        <h1 class="h2-1" style="padding-top: 0;">Релизы</h1>
                         <p class="text-top10">Здесь публикуются анонсы о выпуске новых продуктов, версий программного обеспечения или других значимых релизов</p>
                     </button>
                     <button class="np_category" data-block="np_page3">
-                        <h1>Итоги года</h1>
+                        <h1 class="h2-1" style="padding-top: 0;">Итоги года</h1>
                         <p class="text-top10">В этом разделе подводятся итоги деятельности за прошедший год, включая проекты, достижения, и обновления</p>
                     </button>
                     <div class="news_page_block" id="np_page1">
@@ -300,6 +253,7 @@
                             </div>
                         </a>
                     </div>
+                    
                     <div class="news_page_block" id="np_page3">
                         <div class="question_block2">
                             <div class="toggler" style="border: 1px solid var(--border); box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2); border-radius: 10px;">
@@ -351,14 +305,14 @@
                             <div class="hh"></div>
                             <p class="text-logo">PTS-STUDIO</p>
                         </div>
-                        <!-- <a href="#news">
+                        <a href="#news">
                             <img src="images/footer/Exclude.png" alt="" style="width: 100px; height: auto; filter: brightness(80%);">
-                        </a> -->
+                        </a>
                     </div>
                     <div class="f_bottom_block">
                         <div class="f_column_block">
                             <h1 class="h1-2-text" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Документы</h1>
-                            <a href="#" class="f-link">Политика личный данных</a>
+                            <a href="#" class="f-link">Политика конфиденциальности</a>
                             <a href="#" class="f-link">Условия использования</a>
                             <a href="#" class="f-link">Секретный протокол</a>
                         
@@ -384,6 +338,7 @@
                             <a href="#" class="f-link">Оставить отзыв</a>
                         </div>
                     </div>
+                    <p style="color: rgb(190, 190, 190); font-size: 12px; padding: 10px 30px 10px 30px; border-top: 1px solid var(--border); width: 100%; text-align: center;">Copyright © 2025 «PTS-Studio» Все права защищены, включая контент и изображения, защищенные законом об авторском праве.</p>
                 </div>
             </main>
         </div>

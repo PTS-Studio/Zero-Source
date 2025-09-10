@@ -37,8 +37,10 @@ html {
   --footer-bg: #1c1c1c;
   --color: #ffffff;
   --color2: #d7d7d7;
+  --light-theme: url(../images/HeaderMenu/light_theme.svg);
+  --dark-theme: url(../images/HeaderMenu/dark_theme.svg);
   --img-logo: url(../images/HeaderMenu/logotip2.svg);
-  --img-logo2: url(../images/strelka.svg);
+  --img-strelka: url(../images/strelka.svg);
 
   --img-a1: url(../images/Aside/a1w.svg);
   --img-a2: url(../images/Aside/a2w.svg);
@@ -67,8 +69,10 @@ html {
   --footer-bg: #d0d0d0;
   --color: #000000;
   --color2: #545454;
+  --light-theme: url(../images/HeaderMenu/light_theme.svg);
+  --dark-theme: url(../images/HeaderMenu/dark_theme.svg);
   --img-logo: url(../images/HeaderMenu/Group8.svg);
-  --img-logo2: url(../images/strelka2.svg);
+  --img-strelka: url(../images/strelka2.svg);
 
   --img-a1: url(../images/Aside/a1d.svg);
   --img-a2: url(../images/Aside/a2d.svg);
@@ -84,16 +88,9 @@ html {
   --img-github: url(../images/contacts/github_d.svg);
   --img-rutube: url(../images/contacts/rutube_d.svg);
 }
-h1 {
-  color: var(--color);
-}
-p {
-  color: var(--color2);
-}
 body {
   display: flex;
   flex-direction: column;
-
   background-color: var(--body-bg);
   color: var(--color);
   transition: background-color 0.5s, color 0.5s;
@@ -117,6 +114,9 @@ header {
   transition: transform 0.3s ease;
   z-index: 9999999;
 }
+header.hidden {
+  transform: translateY(-100%);
+}
 .header {
   width: 100%;
   justify-content: center;
@@ -124,14 +124,6 @@ header {
   flex-wrap: wrap;
   box-sizing: border-box;
   z-index: 9999999;
-}
-header.hidden {
-  transform: translateY(-100%);
-}
-.content {
-  height: 2000px;
-  padding: 20px;
-  background-color: var(--block-bg);
 }
 .absorbing_block {
   width: 1280px;
@@ -142,12 +134,8 @@ header.hidden {
   justify-content: space-between;
   border-radius: 0 0 10px 10px;
   align-items: center;
-
   background-color: var(--body-bg);
   color: var(--color);
-
-  /* background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png);
-  background-size: 200px 200px; */
 }
 .header_block {
   width: 100%;
@@ -159,35 +147,20 @@ header.hidden {
   box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
   border-radius: 10px;
   align-items: center;
-  background: #161616;
-  border: 1px solid #363636;
   z-index: 9999;
-
   border: 1px solid var(--border);
   background-color: var(--block-bg);
   color: var(--color);
-  /* transition: background-color 0.5s, color 0.5s; */
-  /* background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png);
-  background-size: 200px 200px; */
 }
 .hd_sector {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-#hd_link1 {
-  border-radius: 10px 0 0 10px;
-}
-#hd_link2 {
-  border-left: 1px solid var(--border);
-}
-#hd_link5 {
-  border-radius: 0;
-  border-right: 1px solid var(--border);
-}
 .hd_link {
   height: 100%;
   gap: 10px;
+  padding: 0 20px 0 20px;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
@@ -199,55 +172,83 @@ header.hidden {
 .hd_link:hover {
   background-color: var(--hover-bg);
 }
-.hd_link_content {
-  padding: 0 20px 0 20px;
-  height: 100%;
-  gap: 10px;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#hd_link1 {
+  border-radius: 10px 0 0 10px;
 }
-.logotip-pts {
-  width: 30px;
-  height: 30px;
+#hd_link2 {
+  border-left: 1px solid var(--border);
 }
+#hd_link5 {
+  border-radius: 0;
+  border-right: 1px solid var(--border);
+}
+
+/*
+=============================================================
+  ИЗОБРАЖЕНИЯ
+=============================================================
+*/
 .hh {
   width: 30px;
   height: 30px;
   background: var(--img-logo);
   background-size: contain;
-  background-repeat: no-repeat; /* Важно! */
-  background-position: center;  /* Опционально, но обычно желательно */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hh2 {
   width: 10px;
   height: 10px;
   background: var(--img-logo2);
   background-size: contain;
-  background-repeat: no-repeat; /* Важно! */
-  background-position: center;  /* Опционально, но обычно желательно */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-strelka {
+  width: 10px;
+  height: 10px;
+  background: var(--img-strelka);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(-90deg);
+}
+.img-light-theme {
+  width: 20px;
+  height: 20px;
+  background: var(--light-theme);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-dark-theme {
+  width: 20px;
+  height: 20px;
+  background: var(--dark-theme);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hh3 {
   width: 18px;
   height: 18px;
   background-size: contain;
-  background-repeat: no-repeat; /* Важно! */
-  background-position: center;  /* Опционально, но обычно желательно */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hh4 {
   width: 15px;
   height: 15px;
   background-size: contain;
-  background-repeat: no-repeat; /* Важно! */
-  background-position: center;  /* Опционально, но обычно желательно */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .hh5 {
   width:25px;
   height: 25px;
   background-size: contain;
-  background-repeat: no-repeat; /* Важно! */
-  background-position: center;  /* Опционально, но обычно желательно */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #img-1 {
   background-image: var(--img-a1);
@@ -266,13 +267,13 @@ header.hidden {
 }
 
 #img-b1 {
-    background-image: var(--img-b1)
+  background-image: var(--img-b1)
 }
 #img-b2 {
-    background-image: var(--img-b2)
+  background-image: var(--img-b2)
 }
 #img-b3 {
-    background-image: var(--img-b3)
+  background-image: var(--img-b3)
 }
 
 #img-security {
@@ -291,9 +292,9 @@ header.hidden {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-.text {
+/* .text {
   color: var(--color);
-}
+} */
 @media (max-width: 330px) {
   .text-logo {
     display: none;
@@ -354,12 +355,11 @@ header.hidden {
   width: 100%;
   height: calc(100% - 60px);
   transform: translateY(100%);
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Добавлена opacity в transition */
-  /* display: flex; */
+  transition: transform 0.5s ease, opacity 0.5s ease;
   flex-direction: column;
   z-index: 9;
-  opacity: 0; /* Изначально невидимый */
-  pointer-events: none; /* Запрещаем взаимодействие, когда невидимый */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .menu.open {
@@ -369,7 +369,7 @@ header.hidden {
 }
 
 /* Контент внутри меню */
-.menu-content {
+.menu_bagget {
   margin: 10px;
   padding: 20px;
   flex: 1;
@@ -385,19 +385,19 @@ header.hidden {
   background-color: var(--block-bg);
 }
 
-.mobile_menu_content {
+.menu_content {
   width: 100%;
   height: 100%;
   overflow: auto;
   /* scrollbar-color: black; */
   padding: 0 14px 0 14px;
 }
-.mobile_menu_content_list {
+.menu_content_list {
   width: 100%;
   height: 50px;
   border-bottom: 1px solid #363636;
 }
-.link_mobile {
+.hd_link_mobile {
   width: 100%;
   font-size: 18px;
   display: flex;
@@ -407,8 +407,9 @@ header.hidden {
   padding: 12px 10px;
   color: white;
   line-height: 1.5rem;
+  border-bottom: 1px solid var(--border);
 }
-.link_mobile:hover {
+.hd_link_mobile:hover {
   background-color: var(--hover-bg);
 }
 .strelka {
@@ -426,7 +427,7 @@ header.hidden {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: var(--block-bg);
+  background: #c4c4c4;
   margin-bottom: 20px;
   margin-top: 50px;
   transition: 0.2s;
@@ -495,6 +496,17 @@ header.hidden {
 #lightBtn {
   width: 100%;
   padding: 20px 0;
+  background: var(--block-bg);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+#darkBtn {
+  width: 100%;
+  padding: 20px 0;
   border-radius: 10px 10px 0 0;
   border-top: none;
   border-left: none;
@@ -505,17 +517,6 @@ header.hidden {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-#darkBtn {
-  width: 100%;
-  padding: 20px 0;
-  background: var(--block-bg);
-  border-radius: 0 0 10px 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border: none;
 }
 #lightBtn:hover {
   background: var(--hover-bg);
@@ -543,6 +544,10 @@ header.hidden {
 }
 /*_Изменение шапки на Мобильную версию__*/
 @media (max-width: 850px) {
+  .chsja {
+    margin-top: 11px;
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+  }
   .absorbing_block {
     height: 60px;
     margin: 0 10px 0 10px;
