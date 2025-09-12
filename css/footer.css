@@ -1,6 +1,5 @@
 .footer_block {
     width: 100%;
-    /* width: 1280px; */
     display: flex;
     flex-wrap: wrap;
     background: var(--block-bg);
@@ -45,7 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    flex: 1 1 200px;
+    flex: 1 1 190px;
 }
 @media (max-width: 850px) {
     .footer_block {

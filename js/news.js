@@ -64,7 +64,7 @@ buttons.forEach(button => {
 
         // Отображаем выбранный блок
         const selectedBlock = document.getElementById(blockId);
-        selectedBlock.style.display = 'block';
+        selectedBlock.style.display = 'flex';
         selectedBlock.classList.add('fade-in'); // Добавляем класс анимации
 
         // Определяем отступ в зависимости от ширины экрана

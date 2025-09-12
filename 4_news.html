@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/home/3_experience_works.css">
     <link rel="stylesheet" href="js/home.js">
     <link rel="stylesheet" href="js/news.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Сайт-портфолио</title>
 </head>
 <body>
@@ -29,7 +31,7 @@
                     </a>
                 </div>
 
-                <!-- Ссылки для HEADER -->
+                <!-- Ссылки навигации -->
                 <div class="hd_sector">
                     <a href="1_home.html" class="hd_link" id="hd_link2">
                         <p class="text-bright">Главная</p>
@@ -43,9 +45,11 @@
                     <a href="4_news.html" class="hd_link" id="hd_link5">
                         <p class="text-bright">Новости</p>
                     </a>
-                    <button class="menu-button" id="menuBtn">Меню</button>
+                    <button class="menu-button" id="menuBtn">
+                        <div class="menu-icon"></div>
+                    </button>
 
-                    <!-- Появляющееся меню -->
+                    <!-- Мобильное всплывающее меню -->
                     <div class="menu" id="menu">
                         <div class="menu_bagget">
                             <div class="menu_content">
@@ -73,19 +77,27 @@
                     </div>
 
                     <!-- Кнопка смены цветовой темы -->
-                    <div class="menu-item">
-                        <p class="text-bright">Тема</p>
-                        <div class="dropdown" style="z-index: 999999;">
-                            <div class="chsja" style="border-radius: 10px 10px; border: 1px solid var(--border); display: flex; flex-wrap: wrap;">
-                                <button id="darkBtn">
+                    <div class="menu-theme">
+
+                        <img id="light-theme" src="images/HeaderMenu/light_theme_l.svg">
+                        <img id="dark-theme" src="images/HeaderMenu/dark_theme_d.svg">
+
+                        <div class="dropdown_block">
+                            <div class="list_theme">
+                                <button id="lightBtn">
                                     <div class="img-light-theme"></div>
                                 </button>
-                                <button id="lightBtn">
+                                <button id="darkBtn">
                                     <div class="img-dark-theme"></div>
                                 </button>
+                                <!-- <button id="systemBtn" style="color: var(--color);">
+                                    <div class="img-system-theme"></div>
+                                </button> -->
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
         </div>
@@ -231,7 +243,7 @@
                             </div>
                             <div class="column-right">
                                 <div class="name">
-                                    <p class="h2-1" style="padding-top: 0;">Сайт портфолио</p>
+                                    <h1 class="h2-1" style="padding-top: 0;">Сайт портфолио</h1>
                                 </div>
                                 <div class="description">
                                     <p>В результате работы я создал цифровой Сайт-портфолио, который является интерактивной средой хранения моих проектов и достижений в сфере дизайна и разработки.</p>
@@ -345,26 +357,41 @@
     </div>
 <script src="js/home.js"></script>
 <script src="js/news.js"></script>
-<script>
-  const body = document.body;
+    <script>
+        const body = document.body;
+        const img1 = document.getElementById('light-theme');
+        const img2 = document.getElementById('dark-theme');
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
 
-  // Проверяем наличие сохранённой темы
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    body.classList.add('dark');
-  } else if (savedTheme === 'light') {
-    body.classList.remove('dark');
-  }
+        // Функция для отображения изображения и скрытия другого
+        function showImage(imageToShow, imageToHide) {
+            imageToShow.style.display = 'block';
+            imageToHide.style.display = 'none';
+        }
 
-  // Обработчики для кнопок
-  document.getElementById('lightBtn').addEventListener('click', () => {
-    body.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  });
-  document.getElementById('darkBtn').addEventListener('click', () => {
-    body.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  });
-</script>
+        // Проверяем наличие сохранённой темы
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark');
+            showImage(img2, img1); // Показываем темную тему
+        } else {
+            body.classList.remove('dark');
+            showImage(img1, img2); // Показываем светлую тему
+        }
+
+        // Обработчики для кнопок
+        lightBtn.addEventListener('click', () => {
+            body.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            showImage(img1, img2); // Показываем светлую тему
+        });
+
+        darkBtn.addEventListener('click', () => {
+            body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            showImage(img2, img1); // Показываем темную тему
+        });
+    </script>
 </body>
 </html>

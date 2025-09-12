@@ -1,6 +1,12 @@
+
 const menuBtn = document.getElementById('menuBtn');
 const menu = document.getElementById('menu');
-const mainContent = document.querySelector('main'); // предполагается, что главный контент внутри тега <main>
+const mainContent = document.querySelector('main');
+const menuIcon = menuBtn.querySelector('menu-icon');
+
+menuBtn.addEventListener('click', function() {
+  this.classList.toggle('active');
+});
 
 // Функция для управления прокруткой
 function toggleScroll(shouldDisable) {
@@ -42,6 +48,7 @@ menuBtn.addEventListener('click', () => {
         fadeMainContent(true);
     }
 });
+
 
 /*
 =============================================================
