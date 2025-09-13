@@ -104,33 +104,22 @@ main.hidden {
     display: flex;
     flex-direction: column;
     top: 20px;
-    /* height: 100%; */
-    gap: 20px;
-    /* height: 100%; */
+    margin-top: 80px;
     bottom: 20px;
+    transition: 0.5s;
+    background: var(--block-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
     /* overflow: auto; */
-    /* box-shadow: 0 10px 10px rgb(0, 0, 0, 0.6); */
+}
+.aside_block.scrolled {
+    margin-top: 0;
 }
 .laptop {
     position: relative;
     display: flex;
     width: 250px;
     height: 100%;
-}
-.aside_sector {
-    display: flex;
-    /* flex-wrap: wrap; */
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    padding: 0 0 0 10px;
-    justify-content: space-between;
-    flex-direction: column;
-    border: 1px solid var(--border);
-    background: var(--block-bg);
-    transition: 0.2s;
-    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
-    overflow: auto;
 }
 .bottom {
     height: auto;
@@ -143,16 +132,48 @@ main.hidden {
     height: 60px;
 }
 .aside_sector_contect {
+    width: 100%;
+    height: 60px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20px;
     width: 100%;
     border-bottom: 1px solid var(--border);
     transition: 0.2s;
 }
 .aside_sector_contect:hover {
     background: var(--hover-bg);
+}
+.aside_left {
+    height: 60px;
+    width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--border);
+}
+.aside_right {
+    height: 100%;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.aside_heading {
+    z-index: 50;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex: 1 1 220px; */
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 1px 8px rgb(0, 0, 0, 0.2);
 }
 .colorF {
     color: black;
@@ -206,7 +227,7 @@ main.hidden {
     }
 }
 @media (max-width: 500px) {
-    .aside_sector {
+    .aside_block {
         display: none;
     }
 }

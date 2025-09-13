@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -12,88 +13,80 @@
     <title>Сайт-портфолио</title>
 </head>
 <body>
-    <header> <!--id="header"-->
-        <div class="header">
-            <div class="absorbing_block">
-                <div class="header_block">
-                    <div class="hd_sector">
-                        <div id="hd_link1" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="hh"></div>
-                                <p class="text-logo">PTS-STUDIO</p>
+    <header class="header"> <!--id="header"-->
+        <div class="absorbing_block">
+            <div class="header_block">
+
+                <!-- Ссылка студии -->
+                <div class="hd_sector">
+                    <a href="2_works.html" class="hd_link" id="hd_link1">
+                        <div class="hh"></div>
+                        <p class="text-logo">PTS-STUDIO</p>
+                    </a>
+                </div>
+
+                <!-- Ссылки навигации -->
+                <div class="hd_sector">
+                    <a href="1_home.html" class="hd_link" id="hd_link2">
+                        <p class="text-bright">Главная</p>
+                    </a>
+                    <a href="2_works.html"class="hd_link" id="hd_link3">
+                        <p class="text-bright">Портфолио</p>
+                    </a>
+                    <a href="3_contacts.html" class="hd_link" id="hd_link4">
+                        <p class="text-bright">Контакты</p>
+                    </a>
+                    <a href="4_news.html" class="hd_link" id="hd_link5">
+                        <p class="text-bright">Новости</p>
+                    </a>
+                    <button class="menu-button" id="menuBtn">
+                        <div class="menu-icon"></div>
+                    </button>
+
+                    <!-- Мобильное всплывающее меню -->
+                    <div class="menu" id="menu">
+                        <div class="menu_bagget">
+                            <div class="menu_content">
+                                <a href="1_home.html" class="hd_link_mobile">
+                                    <p class="text-bright">Главная</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="2_works.html" class="hd_link_mobile">
+                                    <p class="text-bright">Портфолио</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="3_contacts.html" class="hd_link_mobile">
+                                    <p class="text-bright">Контакты</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="4_news.html" class="hd_link_mobile">
+                                    <p class="text-bright">Новости</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <div class="button10">
+                                    <p>информация о сайте</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="hd_sector">
-                        <a href="1_home.html" id="hd_link2" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="dropdown_section">
-                                    <li class="text">Главная</li>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="2_works.html" id="hd_link3" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="dropdown_section">
-                                    <li class="text">Портфолио</li>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="3_contacts.html" id="hd_link4" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="dropdown_section">
-                                    <li class="text">Контакты</li>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="4_news.html" id="hd_link5" class="hd_link">
-                            <div class="hd_link_content">
-                                <div class="dropdown_section">
-                                    <li class="text">Новости</li>
-                                </div>
-                            </div>
-                        </a>
-                        <button class="menu-button" id="menuBtn">Меню</button>
-                        <div class="menu" id="menu">
-                            <div class="menu-content">
-                                <div class="mobile_menu_content">
-                                    <li class="mobile_menu_content_list">
-                                        <a href="1_home.html" class="link_mobile">
-                                            <p class="text">Главная</p>
-                                            <img src="images/strelka.svg" alt="" class="strelka">
-                                        </a>
-                                    </li>
-                                    <li class="mobile_menu_content_list">
-                                        <a href="2_works.html" class="link_mobile">
-                                            <p class="text">Портфолио</p>
-                                            <img src="images/strelka.svg" alt="" class="strelka">
-                                        </a>
-                                    </li>
-                                    <li class="mobile_menu_content_list">
-                                        <a href="3_contacts.html" class="link_mobile">
-                                            <p class="text">Контакты</p>
-                                            <img src="images/strelka.svg" alt="" class="strelka">
-                                        </a>
-                                    </li>
-                                    <li class="mobile_menu_content_list">
-                                        <a href="4_news.html" class="link_mobile">
-                                            <p class="text">Новости</p>
-                                            <img src="images/strelka.svg" alt="" class="strelka">
-                                        </a>
-                                    </li>
-                                    <div class="button10">
-                                        <p>информация о сайте</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-item">
-                            <p class="text">Тема</p>
-                            <div class="dropdown" style="z-index: 999999;">
-                                <div class="chsja" style="border-radius: 10px 10px; border: 1px solid var(--border); display: flex; flex-wrap: wrap;">
-                                    <button id="lightBtn" style="color: var(--color);">Т</button>
-                                    <button id="darkBtn" style="color: var(--color);">С</button>
-                                </div>
+
+                    <!-- Кнопка смены цветовой темы -->
+                    <div class="menu-theme">
+
+                        <img id="light-theme" src="images/HeaderMenu/light_theme_l.svg">
+                        <img id="dark-theme" src="images/HeaderMenu/dark_theme_d.svg">
+
+                        <div class="dropdown_block">
+                            <div class="list_theme">
+                                <button id="lightBtn">
+                                    <div class="img-light-theme"></div>
+                                </button>
+                                <button id="darkBtn">
+                                    <div class="img-dark-theme"></div>
+                                </button>
+                                <button id="systemBtn" style="color: var(--color);">
+                                    <div class="img-system-theme"></div>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -227,26 +220,41 @@
     </div>
 <script src="js/home.js"></script>
 <script src="js/search_panel.js"></script> 
-<script>
-  const body = document.body;
+    <script>
+        const body = document.body;
+        const img1 = document.getElementById('light-theme');
+        const img2 = document.getElementById('dark-theme');
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
 
-  // Проверяем наличие сохранённой темы
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    body.classList.add('dark');
-  } else if (savedTheme === 'light') {
-    body.classList.remove('dark');
-  }
+        // Функция для отображения изображения и скрытия другого
+        function showImage(imageToShow, imageToHide) {
+            imageToShow.style.display = 'block';
+            imageToHide.style.display = 'none';
+        }
 
-  // Обработчики для кнопок
-  document.getElementById('lightBtn').addEventListener('click', () => {
-    body.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  });
-  document.getElementById('darkBtn').addEventListener('click', () => {
-    body.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  });
-</script>
+        // Проверяем наличие сохранённой темы
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark');
+            showImage(img2, img1); // Показываем темную тему
+        } else {
+            body.classList.remove('dark');
+            showImage(img1, img2); // Показываем светлую тему
+        }
+
+        // Обработчики для кнопок
+        lightBtn.addEventListener('click', () => {
+            body.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            showImage(img1, img2); // Показываем светлую тему
+        });
+
+        darkBtn.addEventListener('click', () => {
+            body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            showImage(img2, img1); // Показываем темную тему
+        });
+    </script>
 </body>
 </html>

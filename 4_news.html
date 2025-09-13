@@ -19,7 +19,7 @@
     <title>Сайт-портфолио</title>
 </head>
 <body>
-    <header class="header"> <!--id="header"-->
+    <header class="header" id="header"> <!--id="header"-->
         <div class="absorbing_block">
             <div class="header_block">
 
@@ -78,10 +78,8 @@
 
                     <!-- Кнопка смены цветовой темы -->
                     <div class="menu-theme">
-
                         <img id="light-theme" src="images/HeaderMenu/light_theme_l.svg">
                         <img id="dark-theme" src="images/HeaderMenu/dark_theme_d.svg">
-
                         <div class="dropdown_block">
                             <div class="list_theme">
                                 <button id="lightBtn">
@@ -90,14 +88,9 @@
                                 <button id="darkBtn">
                                     <div class="img-dark-theme"></div>
                                 </button>
-                                <!-- <button id="systemBtn" style="color: var(--color);">
-                                    <div class="img-system-theme"></div>
-                                </button> -->
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>
@@ -106,38 +99,79 @@
         <div class="aside_main">
             <aside>
                 <div class="aside_block">
-                    <img src="images/Aside/h7.svg" alt="" style="width: 18px; height: 18px; position: absolute;">
-                    <a href="#about_web" class="aside_sector_contect2">О сайте</a>
-                    <div class="aside_sector">
-                        <div class="top" style="width: 100%; height: auto;">
-                            <div class="aside_sector_contect" id="mrt">
-                                <div class="hh3" id="img-1"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Статистика</a>
-                            </div>
-                            <div class="aside_sector_contect">
-                                <div class="hh3" id="img-2"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Отчеты</a>
-                            </div>
-                            <div class="aside_sector_contect">
-                                <div class="hh3" id="img-3"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Настройки</a>
-                            </div>
-                            <div class="aside_sector_contect">
-                                <div class="hh3" id="img-4"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Справка</a>
-                            </div>
-                            <div class="aside_sector_contect">
-                                <div class="hh3" id="img-5"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Оставить отзыв</a>
-                            </div>
-                        </div>
-                        <div class="bottom" style="width: 100%;">
-                            <div class="aside_sector_contect" style="border-bottom: none; border-radius: 0 0 10px 10px; border-top: 1px solid var(--border)">
-                                <p href="" style="cursor: default; font-size: 13px;">© 2025 Путилин Андрей. Все права защищены.</p>
-                            </div>
-                        </div>
+                        <!-- <div class="aside_links" style="display: flex; flex-wrap: wrap; flex: 1 1 100px;"> -->
+                            
+                            <!-- <div class="fack_off" style="width: 60px; height: 100%; box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2); border-right: 1px solid var(--border); z-index: 999;"> -->
+                    <div class="aside_heading" style="width: 100%; height: 80px;">
+                        <div class="avatarka2" style="width: 40px; height: 40px; border-radius: 50px; background: rgb(146, 146, 146);"></div>
+                        <p style="width: 150px; height: 80px;">Путилин Андрей Андреевич</p>
                     </div>
+                    <a href="" class="aside_sector_contect" id="mrt">
+                        <div class="aside_left">
+                            <div class="hh3" id="img-1"></div>
+                        </div>
+                        <div class="aside_right">
+                            <p>Статистика</p>
+                        </div>
+                    </a>
+                    <a href="" class="aside_sector_contect" id="a-link1">
+                        <div class="aside_left">
+                            <div class="hh3" id="img-2"></div>
+                        </div>
+                        <div class="aside_right">
+                            <p href="">Отчеты</p>
+                        </div>
+                    </a>
+                    <a href="" class="aside_sector_contect" id="a-link2">
+                        <div class="aside_left">
+                            <div class="hh3" id="img-3"></div>
+                        </div>
+                        <div class="aside_right">
+                            <p href="">Настройки</p>
+                        </div>
+                    </a>
+                    <a href="" class="aside_sector_contect" id="a-link3">
+                        <div class="aside_left">
+                            <div class="hh3" id="img-4"></div>
+                        </div>
+                        <div class="aside_right">
+                            <p href="">Справка</p>
+                        </div>
+                    </a>
+                    <a href="" class="aside_sector_contect" id="a-link4">
+                        <div class="aside_left">
+                            <div class="hh3" id="img-5"></div>
+                        </div>
+                        <div class="aside_right">
+                            <p href="">Оставить отзыв</p>
+                        </div>
+                    </a>
                 </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                    const asideBlock = document.querySelector('.aside_block');
+                    let lastScrollTop = 0;
+                    const scrollThreshold = 5;
+
+                    window.addEventListener('scroll', function() {
+                        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                        if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) {
+                        return;
+                        }
+
+                        if (scrollTop > lastScrollTop) {
+                        // Вниз
+                        asideBlock.classList.add('scrolled');
+                        } else {
+                        // Вверх
+                        asideBlock.classList.remove('scrolled');
+                        }
+                        lastScrollTop = scrollTop;
+                    });
+                    });
+
+                </script>
             </aside>
             <main>
                 <div class="news_paper_block">

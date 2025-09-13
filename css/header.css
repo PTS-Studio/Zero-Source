@@ -1,12 +1,3 @@
-/*
-=============================================================
-    header.css --> home.html --> home.js
-    header.css <-> home.js
-=============================================================
-    Автор: Путилин А.
-    ДатаР: 13.04.2025
-=============================================================
-*/
 * {
   margin: 0;
   padding: 0;
@@ -192,27 +183,43 @@ header.hidden {
   border-radius: 0;
   border-right: 1px solid var(--border);
 }
-
-
-
+#menuBtn {
+  background: none;
+}
+.menu-button {
+  display: none;
+  background: none;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: none;
+  border-top: none;
+  color: var(--color);
+  padding: 0 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.menu-button:hover {
+  background-color: var(--hover-bg);
+}
 .menu-icon {
   width: 30px;
   height: 30px;
+  background: none;
   background: var(--menu-passive);
+  transition: 0.5s;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .menu-button.active .menu-icon {
-  width: 30px; /*  Задайте желаемую ширину */
-  height: 30px; /* Задайте желаемую высоту */
+  width: 30px;
+  height: 30px;
   background: var(--menu-active);
-  background-size: cover; /*  Обеспечивает масштабирование иконки для заполнения div */
+  transition: 0.5s;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-
 .theme-button {
   background: none;
   border: none;
@@ -222,7 +229,6 @@ header.hidden {
   transition: color 0.3s;
   color: var(--text-color); /* Цвет текста кнопки */
 }
-
 /* Выпадающий список */
 .theme-dropdown {
   position: absolute;
@@ -241,24 +247,20 @@ header.hidden {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
-
 .theme-dropdown.active {
   display: block;
   opacity: 1;
   transform: translateY(0);
 }
-
 .theme-dropdown li {
   padding: 8px 15px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
   color: var(--text-color); /* Цвет текста в списке */
 }
-
 .theme-dropdown li:hover {
   background-color: #eee;
 }
-
 /* Иконки */
 .fas, .fa {
   margin-right: 5px;
@@ -312,6 +314,7 @@ header.hidden {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transition: 0.2s;
 }
 .img-dark-theme {
   width: 18px;
@@ -320,6 +323,7 @@ header.hidden {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transition: 0.2s;
 }
 .img-system-theme {
   width: 18px;
@@ -328,6 +332,7 @@ header.hidden {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transition: 0.2s;
 }
 .hh3 {
   width: 18px;
@@ -365,7 +370,6 @@ header.hidden {
 #img-5 {
   background-image: var(--img-a5);
 }
-
 #img-b1 {
   background-image: var(--img-b1)
 }
@@ -375,7 +379,6 @@ header.hidden {
 #img-b3 {
   background-image: var(--img-b3)
 }
-
 #img-security {
   background-image: var(--img-security);
 }
@@ -392,9 +395,6 @@ header.hidden {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-/* .text {
-  color: var(--color);
-} */
 @media (max-width: 330px) {
   .text-logo {
     display: none;
@@ -430,23 +430,6 @@ header.hidden {
   justify-content: space-between;
   z-index: 99999;
 }
-.menu-button {
-  display: none;
-  background: none;
-  border-left: 1px solid var(--border);
-  border-right: 1px solid var(--border);
-  border-bottom: none;
-  border-top: none;
-  color: var(--color);
-  padding: 0 20px;
-  font-size: 1em;
-  cursor: pointer;
-}
-
-.menu-button:hover {
-  background-color: var(--hover-bg);
-}
-
 .menu {
   display: none;
   position: fixed;
@@ -461,13 +444,11 @@ header.hidden {
   opacity: 0;
   pointer-events: none;
 }
-
 .menu.open {
   transform: translateY(0);
-  opacity: 1; /* Делаем видимым */
-  pointer-events: auto; /* Разрешаем взаимодействие */
+  opacity: 1;
+  pointer-events: auto;
 }
-
 /* Контент внутри меню */
 .menu_bagget {
   margin: 10px;
@@ -484,12 +465,10 @@ header.hidden {
   border: 1px solid var(--border);
   background-color: var(--block-bg);
 }
-
 .menu_content {
   width: 100%;
   height: 100%;
   overflow: auto;
-  /* scrollbar-color: black; */
   padding: 0 14px 0 14px;
 }
 .menu_content_list {
@@ -542,14 +521,13 @@ header.hidden {
   justify-content: center;
   align-items: center;
   position: relative;
-  color: #fff;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
+  background: none;
 }
 .menu-theme:hover {
   background-color: var(--hover-bg);
 }
-
 /* Самое выпадающее меню, скрытое по умолчанию */
 .dropdown_block {
   position: absolute;
@@ -559,7 +537,6 @@ header.hidden {
   width: 60px;
   z-index: 999999;
 }
-
 /* Показать при наведении на родительский пункт */
 .menu-theme:hover .dropdown_block {
   display: block;
@@ -613,7 +590,6 @@ header.hidden {
   padding: 20px 0;
   border-radius: 0 0 10px 10px;
   border: 0;
-  /* border-bottom: 1px solid var(--border); */
   background: var(--block-bg);
   display: flex;
   flex-wrap: wrap;
@@ -651,7 +627,6 @@ header.hidden {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
-
 @media (max-width: 950px) {
   .modal-content {
     width: 100%;
