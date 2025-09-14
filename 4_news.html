@@ -19,7 +19,8 @@
     <title>Сайт-портфолио</title>
 </head>
 <body>
-    <header class="header" id="header"> <!--id="header"-->
+    <!-- Шапка HEADER-->
+    <header class="header" id="header">
         <div class="absorbing_block">
             <div class="header_block">
 
@@ -95,102 +96,100 @@
             </div>
         </div>
     </header>
+    <!-- Боковая панель + Основной контент -->
     <div class="center_block">
         <div class="aside_main">
             <aside>
                 <div class="aside_block">
-                        <!-- <div class="aside_links" style="display: flex; flex-wrap: wrap; flex: 1 1 100px;"> -->
-                            
-                            <!-- <div class="fack_off" style="width: 60px; height: 100%; box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2); border-right: 1px solid var(--border); z-index: 999;"> -->
-                    <div class="aside_heading" style="width: 100%; height: 80px;">
-                        <div class="avatarka2" style="width: 40px; height: 40px; border-radius: 50px; background: rgb(146, 146, 146);"></div>
-                        <p style="width: 150px; height: 80px;">Путилин Андрей Андреевич</p>
+
+                    <!-- Обложка боковой панели -->
+                    <div class="aside_heading">
+                        <img src="images/Aside/volna2.svg" alt="Фон" class="volna">
+                        <div class="avatarka"></div>
+                        <div class="link_about">
+                            <div class="a_fio_sector">
+                                <p>Путилин Андрей</p>
+                            </div>
+                            <div class="a_more_sector">
+                                <div class="img-strelka2"></div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="" class="aside_sector_contect" id="mrt">
-                        <div class="aside_left">
-                            <div class="hh3" id="img-1"></div>
+
+                    <!-- Ссылки боковой панели -->
+                    <div class="aside_links">
+                        <div class="height_fix">
+                            <a href="" class="aside_sector_contect" id="a-link1">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-1"></div>
+                                </div>
+                                <div class="aside_right">
+                                    <p>Статистика</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link2">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-2"></div>
+                                </div>
+                                <div class="aside_right">
+                                    <p href="">Отчеты</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link3">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-3"></div>
+                                </div>
+                                <div class="aside_right">
+                                    <p href="">Настройки</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link4">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-4"></div>
+                                </div>
+                                <div class="aside_right">
+                                    <p href="">Справка</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link5">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-5"></div>
+                                </div>
+                                <div class="aside_right">
+                                    <p href="">Оставить отзыв</p>
+                                </div>
+                            </a>
                         </div>
-                        <div class="aside_right">
-                            <p>Статистика</p>
-                        </div>
-                    </a>
-                    <a href="" class="aside_sector_contect" id="a-link1">
-                        <div class="aside_left">
-                            <div class="hh3" id="img-2"></div>
-                        </div>
-                        <div class="aside_right">
-                            <p href="">Отчеты</p>
-                        </div>
-                    </a>
-                    <a href="" class="aside_sector_contect" id="a-link2">
-                        <div class="aside_left">
-                            <div class="hh3" id="img-3"></div>
-                        </div>
-                        <div class="aside_right">
-                            <p href="">Настройки</p>
-                        </div>
-                    </a>
-                    <a href="" class="aside_sector_contect" id="a-link3">
-                        <div class="aside_left">
-                            <div class="hh3" id="img-4"></div>
-                        </div>
-                        <div class="aside_right">
-                            <p href="">Справка</p>
-                        </div>
-                    </a>
-                    <a href="" class="aside_sector_contect" id="a-link4">
-                        <div class="aside_left">
-                            <div class="hh3" id="img-5"></div>
-                        </div>
-                        <div class="aside_right">
-                            <p href="">Оставить отзыв</p>
-                        </div>
-                    </a>
+                    </div>
+
+                    <!-- Copyright © 2025 -->
+                    <div class="aside_end">
+                        <p class="text-aside-end">© 2025 Все права защищены.</p>
+                    </div>
                 </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                    const asideBlock = document.querySelector('.aside_block');
-                    let lastScrollTop = 0;
-                    const scrollThreshold = 5;
-
-                    window.addEventListener('scroll', function() {
-                        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                        if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) {
-                        return;
-                        }
-
-                        if (scrollTop > lastScrollTop) {
-                        // Вниз
-                        asideBlock.classList.add('scrolled');
-                        } else {
-                        // Вверх
-                        asideBlock.classList.remove('scrolled');
-                        }
-                        lastScrollTop = scrollTop;
-                    });
-                    });
-
-                </script>
             </aside>
             <main>
+                
+                <!-- Блок категорий новостей -->
                 <div class="news_paper_block">
                     <button class="np_category" data-block="np_page1">
-                        <h1 class="h2-1" style="padding-top: 0;">Обновления сайта</h1>
+                        <h1 class="h2-3">Обновления сайта</h1>
                         <p class="text-top10">В данном разделе представлена актуальная информация о ключевых нововведениях и улучшениях, внедренных на сайте</p>
                     </button>
                     <button class="np_category" data-block="np_page2">
-                        <h1 class="h2-1" style="padding-top: 0;">Релизы</h1>
+                        <h1 class="h2-3">Релизы</h1>
                         <p class="text-top10">Здесь публикуются анонсы о выпуске новых продуктов, версий программного обеспечения или других значимых релизов</p>
                     </button>
                     <button class="np_category" data-block="np_page3">
-                        <h1 class="h2-1" style="padding-top: 0;">Итоги года</h1>
+                        <h1 class="h2-3">Итоги года</h1>
                         <p class="text-top10">В этом разделе подводятся итоги деятельности за прошедший год, включая проекты, достижения, и обновления</p>
                     </button>
+
+                    <!-- Новости обновлений сайта -->
                     <div class="news_page_block" id="np_page1">
                         <div class="website_updates_block">
                             <div class="ew_heading_block">
-                                <h1>Версия 25П2 - Локальная</h1>
+                                <h1 class="h2-3">Версия 25П2 - Локальная</h1>
                             </div>
                             <div class="toggler">
                                 <input type="checkbox" id="toggler__checkbox-id-1-1" class="toggler__checkbox">
@@ -210,7 +209,6 @@
                                 </label>
                                 <span class="toggler__content-box">
                                     <p>Запуск и новые возможности:</p>
-                                    <!-- <p>Сайт доступен только в локальном формате, то есть у создателя онлайн ресурса. В процессе разработки был спроектирован уникальный дизайн </p> -->
                                     <div class="oooppp" style="display: flex; flex-wrap: wrap;">
                                         <div class="column_block">
                                             <ul class="list-style2">
@@ -247,7 +245,6 @@
                                 </label>
                                 <span class="toggler__content-box">
                                     <p style="width: 100%; border: 1px solid var(--border); margin-bottom: 10px; padding: 0 10px; background: rgb(137, 228, 175);">Запуск и новые возможности:</p>
-                                    <!-- <p>Сайт доступен только в локальном формате, то есть у создателя онлайн ресурса. В процессе разработки был спроектирован уникальный дизайн </p> -->
                                     <div class="oooppp" style="display: flex; flex-wrap: wrap;">
                                         <div class="column_block">
                                             <ul class="list-style2">
@@ -268,8 +265,10 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Новости релизов -->
                     <div class="news_page_block" id="np_page2">
-                        <a href="1_home.html" class="card">
+                        <a href="1_home.html" class="relize_card">
                             <div class="column-left">
                                 <div class="years">
                                     <p class="date">31 Августа 2025</p>
@@ -300,6 +299,7 @@
                         </a>
                     </div>
                     
+                    <!-- Новости итогов года -->
                     <div class="news_page_block" id="np_page3">
                         <div class="question_block2">
                             <div class="toggler" style="border: 1px solid var(--border); box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2); border-radius: 10px;">
@@ -346,8 +346,8 @@
                     </div>
                 </div>
                 <div class="footer_block">
-                    <div class="f_top_block" style="border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0 30px;">
-                        <div class="hd_link_content" style="padding-left: 0;">
+                    <div class="f_top_block">
+                        <div class="hd_link" style="border-right: none;">
                             <div class="hh"></div>
                             <p class="text-logo">PTS-STUDIO</p>
                         </div>

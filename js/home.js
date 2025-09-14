@@ -49,6 +49,34 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
+/*
+=============================================================
+    АНИМАЦИЯ ЗАПОЛНЕНИЯ ASIDE
+=============================================================
+*/
+
+document.addEventListener('DOMContentLoaded', function() {
+const asideBlock = document.querySelector('.aside_block');
+let lastScrollTop = 0;
+const scrollThreshold = 1;
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) {
+    return;
+    }
+
+    if (scrollTop > lastScrollTop) {
+    // Вниз
+    asideBlock.classList.add('scrolled');
+    } else {
+    // Вверх
+    asideBlock.classList.remove('scrolled');
+    }
+    lastScrollTop = scrollTop;
+});
+});
 
 /*
 =============================================================
