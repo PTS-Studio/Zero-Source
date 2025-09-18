@@ -97,8 +97,140 @@
         </div>
     </header>
     <!-- Боковая панель + Основной контент -->
-    <div class="center_block">
+     
+        <div class="center_block">
+            <button class="mobile_panel">
+                <div class="img-sidebar"></div>
+            </button>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const mobilePanel = document.querySelector('.mobile_panel');
+                    const asideBlock = document.querySelector('.aside_block');
+                    let prevScrollPos = window.pageYOffset;
+                    let isPanelActive = false; // Состояние панели: false - управление скроллом, true - фиксированное
+
+                    function handleScroll() {
+                        if (isPanelActive) {
+                            return; // Если панель активна, не меняем её положение при скролле
+                        }
+
+                        const currentScrollPos = window.pageYOffset;
+
+                        if (prevScrollPos > currentScrollPos) {
+                            // Скроллим вверх
+                            mobilePanel.style.transition = 'left 0.3s ease-in-out';
+                            mobilePanel.style.left = '0'; 
+                        } else {
+                            // Скроллим вниз
+                            mobilePanel.style.transition = 'left 0.3s ease-in-out';
+                            mobilePanel.style.left = '-80px'; 
+                        }
+
+                        prevScrollPos = currentScrollPos;
+                    }
+
+                    window.addEventListener('scroll', handleScroll);
+
+                    mobilePanel.addEventListener('click', function() {
+                        isPanelActive = !isPanelActive; // Переключаем состояние панели
+
+                        if (isPanelActive) {
+                            // Активируем панель
+                            mobilePanel.style.transition = 'none'; // Отключаем transition, чтобы не мешал
+                            mobilePanel.style.left = '0'; // Фиксируем положение
+                            asideBlock.style.left = '0';
+                            window.removeEventListener('scroll', handleScroll); // Отключаем обработчик скролла
+                        } else {
+                            // Деактивируем панель
+                            asideBlock.style.left = '-250px';
+                            window.addEventListener('scroll', handleScroll); // Включаем обработчик скролла
+                            // Обновляем позицию сразу после переключения режима
+                            prevScrollPos = window.pageYOffset; // Обновляем позицию скролла
+                            handleScroll(); // Вызываем handleScroll чтобы сразу установить корректное положение
+                        }
+                    });
+                    function updateScreenState() {
+                        isSmallScreen = window.innerWidth <= 950;
+
+                        if (!isSmallScreen) {
+                            // Если экран стал больше 950px, сбрасываем состояние
+                            isPanelActive = false;
+                            asideBlock.style.left = ''; // Удаляем inline-стиль
+                            window.removeEventListener('scroll', handleScroll); //отключаем handleScroll
+                            mobilePanel.style.left = ''; // удаляю inline style "left: -80px"
+                            mobilePanel.removeEventListener('click', handleMobilePanelClick); //отключаем handleMobilePanelClick
+                            // Сбросить стили, если они были установлены
+                        mobilePanel.style.transition = '';
+
+                        } else {
+                            // Если экран меньше или равен 950px, устанавливаем eventListener'ы
+                                mobilePanel.addEventListener('click', handleMobilePanelClick); //отключаем handleMobilePanelClick
+                                window.addEventListener('scroll', handleScroll);// отключаем handleScroll
+
+                            // Если экран снова стал меньше 950px, переинициализируем
+                            if (!isPanelActive) { // чтобы не менять видимость, если панель уже открыта
+                                asideBlock.style.left = '-250px';
+                            }
+                        mobilePanel.style.left = '0'; // чтобы mobilePanel показывалась после ресайза
+                            // Запускаем handleScroll в первый раз
+                                prevScrollPos = window.pageYOffset;
+                                handleScroll();
+                        }
+                    }
+                      // Добавляем слушатель события изменения размера окна
+                    window.addEventListener('resize', function() {
+                        // Проверяем ширину экрана
+                        if (window.innerWidth <= 950) {
+                        //console.log('Ширина экрана менее или равна 950px');
+                        }
+                        else {
+                            console.log('Ширина экрана больше 950px, код мобильной панели делать не нужно.');
+                        }
+                    });
+                    if (window.innerWidth <= 950) {
+                        mobilePanel.addEventListener('click', handleMobilePanelClick);
+                        window.addEventListener('scroll', handleScroll);
+                        prevScrollPos = window.pageYOffset;
+                        handleScroll();
+                        asideBlock.style.left = '-250px';
+                    }
+
+                    window.addEventListener('resize', updateScreenState);
+                    checkScreenWidth(); // Вызываем при загрузке
+                });
+
+
+            // let prevScrollPos = window.pageYOffset;
+
+            // function handleScroll() {
+            // const mobilePanel = document.querySelector('.mobile_panel');
+
+            // if (!mobilePanel) {
+            //     return; // Если панели нет, выходим
+            // }
+
+            // const currentScrollPos = window.pageYOffset;
+
+            // if (prevScrollPos > currentScrollPos) {
+            //     // Скроллим вверх
+            //     mobilePanel.style.transition = 'left 0.3s ease-in-out';
+            //     mobilePanel.style.left = '0'; // Возвращаем в стандартное положение
+            // } else {
+            //     // Скроллим вниз
+            //     mobilePanel.style.transition = 'left 0.3s ease-in-out';
+            //     mobilePanel.style.left = '-80px'; // Скрываем
+            // }
+
+            // prevScrollPos = currentScrollPos;
+            // }
+
+            // window.addEventListener('scroll', handleScroll);
+
+        </script>
+        <!-- <div class="diming_unit_block" style="background: black; opacity: 0.7; width: 100%; height: 100%; position: fixed; top: 0; left: 0; box-shadow: inset 0 11px 8px -10px rgb(0, 0, 0, 0.2), inset 0 -11px 8px -10px rgb(0, 0, 0, 0.2);"></div> -->
+
         <div class="aside_main">
+
             <aside>
                 <div class="aside_block">
 
@@ -123,7 +255,7 @@
                                 <div class="aside_left">
                                     <div class="hh3" id="img-1"></div>
                                 </div>
-                                <div class="aside_right">
+                                <div class="aside_right" id="none-850">
                                     <p>Статистика</p>
                                 </div>
                             </a>
@@ -131,7 +263,7 @@
                                 <div class="aside_left">
                                     <div class="hh3" id="img-2"></div>
                                 </div>
-                                <div class="aside_right">
+                                <div class="aside_right" id="none-850">
                                     <p href="">Отчеты</p>
                                 </div>
                             </a>
@@ -139,7 +271,7 @@
                                 <div class="aside_left">
                                     <div class="hh3" id="img-3"></div>
                                 </div>
-                                <div class="aside_right">
+                                <div class="aside_right" id="none-850">
                                     <p href="">Настройки</p>
                                 </div>
                             </a>
@@ -147,7 +279,7 @@
                                 <div class="aside_left">
                                     <div class="hh3" id="img-4"></div>
                                 </div>
-                                <div class="aside_right">
+                                <div class="aside_right" id="none-850">
                                     <p href="">Справка</p>
                                 </div>
                             </a>
@@ -155,7 +287,7 @@
                                 <div class="aside_left">
                                     <div class="hh3" id="img-5"></div>
                                 </div>
-                                <div class="aside_right">
+                                <div class="aside_right" id="none-850">
                                     <p href="">Оставить отзыв</p>
                                 </div>
                             </a>
@@ -347,7 +479,7 @@
                 </div>
                 <div class="footer_block">
                     <div class="f_top_block">
-                        <div class="hd_link" style="border-right: none;">
+                        <div class="hd_link" style="border-right: 1px solid var(--border); padding: 0 30px; border-radius: 10px 0 0 0;">
                             <div class="hh"></div>
                             <p class="text-logo">PTS-STUDIO</p>
                         </div>
@@ -384,7 +516,7 @@
                             <a href="#" class="f-link">Оставить отзыв</a>
                         </div>
                     </div>
-                    <p style="color: rgb(190, 190, 190); font-size: 12px; padding: 10px 30px 10px 30px; border-top: 1px solid var(--border); width: 100%; text-align: center;">Copyright © 2025 «PTS-Studio» Все права защищены, включая контент и изображения, защищенные законом об авторском праве.</p>
+                    <p style="color: rgb(190, 190, 190); font-size: 12px; padding: 10px 30px 10px 30px; border-top: 1px solid var(--border); width: 100%; text-align: center;">Copyright © 2025 «PTS-Studio» Все права защищены, включая контент и изображения, которые защищены законом об авторском праве. Любое копирование и использование каких-либо материалов на этом сайте без согласия автора является незаконным.</p>
                 </div>
             </main>
         </div>

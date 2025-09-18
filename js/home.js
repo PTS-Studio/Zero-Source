@@ -2,6 +2,9 @@
 const menuBtn = document.getElementById('menuBtn');
 const menu = document.getElementById('menu');
 const mainContent = document.querySelector('main');
+const asideContent = document.querySelector('aside')
+
+
 const menuIcon = menuBtn.querySelector('menu-icon');
 
 menuBtn.addEventListener('click', function() {
@@ -28,13 +31,21 @@ function toggleScroll(shouldDisable) {
 // Функция для плавного скрытия/показа основного контента
 function fadeMainContent(show) {
     if (show) {
-        mainContent.style.transition = 'opacity 0.5s ease';
-        mainContent.style.opacity = '1';
-        mainContent.style.pointerEvents = 'auto';
+
+      asideContent.style.transition = '0.6s';
+      asideContent.style.left = '0';
+
+      mainContent.style.transition = 'opacity 0.5s ease';
+      mainContent.style.opacity = '1';
+      mainContent.style.pointerEvents = 'auto';
     } else {
-        mainContent.style.transition = 'opacity 0.5s ease';
-        mainContent.style.opacity = '0';
-        mainContent.style.pointerEvents = 'none';
+
+      asideContent.style.transition = '0.6s';
+      asideContent.style.left = '-260px';
+
+      mainContent.style.transition = 'opacity 0.5s ease';
+      mainContent.style.opacity = '0';
+      mainContent.style.pointerEvents = 'none';
     }
 }
 // Переключение меню и управление скроллом/анимацией

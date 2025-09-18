@@ -84,11 +84,10 @@
 .relize_card {
     padding: 20px 30px;
     display: flex;
-    flex-wrap: nowrap;
     width: 100%;
     gap: 20px;
     transition: 0.2s;
-    z-index: 1;
+    /* z-index: 1; */
     border-radius: 10px;
     border: 1px solid var(--border);
     background: var(--block-bg);

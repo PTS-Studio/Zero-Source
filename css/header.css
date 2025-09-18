@@ -38,6 +38,8 @@ html {
   --img-logo: url(../images/HeaderMenu/Group8.svg);
   --img-strelka: url(../images/strelka2.svg);
 
+  --sidebar-ico: url(../images/Aside/sidebar_w.svg);
+
   --img-a1: url(../images/Aside/a1d.svg);
   --img-a2: url(../images/Aside/a2d.svg);
   --img-a3: url(../images/Aside/a3d.svg);
@@ -74,6 +76,8 @@ html {
   --system-theme: url(../images/HeaderMenu/system_theme_d.svg);
   --img-logo: url(../images/HeaderMenu/logotip2.svg);
   --img-strelka: url(../images/strelka.svg);
+
+  --sidebar-ico: url(../images/Aside/sidebar_d.svg);
 
   --img-a1: url(../images/Aside/a1w.svg);
   --img-a2: url(../images/Aside/a2w.svg);
@@ -289,11 +293,20 @@ header.hidden {
 .img-strelka {
   width: 10px;
   height: 10px;
-  background: var(--img-strelka);
+  /* background: var(--img-strelka); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   transform: rotate(-90deg);
+}
+.img-sidebar {
+  width: 20px;
+  height: 20px;
+  background: var(--sidebar-ico);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* transform: rotate(90deg); */
 }
 .img-strelka2 {
   width: 10px;
