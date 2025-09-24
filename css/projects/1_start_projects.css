@@ -1,0 +1,335 @@
+.search-panel {
+    width: 100%;
+}
+
+.search-form {
+    width: 100%;
+    height: 60px;
+    background: var(--block-bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    /* gap: 15px; */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.search-input {
+    flex: 2;
+    height: 60px;
+    min-width: 250px;
+    padding: 12px 20px;
+    border: 0;
+    /* border: 1px solid #e1e5e9; */
+    border-radius: 10px 0 0 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: var(--block-bg);
+    color: var(--color);
+}
+
+.search-input:focus {
+    outline: none;
+    /* border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); */
+}
+
+.category-select {
+    flex: 1;
+    height: 60px;
+    min-width: 200px;
+    padding: 12px 20px;
+    border: 0;
+    border-left: 1px solid var(--border);
+    /* border-radius: 10px; */
+    /* font-size: 16px; */
+    background: var(--block-bg);
+    color: var(--color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-select:focus {
+    outline: none;
+}
+
+.search-btn {
+    height: 60px;
+    padding: 12px 25px;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    background: var(--block-bg);
+    color: var(--color);
+    border: 0;
+    border-left: 1px solid var(--border);
+    /* border-radius: 10px; */
+    /* font-size: 16px; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* font-weight: 600; */
+}
+
+.search-btn:hover {
+    background: var(--hover-bg);
+}
+
+.clear-btn {
+    height: 60px;
+    padding: 12px 25px;
+    border-left: 1px solid var(--border);
+    background: var(--block-bg);
+    /* background: #6c757d; */
+    color: var(--color);
+    border: 0;
+    border-left: 1px solid var(--border);
+    border-radius: 0 10px 10px 0;
+    /* font-size: 16px; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* font-weight: 600; */
+}
+
+.clear-btn:hover {
+    background: var(--hover-bg);
+}
+
+.results-info {
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.projects-grid {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--block-bg);
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+}
+
+.project-card.hidden {
+    display: none;
+}
+
+.project-title {
+    /* font-size: 1.4rem; */
+    /* font-weight: 700; */
+    color: var(--color);
+    margin-bottom: 10px;
+}
+
+.project-category {
+    display: inline-block;
+    background: #bbc7ff;
+    /* border-top: 1px solid var(--color); */
+    color: var(--color);
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.project-description {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background: var(--but-bg);
+    color: var(--color);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border);
+}
+
+.project-link {
+    display: inline-block;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #764ba2;
+}
+
+.no-results {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    padding: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 970px) {
+    .search-form {
+        height: auto;
+        background: var(--block-bg);
+        border-radius: 10px;
+
+    }
+    .search-input {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        border-bottom: 1px solid var(--border);
+    }
+    .category-select {
+        width: 100%;
+        /* border-left: 0; */
+        border-bottom: 1px solid var(--border);
+    }
+    .search-btn {
+        width: 50%;
+        border-left: 0;
+        border-radius: 0 0 0 10px;
+    }
+    .clear-btn {
+        width: 50%;
+        border-radius: 0 0 10px 0;
+    }
+}
+@media (max-width: 850px) {
+    .projects-grid {
+        margin-top: 10px;
+        gap: 10px;
+    }
+}
+@media (max-width: 470px) {
+    .category-select {
+        width: 100%;
+        border-left: 0;
+    }
+}
+#radio-button-1, #radio-button-2, #radio-button-3 {
+    display: none;
+}
+#pm_button1 {
+    border-radius: 10px 0 0 10px;
+}
+#pm_button3 {
+    /* border-radius: 0 10px 10px 0; */
+}
+.radio-button {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 20px;
+    flex: 1 1 220px;
+    height: 100%;
+    border-right: 1px solid var(--border);
+    transition: 0.2s;
+}
+.radio-button:hover {
+    background: var(--hover-bg);
+}
+
+.project_output_block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.card_project {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 220px;
+    background: var(--block-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    /* padding: 30px; */
+}
+.img_kard {
+    width: 100%;
+    height: 200px;
+    background: #1c1c22;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid var(--border);
+}
+.cp_bottom {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+}
+.button_po {
+    width: auto;
+    padding: 5px 10px;
+    background: var(--but-bg);
+    border-radius: 5px;
+    font-size: 10px;
+}
+.pkc {
+    width: 50%;
+}
+/* скрываем все .tab-content */
+.tab-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.tab-content.active {
+    display: flex; /* Показываем только .tab-content с классом active */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tab > label {
+    width: 200px;
+    height: 50px;
+    display: block;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    text-decoration: none;
+    color: #a5a5a5;
+    padding: 20px;
+    border-right: 1px solid var(--border);
+    background: 0 0;
+    flex: 1 1 220px;
+}
+
+.tab > input[type="radio"]:checked + label {
+    cursor: default;
+    color: #fff;
+    background-color: #1c1c22;
+}

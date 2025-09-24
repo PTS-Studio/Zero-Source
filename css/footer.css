@@ -1,0 +1,56 @@
+.footer_block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--block-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+}
+.f-link {
+    color: inherit;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 0;
+    transition: 0.2s;
+
+    white-space: nowrap; /* Запрещаем перенос строки */
+    overflow: hidden;      /* Скрываем выходящий текст */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    display: block;         /* Важно: делаем элемент блочным */
+}
+.f-link:hover{
+    border-radius: 5px;
+    background: var(--hover-bg);
+    padding-left: 20px;
+}
+.f_top_block {
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* position: relative; */
+    width: 100%;
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+}
+.f_bottom_block {
+    padding: 30px 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.f_column_block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 1 190px;
+}
+@media (max-width: 950px) {
+    .footer_block {
+        margin-bottom: 10px;
+    }
+}

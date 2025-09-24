@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/projects/1_start_projects.css">
+    <link rel="stylesheet" href="js/home.js">
+    <link rel="stylesheet" href="js/search_panel.js">
+    <title>Сайт-портфолио</title>
+</head>
+<body>
+    <header class="header"> <!--id="header"-->
+        <div class="absorbing_block">
+            <div class="header_block">
+
+                <!-- Ссылка студии -->
+                <div class="hd_sector">
+                    <a href="2_works.html" class="hd_link" id="hd_link1">
+                        <div class="hh"></div>
+                        <p class="text-logo">PTS-STUDIO</p>
+                    </a>
+                </div>
+
+                <!-- Ссылки навигации -->
+                <div class="hd_sector">
+                    <a href="1_home.html" class="hd_link" id="hd_link2">
+                        <p class="text-bright">Главная</p>
+                    </a>
+                    <a href="2_works.html"class="hd_link" id="hd_link3">
+                        <p class="text-bright">Портфолио</p>
+                    </a>
+                    <a href="3_contacts.html" class="hd_link" id="hd_link4">
+                        <p class="text-bright">Контакты</p>
+                    </a>
+                    <a href="4_news.html" class="hd_link" id="hd_link5">
+                        <p class="text-bright">Новости</p>
+                    </a>
+                    <button class="menu-button" id="menuBtn">
+                        <div class="menu-icon"></div>
+                    </button>
+
+                    <!-- Мобильное всплывающее меню -->
+                    <div class="menu" id="menu">
+                        <div class="menu_bagget">
+                            <div class="menu_content">
+                                <a href="1_home.html" class="hd_link_mobile">
+                                    <p class="text-bright">Главная</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="2_works.html" class="hd_link_mobile">
+                                    <p class="text-bright">Портфолио</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="3_contacts.html" class="hd_link_mobile">
+                                    <p class="text-bright">Контакты</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="4_news.html" class="hd_link_mobile">
+                                    <p class="text-bright">Новости</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <div class="button10">
+                                    <p>информация о сайте</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Кнопка смены цветовой темы -->
+                    <div class="menu-theme">
+
+                        <img id="light-theme" src="images/HeaderMenu/light_theme_l.svg">
+                        <img id="dark-theme" src="images/HeaderMenu/dark_theme_d.svg">
+
+                        <div class="dropdown_block">
+                            <div class="list_theme">
+                                <button id="lightBtn">
+                                    <div class="img-light-theme"></div>
+                                </button>
+                                <button id="darkBtn">
+                                    <div class="img-dark-theme"></div>
+                                </button>
+                                <button id="systemBtn" style="color: var(--color);">
+                                    <div class="img-system-theme"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="center_block">
+        <div class="aside_main">
+            <aside>
+                <div class="aside_block">
+                    <img src="images/Aside/h7.svg" alt="" style="width: 18px; height: 18px; position: absolute;">
+                    <a href="#about_web" class="aside_sector_contect2">О сайте</a>
+                    <div class="aside_sector">
+                        <div class="top" style="width: 100%; height: auto;">
+                            <div class="aside_sector_contect" id="mrt">
+                                <div class="hh3" id="img-1"></div>
+                                <!-- <img src="images/Aside/h2.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Статистика</a>
+                            </div>
+                            <div class="aside_sector_contect">
+                                <div class="hh3" id="img-2"></div>
+                                <!-- <img src="images/Aside/h3.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Отчеты</a>
+                            </div>
+                            <div class="aside_sector_contect">
+                                <div class="hh3" id="img-3"></div>
+                                <!-- <img src="images/Aside/h1.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Настройки</a>
+                            </div>
+                            <div class="aside_sector_contect">
+                                <div class="hh3" id="img-4"></div>
+                                <!-- <img src="images/Aside/h5.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Справка</a>
+                            </div>
+                            <div class="aside_sector_contect">
+                                <div class="hh3" id="img-5"></div>
+                                <!-- <img src="images/Aside/h4.svg" alt="" style="width: 18px; height: 18px; position: absolute;"> -->
+                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Оставить отзыв</a>
+                            </div>
+                        </div>
+                        <div class="bottom" style="width: 100%;">
+                            <div class="aside_sector_contect" style="border-bottom: none; border-radius: 0 0 10px 10px; border-top: 1px solid var(--border)">
+                                <p href="" style="cursor: default; font-size: 13px;">© 2025 Путилин Андрей. Все права защищены.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main style="width: 100%;">
+                <div class="search-panel">
+                    <div class="search-form">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Введите название проекта или ключевое слово..."
+                        >
+                        <select id="categorySelect" class="category-select">
+                            <option value="">Все категории</option>
+                            <option value="веб-разработка">Веб-разработка</option>
+                            <option value="мобильные приложения">Мобильные приложения</option>
+                            <option value="искусственный интеллект">Искусственный интеллект</option>
+                            <option value="игры">Игры</option>
+                            <option value="дизайн">Дизайн</option>
+                            <option value="блокчейн">Блокчейн</option>
+                        </select>
+                        <button type="button" id="searchBtn" class="search-btn">Поиск</button>
+                        <button type="button" id="clearBtn" class="clear-btn">Очистить</button>
+                    </div>
+                    <!-- <div class="results-info" id="resultsInfo"></div> -->
+                    <div class="projects-grid" id="projectsGrid">
+                        <!-- Проекты будут добавлены через JavaScript -->
+                    </div>
+                </div>
+                <div class="footer_block">
+                    <div class="f_top_block" style="border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0 30px;">
+                        <p>PTS</p>
+                        <a href="#news">
+                            <img src="images/footer/Exclude.png" alt="" style="width: 100px; height: auto; filter: brightness(80%);">
+                        </a>
+                    </div>
+                    <div class="f_bottom_block">
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Обо мне</h1>
+                            <p>Главная</p>
+                            <p>Проекты</p>
+                            <p>Опыт</p>
+                            <p>Вопросы</p>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Портфолио</h1>
+                            <p>Все проекты</p>
+                            <p>Статьи</p>
+                            <p>Публикации</p>
+                            <p>Лучшее</p>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Связь</h1>
+                            <p>Форма обратной связи</p>
+                            <p>GitHub</p>
+                            <p>RuTube</p>
+                            <p>ВКонтакте</p>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px;">Документы</h1>
+                            <p>Политика конфиденциальности</p>
+                            <p>Антиспам политика</p>
+                            <p>Авторские права</p>
+                            <p>Политика Cookie</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <script>
+                function showTab(tabId) {
+                // Сначала скрываем все вкладки
+                let tabs = document.querySelectorAll('.tab-content');
+                tabs.forEach(tab => tab.classList.remove('active'));
+
+                // Затем показываем нужную вкладку
+                document.getElementById(tabId).classList.add('active');
+                }
+
+                // Показать первую вкладку при загрузке страницы
+                document.addEventListener('DOMContentLoaded', () => {
+                showTab('content-1'); // По умолчанию отображаем content-1
+                });
+            </script>
+        </div>
+    </div>
+<script src="js/home.js"></script>
+<script src="js/search_panel.js"></script> 
+    <script>
+        const body = document.body;
+        const img1 = document.getElementById('light-theme');
+        const img2 = document.getElementById('dark-theme');
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
+
+        // Функция для отображения изображения и скрытия другого
+        function showImage(imageToShow, imageToHide) {
+            imageToShow.style.display = 'block';
+            imageToHide.style.display = 'none';
+        }
+
+        // Проверяем наличие сохранённой темы
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark');
+            showImage(img2, img1); // Показываем темную тему
+        } else {
+            body.classList.remove('dark');
+            showImage(img1, img2); // Показываем светлую тему
+        }
+
+        // Обработчики для кнопок
+        lightBtn.addEventListener('click', () => {
+            body.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            showImage(img1, img2); // Показываем светлую тему
+        });
+
+        darkBtn.addEventListener('click', () => {
+            body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            showImage(img2, img1); // Показываем темную тему
+        });
+    </script>
+</body>
+</html>

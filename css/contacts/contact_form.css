@@ -1,0 +1,101 @@
+.contacts_block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* background: var(--block-bg); */
+    /* border: 1px solid var(--border); */
+    border-radius: 10px;
+    gap: 20px;
+}
+.secutity_block {
+    width: 100%;
+    display: flex;
+    padding: 20px 30px;
+    gap: 30px;
+    background: var(--block-bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.cf_left_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+.cf_right_block {
+    flex: 1 1 230px;
+}
+.cf_category {
+    display: flex;
+    background: var(--block-bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px 30px;
+    gap: 30px;
+    flex: 1 1 350px;
+    transition: 0.2s;
+}
+#border-r-b {
+    border-right: 1px solid var(--border);
+}
+.cf_category:hover {
+    background: var(--hover-bg);
+}
+.cf_links_block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.cube {
+    width: 50px;
+    height: 50px;
+    background: var(--body-bg);
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.cube_warning {
+    width: 50px;
+    height: 50px;
+    background: rgba(197, 126, 126, 0.112);
+    /* background: rgba(red, green, blue, alpha); */
+    border-radius: 5px;
+    border: 1px solid var(--border-red);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cf_phone {
+    background: #8b8b8b;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+}
+.cf-img {
+    width: 20px;
+    height: 20px;
+}
+@media (max-width: 1010px) {
+    #border-r-b {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+}
+@media (max-width: 850px) {
+    .contacts_block {
+        gap: 10px;
+    }
+}

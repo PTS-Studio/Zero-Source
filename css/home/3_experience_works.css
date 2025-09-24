@@ -1,0 +1,105 @@
+.experience_work {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--block-bg);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    justify-content: space-between;
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+}
+.ew_text {
+    padding: 0 30px 40px 30px;
+}
+.ew_heading_block {
+    width: 100%;
+    height: 60px;
+    padding: 20px 30px 10px;
+    border-bottom: 1px solid var(--border);
+}
+.ew_top_block {
+    padding: 20px 30px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+.ew_top_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+.ew_bottom_block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.ew_card_block {
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 220px;
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    justify-content: center;
+    align-items: center;
+}
+.ew_heading_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid var(--border);
+}
+.ew_text_card {
+    padding: 20px 30px;
+}
+.ew-h1-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.ew-p {
+    color: rgb(215, 215, 215);
+}
+.height-max {
+    border-right: 1px solid var(--border);
+    padding-right: 20px;
+    flex: 1 1 150px;
+    padding: 0 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.height-max2 {
+    flex: 1 1 220px;
+    padding: 0 20px 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 1080px) {
+    .ew_text {
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 1076px) {
+    #re {
+        justify-content: flex-start;
+    }
+    #hm-1 {
+        display: none;
+    }
+}
+@media (max-width: 800px) {
+    #hm-2 {
+        display: none;
+    }
+}

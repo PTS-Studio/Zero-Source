@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="images/Group 8.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/news/1_news_paper_block.css">
+    <link rel="stylesheet" href="css/home/2_education_block.css">
+    <link rel="stylesheet" href="css/home/4_question_block.css">
+    <link rel="stylesheet" href="css/home/3_experience_works.css">
+    <!-- <link rel="stylesheet" href="js/home.js"> -->
+    <!-- <link rel="stylesheet" href="js/news.js"> -->
+     <link rel="stylesheet" href="js/4_news.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Сайт-портфолио</title>
+</head>
+<body>
+    <!-- Шапка HEADER-->
+    <header class="header" id="header">
+        <div class="absorbing_block">
+            <div class="header_block">
+
+                <!-- Ссылка студии -->
+                <div class="hd_sector">
+                    <a href="4_news.html" class="hd_link" id="hd_link1">
+                        <div class="hh"></div>
+                        <p class="text-logo">PTS-STUDIO</p>
+                    </a>
+                </div>
+
+                <!-- Ссылки навигации -->
+                <div class="hd_sector">
+                    <a href="1_home.html" class="hd_link" id="hd_link2">
+                        <p class="text-bright">Главная</p>
+                    </a>
+                    <a href="2_works.html"class="hd_link" id="hd_link3">
+                        <p class="text-bright">Портфолио</p>
+                    </a>
+                    <a href="3_contacts.html" class="hd_link" id="hd_link4">
+                        <p class="text-bright">Контакты</p>
+                    </a>
+                    <a href="4_news.html" class="hd_link" id="hd_link5">
+                        <p class="text-bright">Новости</p>
+                    </a>
+                    <button class="menu-button" id="menuBtn">
+                        <div class="menu-icon"></div>
+                    </button>
+
+                    <!-- Мобильное всплывающее меню -->
+                    <div class="menu" id="menu">
+                        <div class="menu_bagget">
+                            <div class="menu_content">
+                                <a href="1_home.html" class="hd_link_mobile">
+                                    <p class="text-bright">Главная</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="2_works.html" class="hd_link_mobile">
+                                    <p class="text-bright">Портфолио</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="3_contacts.html" class="hd_link_mobile">
+                                    <p class="text-bright">Контакты</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="4_news.html" class="hd_link_mobile">
+                                    <p class="text-bright">Новости</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <div class="button10">
+                                    <p>информация о сайте</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Кнопка смены цветовой темы -->
+                    <div class="menu-theme">
+                        <img id="light-theme" src="images/HeaderMenu/light_theme_l.svg">
+                        <img id="dark-theme" src="images/HeaderMenu/dark_theme_d.svg">
+                        <div class="dropdown_block">
+                            <div class="list_theme">
+                                <button id="lightBtn">
+                                    <div class="img-light-theme"></div>
+                                </button>
+                                <button id="darkBtn">
+                                    <div class="img-dark-theme"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Боковая панель + Основной контент -->
+        <div class="center_block">
+            <!-- <button class="mobile_panel" id="open_aside">
+                <div class="img-sidebar"></div>
+            </button> -->
+            
+            <div id="modal2" class="modal_aside">
+                <div class="modal_content_aside">
+                    <div class="ed_heading_block">
+                        <div class="ed_heading_content">
+                            <h3>Боковая панель</h3>
+                            <span id="closeModal2" class="close">&times;</span>
+                        </div>
+                    </div>
+                    <div class="aside_heading">
+                        <img src="images/Aside/volna2.svg" alt="Фон" class="volna">
+                        <div class="avatarka"></div>
+                        <div class="link_about">
+                            <div class="a_fio_sector">
+                                <p>Путилин Андрей</p>
+                            </div>
+                            <div class="a_more_sector">
+                                <div class="img-strelka2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside_links">
+                        <div class="height_fix">
+                            <a href="" class="aside_sector_contect" id="a-link1">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-1"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p>Статистика</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link2">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-2"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Отчеты</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link3">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-3"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Настройки</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link4">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-4"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Справка</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link5">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-5"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Оставить отзыв</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const mobilePanel = document.querySelector('.mobile_panel');
+                    const asideBlock = document.querySelector('.aside_block');
+                    let prevScrollPos = window.pageYOffset;
+                    let isPanelActive = false; // Состояние панели: false - управление скроллом, true - фиксированное
+
+                    function handleScroll() {
+                        if (isPanelActive) {
+                            return; // Если панель активна, не меняем её положение при скролле
+                        }
+
+                        const currentScrollPos = window.pageYOffset;
+
+                        if (prevScrollPos > currentScrollPos) {
+                            // Скроллим вверх
+                            mobilePanel.style.transition = 'left 0.3s ease-in-out';
+                            mobilePanel.style.left = '0'; 
+                        } else {
+                            // Скроллим вниз
+                            mobilePanel.style.transition = 'left 0.3s ease-in-out';
+                            mobilePanel.style.left = '-80px'; 
+                        }
+
+                        prevScrollPos = currentScrollPos;
+                    }
+
+                    window.addEventListener('scroll', handleScroll);
+
+            
+                    function updateScreenState() {
+                        isSmallScreen = window.innerWidth <= 950;
+
+                        if (!isSmallScreen) {
+                            // Если экран стал больше 950px, сбрасываем состояние
+                            isPanelActive = false;
+                            asideBlock.style.left = ''; // Удаляем inline-стиль
+                            window.removeEventListener('scroll', handleScroll); //отключаем handleScroll
+                            mobilePanel.style.left = ''; // удаляю inline style "left: -80px"
+                            mobilePanel.removeEventListener('click', handleMobilePanelClick); //отключаем handleMobilePanelClick
+                            // Сбросить стили, если они были установлены
+                        mobilePanel.style.transition = '';
+
+                        } else {
+                            // Если экран меньше или равен 950px, устанавливаем eventListener'ы
+                                mobilePanel.addEventListener('click', handleMobilePanelClick); //отключаем handleMobilePanelClick
+                                window.addEventListener('scroll', handleScroll);// отключаем handleScroll
+
+                            // Если экран снова стал меньше 950px, переинициализируем
+                            if (!isPanelActive) { // чтобы не менять видимость, если панель уже открыта
+                                asideBlock.style.left = '-250px';
+                            }
+                        mobilePanel.style.left = '0'; // чтобы mobilePanel показывалась после ресайза
+                            // Запускаем handleScroll в первый раз
+                                prevScrollPos = window.pageYOffset;
+                                handleScroll();
+                        }
+                    }
+                      // Добавляем слушатель события изменения размера окна
+                    window.addEventListener('resize', function() {
+                        // Проверяем ширину экрана
+                        if (window.innerWidth <= 950) {
+                        //console.log('Ширина экрана менее или равна 950px');
+                        }
+                        else {
+                            console.log('Ширина экрана больше 950px, код мобильной панели делать не нужно.');
+                        }
+                    });
+
+                    window.addEventListener('resize', updateScreenState);
+                    checkScreenWidth(); // Вызываем при загрузке
+                });
+            </script>
+        <!-- <div class="diming_unit_block" style="background: black; opacity: 0.7; width: 100%; height: 100%; position: fixed; top: 0; left: 0; box-shadow: inset 0 11px 8px -10px rgb(0, 0, 0, 0.2), inset 0 -11px 8px -10px rgb(0, 0, 0, 0.2);"></div> -->
+
+        <div class="aside_main">
+
+            <aside>
+                <button class="mobile_panel" id="open_aside">
+                    <div class="img-sidebar"></div>
+                </button>
+                <div class="aside_block">
+
+                    <!-- Обложка боковой панели -->
+                    <div class="aside_heading">
+                        <img src="images/Aside/volna2.svg" alt="Фон" class="volna">
+                        <div class="avatarka"></div>
+                        <div class="link_about">
+                            <div class="a_fio_sector">
+                                <p>Путилин Андрей</p>
+                            </div>
+                            <div class="a_more_sector">
+                                <div class="img-strelka2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ссылки боковой панели -->
+                    <div class="aside_links">
+                        <div class="height_fix">
+                            <a href="" class="aside_sector_contect" id="a-link1">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-1"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p>Статистика</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link2">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-2"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Отчеты</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link3">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-3"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Настройки</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link4">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-4"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Справка</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link5">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-5"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Оставить отзыв</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Copyright © 2025 -->
+                    <div class="aside_end">
+                        <p class="text-aside-end">© 2025 Все права защищены.</p>
+                    </div>
+                </div>
+            </aside>
+            <main>
+
+                
+                <!-- Блок категорий новостей -->
+                <div class="news_paper_block">
+                    <button class="np_category" data-block="np_page1">
+                        <h1 class="h2-3">Обновления сайта</h1>
+                        <p class="text-top10">В данном разделе представлена актуальная информация о ключевых нововведениях и улучшениях, внедренных на сайте</p>
+                    </button>
+                    <button class="np_category" data-block="np_page2">
+                        <h1 class="h2-3">Релизы</h1>
+                        <p class="text-top10">Здесь публикуются анонсы о выпуске новых продуктов, версий программного обеспечения или других значимых релизов</p>
+                    </button>
+                    <button class="np_category" data-block="np_page3">
+                        <h1 class="h2-3">Итоги года</h1>
+                        <p class="text-top10">В этом разделе подводятся итоги деятельности за прошедший год, включая проекты, достижения, и обновления</p>
+                    </button>
+
+                    <!-- Новости обновлений сайта -->
+                    <div class="news_page_block" id="np_page1">
+                        <div class="website_updates_block">
+                            <div class="ew_heading_block">
+                                <h1 class="h2-3">Версия 25П2 - Локальная</h1>
+                            </div>
+                            <div class="toggler">
+                                <input type="checkbox" id="toggler__checkbox-id-1-1" class="toggler__checkbox">
+                                <label for="toggler__checkbox-id-1-1" class="toggler__label" id="lab-t">
+                                    <div class="fg" style="display: flex; flex-wrap: wrap; align-items: center; padding: 0 30px 0 30px; border-right: 1px solid var(--border);">
+                                        <p>Обновление 0.1.1</p>
+                                    </div>
+                                    <div class="height-max" id="hm-2">
+                                        <p>Обновление защиты</p>
+                                    </div>
+                                    <div class="height-max">
+                                        <p>31.08.2025</p>
+                                    </div>
+                                    <div class="fg" style="height: 40%; width: 60px; position: relative; justify-content: center; align-items: center; display: flex; flex-wrap: wrap; border-left: 1px solid var(--border);">
+                                        <div class="hh2"></div>
+                                    </div>
+                                </label>
+                                <span class="toggler__content-box">
+                                    <p>Запуск и новые возможности:</p>
+                                    <div class="oooppp" style="display: flex; flex-wrap: wrap;">
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Разработан основной макет сайта.</li>
+                                                <li>Добавлена навигация по разделам.</li>
+                                                <li>Созданы базовые страницы.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Реализована адаптивная верстка для разных устройств.</li>
+                                                <li>Установлены начальные анимации для контента.</li>
+                                                <li>Оформлены текстовые блоки.</li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                </span>
+                            </div>
+                            <div class="toggler">
+                                <input type="checkbox" id="toggler__checkbox-id-1-2" class="toggler__checkbox">
+                                <label for="toggler__checkbox-id-1-2" class="toggler__label" id="lab-t">
+                                    <div class="fg" style="display: flex; flex-wrap: wrap; align-items: center; padding: 0 30px 0 30px; border-right: 1px solid var(--border);">
+                                        <p>Обновление 0.1.2</p>
+                                    </div>
+                                    <div class="height-max" id="hm-2">
+                                        <p>Исправление ошибок</p>
+                                    </div>
+                                    <div class="height-max">
+                                        <p>12.09.2025</p>
+                                    </div>
+                                    <div class="fg" style="height: 40%; width: 60px; position: relative; justify-content: center; align-items: center; display: flex; flex-wrap: wrap; border-left: 1px solid var(--border);">
+                                        <div class="hh2"></div>
+                                    </div>
+                                </label>
+                                <span class="toggler__content-box">
+                                    <p style="width: 100%; border: 1px solid var(--border); margin-bottom: 10px; padding: 0 10px; background: rgb(137, 228, 175);">Запуск и новые возможности:</p>
+                                    <div class="oooppp" style="display: flex; flex-wrap: wrap;">
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Разработан основной макет сайта.</li>
+                                                <li>Добавлена навигация по разделам.</li>
+                                                <li>Созданы базовые страницы.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Реализована адаптивная верстка для разных устройств.</li>
+                                                <li>Установлены начальные анимации для контента.</li>
+                                                <li>Оформлены текстовые блоки.</li>
+                                            </ul>
+                                        </div>
+                                     </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Новости релизов -->
+                    <div class="news_page_block" id="np_page2">
+                        <a href="1_home.html" class="relize_card">
+                            <div class="column-left">
+                                <div class="years">
+                                    <p class="date">31 Августа 2025</p>
+                                </div>
+                            </div>
+                            <div class="column-right">
+                                <div class="name">
+                                    <h1 class="h2-1" style="padding-top: 0;">Сайт портфолио</h1>
+                                </div>
+                                <div class="description">
+                                    <p>В результате работы я создал цифровой Сайт-портфолио, который является интерактивной средой хранения моих проектов и достижений в сфере дизайна и разработки.</p>
+                                </div>
+                                <div class="technologies">
+                                    <div class="tech">
+                                        <p>Figma</p>
+                                    </div>
+                                    <div class="tech">
+                                        <p>HTML</p>
+                                    </div>
+                                    <div class="tech">
+                                        <p>CSS</p>
+                                    </div>
+                                    <div class="tech">
+                                        <p>JS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Новости итогов года -->
+                    <div class="news_page_block" id="np_page3">
+                        <div class="question_block2">
+                            <div class="toggler" style="border: 1px solid var(--border); box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2); border-radius: 10px;">
+                                <input type="checkbox" id="toggler__checkbox-id-9" class="toggler__checkbox">
+                                <label for="toggler__checkbox-id-9" class="toggler__label" style="border-radius: 10px; align-items: center;">
+                                    <div class="height-max" id="re">
+                                        <p>Итоги 2025 года</p>
+                                    </div>
+                                    <div class="height-max" id="hm-1" style="align-items: center;gap: 5px;">
+                                        <div class="hh4" id="img-b1"></div>
+                                        <p>Проекты:</p>
+                                        <!-- <img src="images/c1.svg" alt="" style="width: 15px; height: 15px;"> -->
+                                        <!-- <p style="color: rgb(56, 182, 56);">+1</p> -->
+                                         <p>0</p>
+                                    </div>
+                                    <div class="height-max" id="hm-1" style="align-items: center;gap: 5px;">
+                                        <div class="hh4" id="img-b3"></div>
+                                        <p>Статьи:</p>
+                                        
+                                        <!-- <img src="images/c3.svg" alt="" style="width: 15px; height: 15px;"> -->
+                                        <p>0</p>
+                                    </div>
+                                    <div class="height-max" id="hm-1" style="align-items: center;gap: 5px;">
+                                        <div class="hh4" id="img-b2"></div>
+                                        <p>Публикации:</p>
+                                        <!-- <img src="images/c2.svg" alt="" style="width: 15px; height: 15px;"> -->
+                                        <p>0</p>
+                                    </div>
+                                    <div class="fg" style="width: 60px; position: relative; justify-content: center; align-items: center; display: flex; flex-wrap: wrap;">
+                                        <div class="hh2"></div>
+                                    </div>
+                                    
+                                </label>
+                                <span class="toggler__content-box" style="border-radius: 0 0 10px 10px;">
+                                    <div class="jcsb" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+                                        <div class="lala" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                                            <p class="h2-1" style="padding-top: 0; margin-bottom: 0;">Информация недоступна</p>
+                                        </div>
+                                        <!-- <img src="images/warning.svg" alt="" style="width: 15px; height: 15px; align-items: center;"> -->
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_block">
+                    <div class="f_top_block">
+                        <div class="hd_link" style="border-right: 1px solid var(--border); padding: 0 30px; border-radius: 10px 0 0 0;">
+                            <div class="hh"></div>
+                            <p class="text-logo">PTS-STUDIO</p>
+                        </div>
+                        <a href="#news">
+                            <img src="images/footer/Exclude.png" alt="" style="width: 100px; height: auto; filter: brightness(80%); margin-right: 30px;">
+                        </a>
+                    </div>
+                    <div class="f_bottom_block">
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Документы</h1>
+                            <a href="#" class="f-link">Политика конфиденциальности</a>
+                            <a href="#" class="f-link">Условия использования</a>
+                            <a href="#" class="f-link">Секретный протокол</a>
+                        
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Навигация</h1>
+                            <a href="#" class="f-link">Главная</a>
+                            <a href="#" class="f-link">Статистика</a>
+                            <a href="#" class="f-link">Отчеты</a>
+                        
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Дополнительно</h1>
+                            <a href="#" class="f-link">О сайте</a>
+                            <a href="#" class="f-link">Справка</a>
+                            <a href="#" class="f-link">Оставить отзыв</a>
+                        
+                        </div>
+                        <div class="f_column_block" style="padding-right: 0;">
+                            <h1 class="h1-2-text" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Студия</h1>
+                            <a href="#" class="f-link">О сайте</a>
+                            <a href="#" class="f-link">Справка</a>
+                            <a href="#" class="f-link">Оставить отзыв</a>
+                        </div>
+                    </div>
+                    <p style="color: rgb(190, 190, 190); font-size: 12px; padding: 10px 30px 10px 30px; border-top: 1px solid var(--border); width: 100%; text-align: center;">Copyright © 2025 «PTS-Studio» Все права защищены, включая контент и изображения, которые защищены законом об авторском праве. Любое копирование и использование каких-либо материалов на этом сайте без согласия автора является незаконным.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+<!-- <script src="js/home.js"></script>
+<script src="js/news.js"></script> -->
+<script src="js/4_news.js"></script>
+    <script>
+        const body = document.body;
+        const img1 = document.getElementById('light-theme');
+        const img2 = document.getElementById('dark-theme');
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
+
+        // Функция для отображения изображения и скрытия другого
+        function showImage(imageToShow, imageToHide) {
+            imageToShow.style.display = 'block';
+            imageToHide.style.display = 'none';
+        }
+
+        // Проверяем наличие сохранённой темы
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark');
+            showImage(img2, img1); // Показываем темную тему
+        } else {
+            body.classList.remove('dark');
+            showImage(img1, img2); // Показываем светлую тему
+        }
+
+        // Обработчики для кнопок
+        lightBtn.addEventListener('click', () => {
+            body.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            showImage(img1, img2); // Показываем светлую тему
+        });
+
+        darkBtn.addEventListener('click', () => {
+            body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            showImage(img2, img1); // Показываем темную тему
+        });
+    </script>
+</body>
+</html>

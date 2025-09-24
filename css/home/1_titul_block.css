@@ -1,0 +1,410 @@
+/*
+=============================================================
+    1_titul_block --> home.html --> home.js
+    1_titul_block <-> home.js
+=============================================================
+    Автор: Путилин А.
+    ДатаР: 29.03.2025
+=============================================================
+*/
+.FIO{
+    width: 100%;
+    color: #e2e8f0;
+    /* line-height: 28px; */
+    /* font-size: 15px; */
+}
+
+.text-p {
+    font-size: 13px;
+    color: white;
+}
+.titul-text-p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+}
+/*
+=============================================================
+    ТИТУЛЬНЫЙ БЛОК (PC)
+=============================================================
+*/
+.center_block {
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+.titul_block {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: var(--block-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.1);
+}
+.h1_block {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #363636;
+    border-radius: 10px;
+    background: #1a1a1a;
+}
+.avatar {
+    position: absolute;
+    top: 125px;
+    left: 30px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 8px solid var(--block-bg);
+    object-fit: cover;
+    /* padding: 3px; */
+    /* background: white; */
+}
+.titul_sector_top {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 10px 0 10px 0; */
+    border-radius: 10px 10px 0 0;
+}
+.titul_sector_bottom {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+.sector_block_top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 0 0 150px;
+}
+.sector_block_left {
+    /* display: flex; */
+    flex-wrap: wrap;
+    width: 58%;
+    padding: 0;
+    border-radius: 0 0 0 10px;
+}
+.sector_block_right {
+    width: 42%;
+    /* display: flex; */
+    flex-wrap: wrap;
+    padding: 0;
+    border-left: 1px solid var(--border);
+    border-radius: 0 10px 10px 0;
+}
+.button_titul {
+    width: auto;
+    padding: 5px 18px;
+    border-radius: 5px;
+    border: 1px solid var(--border-but);
+    background: var(--but-bg);
+    transition: 0.2s;
+}
+.button_titul:hover {
+    border: 1px solid white;
+    cursor: pointer;
+}
+.button_titul2 {
+    width: 100%;
+    /* padding: 20px 30px; */
+    border-top: 1px solid var(--border);
+    transition: 0.3s;
+    cursor: pointer;
+    flex: 1 1 220px;
+}
+.titul_link_l {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    width: 100%;
+}
+.button_titul2:hover {
+    background: var(--hover-bg);
+}
+.two-button {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.button1 {
+    width: 40%;
+    height: 45px;
+    margin-top: 10px;
+    background: #e2e8f0;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    color: black;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.button1:hover{
+    background: none;
+    border: 1px solid #e2e8f0;
+    color: white;
+}
+.button2 {
+    width: 40%;
+    height: 45px;
+    margin-top: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.button2:hover {
+    background: #e2e8f0;
+    color: black;
+}
+.cover_block {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+    background:var(--cover-bg);
+    /* background-image: url(.../6674f0cdb5b7b401612cf065_noise-50.png); */
+    border: 1px solid var(--border);
+}
+.header_titul_block {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--block-bg);
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px 10px 0 0;
+    /* border-bottom: 1px solid #363636; */
+}
+.header_titul_block_left {
+    width: 58%;
+    height: 50px;
+}
+.header_titul_block_right {
+    width: 42%;
+    justify-content: center;
+    display: flex;
+}
+.titul_link {
+    border-left: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    flex: 1 1 220px;
+    cursor: pointer;
+}
+.titul_link2 {
+    border-left: 1px solid var(--border);
+    border-radius: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    flex: 1 1 220px;
+    cursor: pointer;
+}
+.titul_link3 {
+    border-left: 1px solid var(--border);
+    border-radius: 0 10px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    flex: 1 1 220px;
+    cursor: pointer;
+}
+.titul_link:hover {
+    background: var(--hover-bg);
+}
+.titul_link2:hover {
+    background: var(--hover-bg);
+}
+.titul_link3:hover {
+    background: var(--hover-bg);
+}
+.block_tt2 {
+    width: 42%;
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+}
+
+/*
+=============================================================
+    ДЕКОРАТИВНАЯ КОНСОЛЬ
+=============================================================
+*/
+.code-block {
+    width: 100%;
+    background: #191919;
+    padding: 3.875rem 1.5rem 2rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+}
+.code-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #e2e8f0;
+}
+.code-block::after {
+    content: '• • •';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    color: #161616;
+    font-size: 20px;
+    line-height: 30px;
+}
+.code-block pre code {
+    margin-top: 20px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+}
+.code-block code {
+    color: white;
+}
+.block_tt {
+    width: 58%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #363636;
+}
+.sdaja {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*
+=============================================================
+    Титульный блок (MOBILE)
+=============================================================
+*/
+.titul_block_mobile {
+    width: 1280px;
+    justify-content: space-between;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    display: flex;
+    margin: 100px 20px 80px 20px;
+    display: none;
+}
+.button1_MOBILE {
+    width: 40%;
+    height: 45px;
+    padding: 10px;
+    margin-top: 10px;
+    background: #e2e8f0;
+    border: 2px solid #e2e8f0;
+    color: black;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.button1_MOBILE:hover{
+    background: none;
+    border: 2px solid #e2e8f0;
+    color: white;
+}
+.button2_MOBILE {
+    width: 40%;
+    height: 45px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #e2e8f0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.button2_MOBILE:hover {
+    background: #e2e8f0;
+    color: black;
+}
+/*
+=============================================================
+    Медиа запросы
+=============================================================
+*/
+@media (max-width: 1080px) {
+    .avatar {
+        top: 25px;
+        margin: 0 auto;
+        display: none;
+    }
+    .header_titul_block_left {
+        display: none;
+    }
+    .header_titul_block_right {
+        width: 100%;
+    }
+    .sector_block_left {
+        width: 100%;
+    }
+    .sector_block_right {
+        width: 100%;
+        border-left: none;
+    }
+    .titul_link2 {
+        border-radius: 10px 0 0 0;
+        border-left: none;
+    }
+    .titul_link3 {
+        border-radius: 0 10px 0 0;
+    }
+    .block_tt2 {
+        width: 1px;
+        display: none;
+    }
+    .block_tt {
+        width: 100%;
+    }
+    .sdaja {
+        width: 100%;
+    }
+}
+
+@media (max-width: 970px) {
+    /* aside {
+        display: none;
+    } */
+    
+}

@@ -1,0 +1,697 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  letter-spacing: 0.6px;
+  line-height: 22px;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  text-decoration: none;
+  list-style: none;
+  scrollbar-color: #383838 #161616;
+  scrollbar-width:thin;
+  scrollbar-gutter: stable;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --block-bg: #ffffff;
+  --body-bg: #e4e4e4;
+  --dark-bg: #f6f6f6;
+  --hover-bg: #f3f3f3;
+  --cover-bg: #ffe3ff;
+  --but-bg: #eaeaea;
+  --border: #c4c4c4;
+  --border-but: #cdcdcd;
+  --footer-bg: #d0d0d0;
+  --color: #000000;
+  --color2: #545454;
+
+  --menu-active: url(../images/HeaderMenu/menu_active_l.svg);
+  --menu-passive: url(../images/HeaderMenu/menu_passive_l.svg);
+  
+  --light-theme: url(../images/HeaderMenu/light_theme_l.svg);
+  --dark-theme: url(../images/HeaderMenu/dark_theme_l.svg);
+  --system-theme: url(../images/HeaderMenu/system_theme_l.svg);
+  --img-logo: url(../images/HeaderMenu/Group8.svg);
+  --img-strelka: url(../images/strelka2.svg);
+
+  --sidebar-ico: url(../images/Aside/sidebar_w.svg);
+
+  --img-a1: url(../images/Aside/a1d.svg);
+  --img-a2: url(../images/Aside/a2d.svg);
+  --img-a3: url(../images/Aside/a3d.svg);
+  --img-a4: url(../images/Aside/a4d.svg);
+  --img-a5: url(../images/Aside/a5d.svg);
+
+  --img-b1: url(../images/c1.svg);
+  --img-b2: url(../images/c2.svg);
+  --img-b3: url(../images/c3.svg);
+
+  --img-security: url(../images/contacts/security_d.svg);
+  --img-github: url(../images/contacts/github_d.svg);
+  --img-rutube: url(../images/contacts/rutube_d.svg);
+}
+
+.dark {
+  --block-bg: #161616;
+  --body-bg: #121212;
+  --dark-bg: #111111;
+  --hover-bg: #1b1b1b;
+  --cover-bg: #2e2e2e;
+  --but-bg: #292929;
+  --border: #2e2e2e;
+  --border-but: #161616;
+  --footer-bg: #1c1c1c;
+  --color: #ffffff;
+  --color2: #d7d7d7;
+
+  --menu-active: url(../images/HeaderMenu/menu_active_d.svg);
+  --menu-passive: url(../images/HeaderMenu/menu_passive_d.svg);
+
+  --light-theme: url(../images/HeaderMenu/light_theme_d.svg);
+  --dark-theme: url(../images/HeaderMenu/dark_theme_d.svg);
+  --system-theme: url(../images/HeaderMenu/system_theme_d.svg);
+  --img-logo: url(../images/HeaderMenu/logotip2.svg);
+  --img-strelka: url(../images/strelka.svg);
+
+  --sidebar-ico: url(../images/Aside/sidebar_d.svg);
+
+  --img-a1: url(../images/Aside/a1w.svg);
+  --img-a2: url(../images/Aside/a2w.svg);
+  --img-a3: url(../images/Aside/a3w.svg);
+  --img-a4: url(../images/Aside/a4w.svg);
+  --img-a5: url(../images/Aside/a5w.svg);
+
+  --img-b1: url(../images/d1.svg);
+  --img-b2: url(../images/d2.svg);
+  --img-b3: url(../images/d3.svg);
+
+  --img-security: url(../images/contacts/security_w.svg);
+  --img-github: url(../images/contacts/github_w.svg);
+  --img-rutube: url(../images/contacts/rutube_w.svg);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--body-bg);
+  color: var(--color);
+  transition: background-color 0.5s, color 0.5s;
+}
+.center_block {
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+/*
+=============================================================
+  ШАПКА САЙТА (PC)
+=============================================================
+*/
+header {
+  top: 0;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  transition: transform 0.3s ease;
+  z-index: 9999999;
+}
+header.hidden {
+  transform: translateY(-100%);
+}
+.header {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  z-index: 9999999;
+}
+.absorbing_block {
+  width: 1280px;
+  height: 80px;
+  margin: 0 20px 0 20px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+  align-items: center;
+  background-color: var(--body-bg);
+  color: var(--color);
+}
+.header_block {
+  width: 100%;
+  height: 60px;
+  margin: 20px 0 0 0;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+  align-items: center;
+  z-index: 9999;
+  border: 1px solid var(--border);
+  background-color: var(--block-bg);
+  color: var(--color);
+}
+.hd_sector {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hd_link {
+  height: 100%;
+  gap: 10px;
+  padding: 0 20px 0 20px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  border-right: 1px solid var(--border);
+  cursor: pointer;
+}
+.hd_link:hover {
+  background-color: var(--hover-bg);
+}
+#hd_link1 {
+  border-radius: 10px 0 0 10px;
+}
+#hd_link2 {
+  border-left: 1px solid var(--border);
+}
+#hd_link5 {
+  border-radius: 0;
+  border-right: 1px solid var(--border);
+}
+#menuBtn {
+  background: none;
+}
+.menu-button {
+  display: none;
+  background: none;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-bottom: none;
+  border-top: none;
+  color: var(--color);
+  padding: 0 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.menu-button:hover {
+  background-color: var(--hover-bg);
+}
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  background: none;
+  background: var(--menu-passive);
+  transition: 0.5s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.menu-button.active .menu-icon {
+  width: 30px;
+  height: 30px;
+  background: var(--menu-active);
+  transition: 0.5s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.theme-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 5px;
+  transition: color 0.3s;
+  color: var(--text-color); /* Цвет текста кнопки */
+}
+/* Выпадающий список */
+.theme-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: var(--dropdown-background-color);
+  border: 1px solid var(--dropdown-border-color);
+  border-radius: 5px;
+  padding: 5px 0;
+  list-style: none;
+  margin: 0;
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.theme-dropdown.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+.theme-dropdown li {
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color); /* Цвет текста в списке */
+}
+.theme-dropdown li:hover {
+  background-color: #eee;
+}
+/* Иконки */
+.fas, .fa {
+  margin-right: 5px;
+}
+/*
+=============================================================
+  ИЗОБРАЖЕНИЯ
+=============================================================
+*/
+.hh {
+  width: 30px;
+  height: 30px;
+  background: var(--img-logo);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hh2 { 
+  width: 10px;
+  height: 10px;
+  background: var(--img-logo2);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-strelka {
+  width: 10px;
+  height: 10px;
+  /* background: var(--img-strelka); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(-90deg);
+}
+.img-sidebar {
+  width: 20px;
+  height: 20px;
+  background: var(--sidebar-ico);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* transform: rotate(90deg); */
+}
+.img-strelka2 {
+  width: 10px;
+  height: 10px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background: var(--img-strelka);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(-90deg);
+}
+.img-theme {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#light-theme, #dark-theme {
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+.img-light-theme {
+  width: 18px;
+  height: 18px;
+  background: var(--light-theme);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+}
+.img-dark-theme {
+  width: 18px;
+  height: 18px;
+  background: var(--dark-theme);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+}
+.img-system-theme {
+  width: 18px;
+  height: 18px;
+  background: var(--system-theme);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.2s;
+}
+.hh3 {
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hh4 {
+  width: 15px;
+  height: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hh5 {
+  width:25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#img-1 {
+  background-image: var(--img-a1);
+}
+#img-2 {
+  background-image: var(--img-a2);
+}
+#img-3 {
+  background-image: var(--img-a3);
+}
+#img-4 {
+  background-image: var(--img-a4);
+}
+#img-5 {
+  background-image: var(--img-a5);
+}
+#img-b1 {
+  background-image: var(--img-b1)
+}
+#img-b2 {
+  background-image: var(--img-b2)
+}
+#img-b3 {
+  background-image: var(--img-b3)
+}
+#img-security {
+  background-image: var(--img-security);
+}
+#img-github {
+  background-image: var(--img-github);
+}
+#img-rutube {
+  background-image: var(--img-rutube);
+}
+/*_Анимация появления меню______________*/
+@keyframes anim {
+  0% {transform: translateY(-5%);}
+  100% {transform: translateY(0);}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@media (max-width: 330px) {
+  .text-logo {
+    display: none;
+  }
+}
+/*
+=============================================================
+  ШАПКА САЙТА (MOBILE)
+=============================================================
+*/
+
+.header_block_mobile {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  margin: 10px 0 0 0;
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 9999;
+  /* background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png); */
+  background-size: 200px 200px;
+  border: 1px solid var(--border);
+  background-color: var(--block-bg);
+  color: var(--color);
+}
+.hd_sector_mobile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  z-index: 99999;
+}
+.menu {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  transform: translateY(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  flex-direction: column;
+  z-index: 9;
+  opacity: 0;
+  pointer-events: none;
+}
+.menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+/* Контент внутри меню */
+.menu_bagget {
+  margin: 10px;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: auto;
+  background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png);
+  background-size: 200px 200px;
+  border: 1px solid var(--border);
+  background-color: var(--block-bg);
+}
+.menu_content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 0 14px 0 14px;
+}
+.menu_content_list {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #363636;
+}
+.hd_link_mobile {
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  color: white;
+  line-height: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.hd_link_mobile:hover {
+  background-color: var(--hover-bg);
+}
+.strelka {
+  width: 10px;
+  height: 10px;
+  transform: rotate(-90deg);
+}
+.button10 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px 12px;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #c4c4c4;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  transition: 0.2s;
+}
+.button10:hover {
+  background: var(--hover-bg);
+}
+.menu-theme {
+  width: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  background: none;
+}
+.menu-theme:hover {
+  background-color: var(--hover-bg);
+}
+/* Самое выпадающее меню, скрытое по умолчанию */
+.dropdown_block {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  width: 60px;
+  z-index: 999999;
+}
+/* Показать при наведении на родительский пункт */
+.menu-theme:hover .dropdown_block {
+  display: block;
+}
+.list_theme {
+  border-radius: 10px 10px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-theme:hover .list_theme {
+  opacity: 0;
+  animation: ani 0.3s forwards;
+}
+@keyframes ani {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.list_theme {
+  margin-top: 21px;
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+}
+.ch-hov {
+  border-radius: 10px 10px 0 0;
+  transition: 0.2s;
+}
+.ch-hov2 {
+  border-radius: 0 0 10px 10px;
+  transition: 0.2s;
+}
+.ch-hov:hover {
+  background-color: var(--hover-bg);
+}
+.ch-hov2:hover {
+  background-color: var(--hover-bg);
+}
+#lightBtn {
+  width: 100%;
+  padding: 20px 0;
+  background: var(--block-bg);
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#darkBtn {
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 0 0 10px 10px;
+  border: 0;
+  background: var(--block-bg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#systemBtn {
+  width: 100%;
+  padding: 20px 0;
+  background: var(--block-bg);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+}
+#lightBtn:hover {
+  background: var(--hover-bg);
+}
+#darkBtn:hover {
+  background: var(--hover-bg);
+}
+#systemBtn:hover {
+  background: var(--hover-bg);
+}
+/*
+=============================================================
+  Анимация появления бургер меню (MOBILE)
+=============================================================
+*/
+@keyframes anim2 {
+  0% {transform: translateY(100%);}
+  100% {transform: translateY(0);}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@media (max-width: 950px) {
+  .list_theme {
+    margin-top: 11px;
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+  }
+  .header_block {
+    height: 50px;
+    margin-top: 10px;
+  }
+  .absorbing_block {
+    height: 60px;
+    margin: 0 10px 0 10px;
+  }
+  .modal-content {
+    width: 100%;
+    margin: 0 20px 0 20px;
+  }
+}
+/*_Изменение шапки на Мобильную версию__*/
+@media (max-width: 850px) {
+  .absorbing_block {
+    height: 60px;
+    margin: 0 10px 0 10px;
+  }
+  .header_block {
+    height: 50px;
+    margin: 10px 0 0 0;
+  }
+  #hd_link2, #hd_link3, #hd_link4, #hd_link5 {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+  .menu {
+    display: flex;
+  }
+}
+@media (max-width: 280px) {
+  .hd_link_content p {
+    display: none;
+  }
+}

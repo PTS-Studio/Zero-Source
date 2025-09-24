@@ -1,0 +1,190 @@
+.news_paper_block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.np_category {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    padding: 20px 30px;
+    background: var(--block-bg);
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+    transition: 0.1s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.np_category:hover {
+    background: var(--hover-bg);
+}
+.news_page_block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+#np_page1, #np_page3 {
+    display: none;
+}
+.website_updates_block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    background: var(--block-bg);
+    border-radius: 10px;
+    padding: 0 0 40px;
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+}
+.column_block {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 220px;
+}
+.list-style2 li {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--color2);
+}
+.news_block {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none; /* Изначально скрываем все блоки */
+}
+.button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #4CAF50; /* Зеленый */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.block-active {
+    padding-top: 100px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.news_card {
+    flex: 1 1 220px;
+    padding: 20px 30px;
+    background: var(--block-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+.relize_card {
+    padding: 20px 30px;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    transition: 0.2s;
+    /* z-index: 1; */
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--block-bg);
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+}
+/* .card:hover {
+    background: var(--hover-bg);
+} */
+.text-h2p {
+    color: #e2e8f0;
+    width: 100%;
+    font-size: 16px;
+}
+.text-pp {
+    font-size: 14px;
+    color: #94a3b8;
+    line-height: 1.4rem;
+}
+.description {
+    margin-top: 16px;
+}
+.abbreviature {
+    padding: 70px 0 70px 0;
+}
+.technologies {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.tech {
+    padding: 5px 20px 5px 20px;
+    background: var(--but-bg);
+    border-radius: 5px;
+}
+.years {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.date {
+    width: 100px;
+    color: var(--color2);
+    font-size: 12px;
+}
+.color-purple {
+    font-size: 14px;
+    color: rgb(75, 195, 75);
+}
+@media (max-width: 1080px) {
+    .services_block {
+        width: 100%;
+        margin-top: 32px;
+    }
+    .block_fixed {
+        position:static;
+    }
+    .links_block {
+        display: none;
+    }
+    .block_left {
+        display: block;
+        padding-bottom: 0;
+        width: 100%;
+        height: auto;
+    }
+    .text-h1 {
+        font-size: 7vw;
+    }
+    .text-h2 {
+        font-size: 7vw;
+    }
+    .text-p {
+        width: 100%;
+    }
+    .block_right {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .relize_card {
+        display: block;
+    }
+    .date {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .works_block {
+        height: auto;
+        padding: 0 20px 0 20px;
+        display: block;
+    }
+}
+@media (max-width: 950px) {
+    .news_paper_block {
+        gap: 10px;
+    }
+}
+@media (max-width: 850px) {
+}

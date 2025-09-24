@@ -1,0 +1,15 @@
+h1 {
+  color: var(--color);
+}
+p {
+  color: var(--color2);
+}
+.text-bright {
+  color: var(--color);
+}
+.text-top10 {
+    margin-top: 10px;
+}
+.text-top5 {
+    margin-top: 5px;
+}
