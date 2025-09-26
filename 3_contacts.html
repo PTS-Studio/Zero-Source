@@ -95,39 +95,218 @@
         </div>
     </header>
     <div class="center_block">
+                <div id="modal2" class="modal_aside">
+                <div class="modal_content_aside">
+                    <div class="ed_heading_block">
+                        <div class="ed_heading_content">
+                            <h3>Боковая панель</h3>
+                            <span id="closeModal2" class="close">&times;</span>
+                        </div>
+                    </div>
+                    <div class="aside_heading">
+                        <img src="images/Aside/volna2.svg" alt="Фон" class="volna">
+                        <div class="avatarka"></div>
+                        <div class="link_about">
+                            <div class="a_fio_sector">
+                                <p>Путилин Андрей</p>
+                            </div>
+                            <div class="a_more_sector">
+                                <div class="img-strelka2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside_links">
+                        <div class="height_fix">
+                            <a href="" class="aside_sector_contect" id="a-link1">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-1"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p>Статистика</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link2">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-2"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Отчеты</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link3">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-3"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Настройки</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link4">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-4"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Справка</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link5">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-5"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Оставить отзыв</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const mobilePanel = document.querySelector('.mobile_panel');
+                    const asideBlock = document.querySelector('.aside_block');
+                    let prevScrollPos = window.pageYOffset;
+                    let isPanelActive = false; // Состояние панели: false - управление скроллом, true - фиксированное
+
+                    function handleScroll() {
+                        if (isPanelActive) {
+                            return; // Если панель активна, не меняем её положение при скролле
+                        }
+
+                        const currentScrollPos = window.pageYOffset;
+
+                        if (prevScrollPos > currentScrollPos) {
+                            // Скроллим вверх
+                            mobilePanel.style.transition = 'left 0.3s ease-in-out';
+                            mobilePanel.style.left = '0'; 
+                        } else {
+                            // Скроллим вниз
+                            mobilePanel.style.transition = 'left 0.3s ease-in-out';
+                            mobilePanel.style.left = '-80px'; 
+                        }
+
+                        prevScrollPos = currentScrollPos;
+                    }
+
+                    window.addEventListener('scroll', handleScroll);
+
+            
+                    function updateScreenState() {
+                        isSmallScreen = window.innerWidth <= 950;
+
+                        if (!isSmallScreen) {
+                            // Если экран стал больше 950px, сбрасываем состояние
+                            isPanelActive = false;
+                            asideBlock.style.left = ''; // Удаляем inline-стиль
+                            window.removeEventListener('scroll', handleScroll); //отключаем handleScroll
+                            mobilePanel.style.left = ''; // удаляю inline style "left: -80px"
+                            mobilePanel.removeEventListener('click', handleMobilePanelClick); //отключаем handleMobilePanelClick
+                            // Сбросить стили, если они были установлены
+                        mobilePanel.style.transition = '';
+
+                        } else {
+                            // Если экран меньше или равен 950px, устанавливаем eventListener'ы
+                                mobilePanel.addEventListener('click', handleMobilePanelClick); //отключаем handleMobilePanelClick
+                                window.addEventListener('scroll', handleScroll);// отключаем handleScroll
+
+                            // Если экран снова стал меньше 950px, переинициализируем
+                            if (!isPanelActive) { // чтобы не менять видимость, если панель уже открыта
+                                asideBlock.style.left = '-250px';
+                            }
+                        mobilePanel.style.left = '0'; // чтобы mobilePanel показывалась после ресайза
+                            // Запускаем handleScroll в первый раз
+                                prevScrollPos = window.pageYOffset;
+                                handleScroll();
+                        }
+                    }
+                      // Добавляем слушатель события изменения размера окна
+                    window.addEventListener('resize', function() {
+                        // Проверяем ширину экрана
+                        if (window.innerWidth <= 950) {
+                        //console.log('Ширина экрана менее или равна 950px');
+                        }
+                        else {
+                            console.log('Ширина экрана больше 950px, код мобильной панели делать не нужно.');
+                        }
+                    });
+
+                    window.addEventListener('resize', updateScreenState);
+                    checkScreenWidth(); // Вызываем при загрузке
+                });
+            </script>
+        <!-- <div class="diming_unit_block" style="background: black; opacity: 0.7; width: 100%; height: 100%; position: fixed; top: 0; left: 0; box-shadow: inset 0 11px 8px -10px rgb(0, 0, 0, 0.2), inset 0 -11px 8px -10px rgb(0, 0, 0, 0.2);"></div> -->
+
         <div class="aside_main">
+
             <aside>
+                <button class="mobile_panel" id="open_aside">
+                    <div class="img-sidebar"></div>
+                </button>
                 <div class="aside_block">
-                    <img src="images/Aside/h7.svg" alt="" style="width: 18px; height: 18px; position: absolute;">
-                    <a href="#about_web" class="aside_sector_contect2">О сайте</a>
-                    <div class="aside_sector">
-                        <div class="top" style="width: 100%; height: auto;">
-                            <div class="aside_sector_contect" id="mrt">
-                                <div class="hh3" id="img-1"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Статистика</a>
+
+                    <!-- Обложка боковой панели -->
+                    <div class="aside_heading">
+                        <img src="images/Aside/volna2.svg" alt="Фон" class="volna">
+                        <div class="avatarka"></div>
+                        <div class="link_about">
+                            <div class="a_fio_sector">
+                                <p>Путилин Андрей</p>
                             </div>
-                            <div class="aside_sector_contect">
-                                <div class="hh3" id="img-2"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Отчеты</a>
-                            </div>
-                            <div class="aside_sector_contect">
-                                <div class="hh3" id="img-3"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Настройки</a>
-                            </div>
-                            <div class="aside_sector_contect">
-                                <div class="hh3" id="img-4"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Справка</a>
-                            </div>
-                            <div class="aside_sector_contect">
-                                <div class="hh3" id="img-5"></div>
-                                <a href="" style="cursor: default; margin-left: 40px; color: var(--color);">Оставить отзыв</a>
+                            <div class="a_more_sector">
+                                <div class="img-strelka2"></div>
                             </div>
                         </div>
-                        <div class="bottom" style="width: 100%;">
-                            <div class="aside_sector_contect" style="border-bottom: none; border-radius: 0 0 10px 10px; border-top: 1px solid var(--border)">
-                                <p href="" style="cursor: default; font-size: 13px;">© 2025 Путилин Андрей. Все права защищены.</p>
-                            </div>
+                    </div>
+
+                    <!-- Ссылки боковой панели -->
+                    <div class="aside_links">
+                        <div class="height_fix">
+                            <a href="" class="aside_sector_contect" id="a-link1">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-1"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p>Статистика</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link2">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-2"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Отчеты</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link3">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-3"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Настройки</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link4">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-4"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Справка</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link5">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-5"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Оставить отзыв</p>
+                                </div>
+                            </a>
                         </div>
+                    </div>
+
+                    <!-- Copyright © 2025 -->
+                    <div class="aside_end">
+                        <p class="text-aside-end">© 2025 Все права защищены.</p>
                     </div>
                 </div>
             </aside>
