@@ -163,25 +163,52 @@ window.addEventListener('scroll', function() {
 //   document.body.style.overflow = 'auto';
 // };
 
-const openModalButton2 = document.getElementById('open_aside');
-const modal2 = document.getElementById('modal2');
-const closeModalButton2 = document.getElementById('closeModal2');
+// const openModalButton2 = document.getElementById('open_aside');
+// const modal2 = document.getElementById('modal2');
+// const closeModalButton2 = document.getElementById('closeModal2');
 
-openModalButton2.addEventListener('click', function() {
-  modal2.classList.add('show');
-  document.body.style.overflow = 'hidden'; // Предотвращаем прокрутку страницы, когда модальное окно открыто
+// openModalButton2.addEventListener('click', function() {
+//   modal2.classList.add('show');
+//   document.body.style.overflow = 'hidden'; // Предотвращаем прокрутку страницы, когда модальное окно открыто
+// });
+
+// closeModalButton2.addEventListener('click', function() {
+//   modal2.classList.remove('show'); // Сначала удаляем класс 'show', чтобы запустить анимацию закрытия
+//   document.body.style.overflow = 'auto';
+
+// });
+
+// // Дополнительная защита: закрытие модального окна при клике вне его.  Необязательно, но может быть полезным.
+// window.addEventListener('click', function(event) {
+//   if (event.target == modal2) {
+//     modal2.classList.remove('show');
+//     document.body.style.overflow = 'auto';
+//   }
+// });
+
+
+const openModalButton = document.getElementById('open_aside');
+const modal = document.getElementById('modal2');
+const modalContentAside = document.querySelector('.modal_content_aside'); // Более надежный селектор
+const closeModalButton = document.getElementById('closeModal2');
+
+openModalButton.addEventListener('click', function() {
+  modal.classList.add('show');
+  modalContentAside.classList.add('show'); // Добавляем класс и к content
+  document.body.style.overflow = 'hidden';
 });
 
-closeModalButton2.addEventListener('click', function() {
-  modal2.classList.remove('show'); // Сначала удаляем класс 'show', чтобы запустить анимацию закрытия
+closeModalButton.addEventListener('click', function() {
+  modal.classList.remove('show');
+  modalContentAside.classList.remove('show'); // Удаляем класс и у content
   document.body.style.overflow = 'auto';
-
 });
 
-// Дополнительная защита: закрытие модального окна при клике вне его.  Необязательно, но может быть полезным.
 window.addEventListener('click', function(event) {
-  if (event.target == modal2) {
-    modal2.classList.remove('show');
+  if (event.target === modal) {  // Строгое сравнение
+    modal.classList.remove('show');
+    modalContentAside.classList.remove('show'); // И здесь
     document.body.style.overflow = 'auto';
   }
 });
+

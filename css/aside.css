@@ -265,53 +265,46 @@ main.hidden {
     height: 100%;
     padding: 10px 10px 0 10px;
     bottom: 0;
-    left: -100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     position: fixed;
-    display: none;
 
     z-index: 9999;
-    /* background-color: rgba(0, 0, 0, 0.7); */
-    /* transition: transform 0.5s ease; */
-    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.7);
 
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Упрощаем и делаем согласованным */
     opacity: 0;
-    /* transform: translateX(-100%); */
 
     pointer-events: none;
     visibility: hidden;
 }
 .modal_aside.show {
-  opacity: 1;
-  left: 0;
-  /* transform: translateX(0); */
-  
-  visibility: visible;
-  pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 .modal_content_aside {
-  /* flex-direction: column; */
-  /* position: absolute; */
-  width: 280px;
-  /* max-width: 660px; */
-  /* max-height: 600px; */
-  height: 100%;
-  /* height: calc(100% - 60px); */
-  display: flex;
-  flex-wrap: wrap;
-  /* top: 0; */
-  /* left: 10px; */
-  bottom: 10px;
-  background-color: var(--block-bg);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: auto;
+    width: 280px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    bottom: 10px;
+    background-color: var(--block-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: auto;
+
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Плавный переход для transform и opacity */
+    left: 0;
+
+    opacity: 0;
+    transform: translateX(-100%); /*  Начальное положение вне экрана */
 }
-
-
-
+.modal_content_aside.show {
+    opacity: 1;
+    transform: translateX(0); /* Конечное положение - на экране */
+}
 
 
 
