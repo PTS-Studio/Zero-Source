@@ -169,30 +169,54 @@ let lastScrollTop = 0;
 
 /*
 =============================================================
-    МОДАЛЬНОЕ ОКНО
+    АНИМАЦИЯ ЗАПОЛНЕНИЯ ASIDE
 =============================================================
 */
 
-const openModalButton = document.getElementById('open_aside');
-const modal = document.getElementById('modal2');
-const modalContentAside = document.querySelector('.modal_content_aside'); // Более надежный селектор
-const closeModalButton = document.getElementById('closeModal2');
-
-openModalButton.addEventListener('click', function() {
+const openModalButton = document.getElementById('open_modal1');
+const modal = document.getElementById('modal1');
+const closeModalButton = document.getElementById('closeModal1');
+openModalButton.onclick = function() {
   modal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+};
+closeModalButton.onclick = function() {
+  modal.classList.remove('show');
+  document.body.style.overflow = 'auto';
+};
+
+const openModalButton2 = document.getElementById('open_modal2');
+const modal2 = document.getElementById('modal2');
+const closeModalButton2 = document.getElementById('closeModal2');
+openModalButton2.onclick = function() {
+  modal2.classList.add('show');
+  document.body.style.overflow = 'hidden';
+};
+closeModalButton2.onclick = function() {
+  modal2.classList.remove('show');
+  document.body.style.overflow = 'auto';
+};
+
+const openModalButton3 = document.getElementById('open_aside');
+const moda3 = document.getElementById('modal3');
+const modalContentAside = document.querySelector('.modal_content_aside'); // Более надежный селектор
+const closeModalButton3 = document.getElementById('closeModal3');
+
+openModalButton3.addEventListener('click', function() {
+  modal3.classList.add('show');
   modalContentAside.classList.add('show'); // Добавляем класс и к content
   document.body.style.overflow = 'hidden';
 });
 
-closeModalButton.addEventListener('click', function() {
-  modal.classList.remove('show');
+closeModalButton3.addEventListener('click', function() {
+  modal3.classList.remove('show');
   modalContentAside.classList.remove('show'); // Удаляем класс и у content
   document.body.style.overflow = 'auto';
 });
 
 window.addEventListener('click', function(event) {
-  if (event.target === modal) {  // Строгое сравнение
-    modal.classList.remove('show');
+  if (event.target === modal3) {  // Строгое сравнение
+    modal3.classList.remove('show');
     modalContentAside.classList.remove('show'); // И здесь
     document.body.style.overflow = 'auto';
   }
