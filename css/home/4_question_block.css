@@ -12,6 +12,16 @@
   padding: 0 0 40px;
   box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
 }
+.fg {
+  height: 40%;
+  width: 60px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  border-left: 1px solid var(--border);
+}
 .question_block2 {
   width: 100%;
   display: flex;
@@ -38,7 +48,6 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  /* padding: 0 30px 0 30px; */
   cursor: pointer;
   transition: 0.2s;
 }

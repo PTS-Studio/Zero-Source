@@ -1,7 +1,9 @@
+const mobile_panel_header = document.getElementById('open_aside')
 const menuBtn = document.getElementById('menuBtn');
 const menu = document.getElementById('menu');
 const mainContent = document.querySelector('main');
 const menuIcon = menuBtn.querySelector('menu-icon');
+
 
 menuBtn.addEventListener('click', function() {
   this.classList.toggle('active');
@@ -30,10 +32,18 @@ function fadeMainContent(show) {
       mainContent.style.transition = 'opacity 0.5s ease';
       mainContent.style.opacity = '1';
       mainContent.style.pointerEvents = 'auto';
+
+      mobile_panel_header.style.transition = 'opacity 0.5s ease';
+      mobile_panel_header.style.opacity = '1';
+      mobile_panel_header.style.pointerEvents = 'auto';
     } else {
       mainContent.style.transition = 'opacity 0.5s ease';
       mainContent.style.opacity = '0';
       mainContent.style.pointerEvents = 'none';
+
+      mobile_panel_header.style.transition = 'opacity 0.5s ease';
+      mobile_panel_header.style.opacity = '0';
+      mobile_panel_header.style.pointerEvents = 'auto';
     }
 }
 // Переключение меню и управление скроллом/анимацией

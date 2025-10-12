@@ -4,8 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #121212;
-    color: #fff;
+    background: #121212;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +21,13 @@
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 20px;
-    animation: pulse 2s infinite alternate; /* Пульсирующая анимация логотипа */
+    width: 80px;
+    height: 80px;
+    background: var(--img-logo);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: pulse 2s infinite alternate;
 }
 
 #copyright {

@@ -45,6 +45,7 @@ html {
   --img-a3: url(../images/Aside/a3d.svg);
   --img-a4: url(../images/Aside/a4d.svg);
   --img-a5: url(../images/Aside/a5d.svg);
+  --img-footer: url(../images/footer/Exclude_w.svg);
 
   --img-b1: url(../images/c1.svg);
   --img-b2: url(../images/c2.svg);
@@ -53,6 +54,7 @@ html {
   --img-security: url(../images/contacts/security_d.svg);
   --img-github: url(../images/contacts/github_d.svg);
   --img-rutube: url(../images/contacts/rutube_d.svg);
+  --footer-img: url(../images/footer/topw.jpg);
 }
 
 .dark {
@@ -84,6 +86,7 @@ html {
   --img-a3: url(../images/Aside/a3w.svg);
   --img-a4: url(../images/Aside/a4w.svg);
   --img-a5: url(../images/Aside/a5w.svg);
+  --img-footer: url(../images/footer/Exclude_d.svg);
 
   --img-b1: url(../images/d1.svg);
   --img-b2: url(../images/d2.svg);
@@ -92,6 +95,7 @@ html {
   --img-security: url(../images/contacts/security_w.svg);
   --img-github: url(../images/contacts/github_w.svg);
   --img-rutube: url(../images/contacts/rutube_w.svg);
+  --footer-img: url(../images/footer/topd.jpg);
 }
 body {
   display: flex;
@@ -155,6 +159,7 @@ header.hidden {
   z-index: 9999;
   border: 1px solid var(--border);
   background-color: var(--block-bg);
+  /* background-image: url(../images/new_year.svg); */
   color: var(--color);
 }
 .hd_sector {
@@ -293,11 +298,10 @@ header.hidden {
 .img-strelka {
   width: 10px;
   height: 10px;
-  /* background: var(--img-strelka); */
+  background: var(--img-strelka);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  transform: rotate(-90deg);
 }
 .img-sidebar {
   width: 20px;
@@ -380,6 +384,14 @@ header.hidden {
   background-repeat: no-repeat;
   background-position: center;
 }
+.footer_hh {
+  width: 100px;
+  height: 40px;
+  background: var(--img-footer);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 #img-1 {
   background-image: var(--img-a1);
 }
@@ -412,6 +424,9 @@ header.hidden {
 }
 #img-rutube {
   background-image: var(--img-rutube);
+}
+#img-footer {
+  background-image: var(--footer-img);
 }
 /*_Анимация появления меню______________*/
 @keyframes anim {

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/home/2_education_block.css">
     <link rel="stylesheet" href="css/home/4_question_block.css">
     <link rel="stylesheet" href="css/home/3_experience_works.css">
+    <link rel="stylesheet" href="css/system_ui.css">
     <link rel="stylesheet" href="js/4_news.js">
     <title>Сайт-портфолио</title>
 </head>
@@ -256,40 +257,47 @@
                 <div class="news_paper_block">
                     <button class="np_category" data-block="np_page1">
                         <h1 class="h2-3">Обновления сайта</h1>
-                        <p class="text-top10">В данном разделе представлена актуальная информация о ключевых нововведениях и улучшениях, внедренных на сайте</p>
+                        <p class="text-top10">
+                            В данном разделе представлена актуальная информация о ключевых 
+                            нововведениях и улучшениях, внедренных на сайте
+                        </p>
                     </button>
                     <button class="np_category" data-block="np_page2">
                         <h1 class="h2-3">Релизы</h1>
-                        <p class="text-top10">Здесь публикуются анонсы о выпуске новых продуктов, версий программного обеспечения или других значимых релизов</p>
+                        <p class="text-top10">
+                            Здесь публикуются анонсы о выпуске новых продуктов, версий 
+                            программного обеспечения или других значимых релизов
+                        </p>
                     </button>
                     <button class="np_category" data-block="np_page3">
                         <h1 class="h2-3">Итоги года</h1>
-                        <p class="text-top10">В этом разделе подводятся итоги деятельности за прошедший год, включая проекты, достижения, и обновления</p>
+                        <p class="text-top10">В этом разделе подводятся итоги деятельности 
+                            за прошедший год, включая проекты, достижения, и обновления</p>
                     </button>
 
                     <!-- Новости обновлений сайта -->
                     <div class="news_page_block" id="np_page1">
                         <div class="website_updates_block">
                             <div class="ew_heading_block">
-                                <h1 class="h2-3">Версия 25П2 - Локальная</h1>
+                                <h1 class="h2-3">Версия 25П2 - Локальная (Первый запуск)</h1>
                             </div>
-                            <div class="toggler">
-                                <input type="checkbox" id="toggler__checkbox-id-1-1" class="toggler__checkbox">
-                                <label for="toggler__checkbox-id-1-1" class="toggler__label" id="lab-t">
-                                    <div class="fg" style="display: flex; flex-wrap: wrap; align-items: center; padding: 0 30px 0 30px; border-right: 1px solid var(--border);">
-                                        <p>Обновление 0.1.1</p>
+                            <div class="dropdown">
+                                <input type="checkbox" id="checkbox-np30" class="dropdown_up">
+                                <label for="checkbox-np30" class="dropdown_label" id="lab-t">
+                                    <div class="toggler_heading">
+                                        <p>Запуск 0.1.1</p>
                                     </div>
                                     <div class="height-max" id="hm-2">
-                                        <p>Обновление защиты</p>
+                                        <p>Тестирование</p>
                                     </div>
                                     <div class="height-max">
                                         <p>31.08.2025</p>
                                     </div>
-                                    <div class="fg" style="height: 40%; width: 60px; position: relative; justify-content: center; align-items: center; display: flex; flex-wrap: wrap; border-left: 1px solid var(--border);">
-                                        <div class="hh2"></div>
+                                    <div class="fg">
+                                        <div class="img-strelka"></div>
                                     </div>
                                 </label>
-                                <span class="toggler__content-box">
+                                <span class="dropdown_contentbox">
                                     <p>Запуск и новые возможности:</p>
                                     <div class="oooppp" style="display: flex; flex-wrap: wrap;">
                                         <div class="column_block">
@@ -310,9 +318,9 @@
                                 </span>
                             </div>
                             <div class="toggler">
-                                <input type="checkbox" id="toggler__checkbox-id-1-2" class="toggler__checkbox">
-                                <label for="toggler__checkbox-id-1-2" class="toggler__label" id="lab-t">
-                                    <div class="fg" style="display: flex; flex-wrap: wrap; align-items: center; padding: 0 30px 0 30px; border-right: 1px solid var(--border);">
+                                <input type="checkbox" id="checkbox-np20" class="dropdown_up">
+                                <label for="checkbox-np20" class="dropdown_label" id="lab-t">
+                                    <div class="toggler_heading">
                                         <p>Обновление 0.1.2</p>
                                     </div>
                                     <div class="height-max" id="hm-2">
@@ -321,12 +329,12 @@
                                     <div class="height-max">
                                         <p>12.09.2025</p>
                                     </div>
-                                    <div class="fg" style="height: 40%; width: 60px; position: relative; justify-content: center; align-items: center; display: flex; flex-wrap: wrap; border-left: 1px solid var(--border);">
-                                        <div class="hh2"></div>
+                                    <div class="fg">
+                                        <div class="img-strelka"></div>
                                     </div>
                                 </label>
-                                <span class="toggler__content-box">
-                                    <p style="width: 100%; border: 1px solid var(--border); margin-bottom: 10px; padding: 0 10px; background: rgb(137, 228, 175);">Запуск и новые возможности:</p>
+                                <span class="dropdown_contentbox">
+                                    <p style="width: 100%; border: 1px solid var(--border); margin-bottom: 10px; padding: 0 10px;">Запуск и новые возможности:</p>
                                     <div class="oooppp" style="display: flex; flex-wrap: wrap;">
                                         <div class="column_block">
                                             <ul class="list-style2">
@@ -343,6 +351,191 @@
                                             </ul>
                                         </div>
                                      </div>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="website_updates_block">
+                            <div class="ew_heading_block">
+                                <h1 class="h2-3">Версия 25П1 - Локальная (Разработка)</h1>
+                            </div>
+                            <div class="dropdown">
+                                <input type="checkbox" id="checkbox-np1" class="dropdown_up">
+                                <label for="checkbox-np1" class="dropdown_label" id="lab-t">
+                                    <div class="toggler_heading">
+                                        <p>Версия 0.1.0</p>
+                                    </div>
+                                    <div class="height-max" id="hm-2">
+                                        <p>Разработка дизайна</p>
+                                    </div>
+                                    <div class="height-max">
+                                        <p>11.06.2023 - 31.05.2024</p>
+                                    </div>
+                                    <div class="fg">
+                                        <div class="img-strelka"></div>
+                                    </div>
+                                </label>
+                                <span class="dropdown_contentbox">
+                                    <p>Запуск и новые возможности:</p>
+                                    <div class="oooppp" style="display: flex; flex-wrap: wrap;">
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Разработан основной макет сайта.</li>
+                                                <li>Добавлена навигация по разделам.</li>
+                                                <li>Созданы базовые страницы.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Реализована адаптивная верстка для разных устройств.</li>
+                                                <li>Установлены начальные анимации для контента.</li>
+                                                <li>Оформлены текстовые блоки.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="dropdown">
+                                <input type="checkbox" id="checkbox-np2" class="dropdown_up">
+                                <label for="checkbox-np2" class="dropdown_label" id="lab-t">
+                                    <div class="toggler_heading">
+                                        <p>Версия 0.2.0</p>
+                                    </div>
+                                    <div class="height-max" id="hm-2">
+                                        <p>Оформление контента</p>
+                                    </div>
+                                    <div class="height-max">
+                                        <p>02.06.2025 - 10.10.2025</p>
+                                    </div>
+                                    <div class="fg">
+                                        <div class="img-strelka"></div>
+                                    </div>
+                                </label>
+                                <span class="dropdown_contentbox">
+                                    <p>Запуск и новые возможности:</p>
+                                    <div class="oooppp" style="display: flex; flex-wrap: wrap;">
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Разработан основной макет сайта.</li>
+                                                <li>Добавлена навигация по разделам.</li>
+                                                <li>Созданы базовые страницы.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Реализована адаптивная верстка для разных устройств.</li>
+                                                <li>Установлены начальные анимации для контента.</li>
+                                                <li>Оформлены текстовые блоки.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="dropdown">
+                                <input type="checkbox" id="checkbox-np3" class="dropdown_up">
+                                <label for="checkbox-np3" class="dropdown_label" id="lab-t">
+                                    <div class="toggler_heading">
+                                        <p>Версия 0.3.0</p>
+                                    </div>
+                                    <div class="height-max" id="hm-2">
+                                        <p>Верства макета</p>
+                                    </div>
+                                    <div class="height-max">
+                                        <p>31.08.2025</p>
+                                    </div>
+                                    <div class="fg">
+                                        <div class="img-strelka"></div>
+                                    </div>
+                                </label>
+                                <span class="dropdown_contentbox">
+                                    <p>Запуск и новые возможности:</p>
+                                    <div class="oooppp" style="display: flex; flex-wrap: wrap;">
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Разработан основной макет сайта.</li>
+                                                <li>Добавлена навигация по разделам.</li>
+                                                <li>Созданы базовые страницы.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Реализована адаптивная верстка для разных устройств.</li>
+                                                <li>Установлены начальные анимации для контента.</li>
+                                                <li>Оформлены текстовые блоки.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="dropdown">
+                                <input type="checkbox" id="checkbox-np4" class="dropdown_up">
+                                <label for="checkbox-np4" class="dropdown_label" id="lab-t">
+                                    <div class="toggler_heading">
+                                        <p>Версия 0.4.0</p>
+                                    </div>
+                                    <div class="height-max" id="hm-2">
+                                        <p>Тестирование</p>
+                                    </div>
+                                    <div class="height-max">
+                                        <p>31.08.2025</p>
+                                    </div>
+                                    <div class="fg">
+                                        <div class="img-strelka"></div>
+                                    </div>
+                                </label>
+                                <span class="dropdown_contentbox">
+                                    <p>Запуск и новые возможности:</p>
+                                    <div class="oooppp" style="display: flex; flex-wrap: wrap;">
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Разработан основной макет сайта.</li>
+                                                <li>Добавлена навигация по разделам.</li>
+                                                <li>Созданы базовые страницы.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Реализована адаптивная верстка для разных устройств.</li>
+                                                <li>Установлены начальные анимации для контента.</li>
+                                                <li>Оформлены текстовые блоки.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="dropdown">
+                                <input type="checkbox" id="checkbox-np5" class="dropdown_up">
+                                <label for="checkbox-np5" class="dropdown_label" id="lab-t">
+                                    <div class="toggler_heading">
+                                        <p>Версия 0.5.0</p>
+                                    </div>
+                                    <div class="height-max" id="hm-2">
+                                        <p>Оптимизация и публикация</p>
+                                    </div>
+                                    <div class="height-max">
+                                        <p>31.08.2025</p>
+                                    </div>
+                                    <div class="fg">
+                                        <div class="img-strelka"></div>
+                                    </div>
+                                </label>
+                                <span class="dropdown_contentbox">
+                                    <p>Запуск и новые возможности:</p>
+                                    <div class="oooppp" style="display: flex; flex-wrap: wrap;">
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Разработан основной макет сайта.</li>
+                                                <li>Добавлена навигация по разделам.</li>
+                                                <li>Созданы базовые страницы.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="column_block">
+                                            <ul class="list-style2">
+                                                <li>Реализована адаптивная верстка для разных устройств.</li>
+                                                <li>Установлены начальные анимации для контента.</li>
+                                                <li>Оформлены текстовые блоки.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </span>
                             </div>
                         </div>
@@ -384,43 +577,36 @@
                     <!-- Новости итогов года -->
                     <div class="news_page_block" id="np_page3">
                         <div class="question_block2">
-                            <div class="toggler" style="border: 1px solid var(--border); box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2); border-radius: 10px;">
-                                <input type="checkbox" id="toggler__checkbox-id-9" class="toggler__checkbox">
-                                <label for="toggler__checkbox-id-9" class="toggler__label" style="border-radius: 10px; align-items: center;">
+                            <div class="dropdown" style="border: 1px solid var(--border); box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2); border-radius: 10px;">
+                                <input type="checkbox" id="checkbox-np70" class="dropdown_up">
+                                <label for="checkbox-np70" class="dropdown_label" style="border-radius: 10px; align-items: center;">
                                     <div class="height-max" id="re">
                                         <p>Итоги 2025 года</p>
                                     </div>
                                     <div class="height-max" id="hm-1" style="align-items: center;gap: 5px;">
                                         <div class="hh4" id="img-b1"></div>
                                         <p>Проекты:</p>
-                                        <!-- <img src="images/c1.svg" alt="" style="width: 15px; height: 15px;"> -->
-                                        <!-- <p style="color: rgb(56, 182, 56);">+1</p> -->
                                          <p>0</p>
                                     </div>
                                     <div class="height-max" id="hm-1" style="align-items: center;gap: 5px;">
                                         <div class="hh4" id="img-b3"></div>
                                         <p>Статьи:</p>
-                                        
-                                        <!-- <img src="images/c3.svg" alt="" style="width: 15px; height: 15px;"> -->
                                         <p>0</p>
                                     </div>
                                     <div class="height-max" id="hm-1" style="align-items: center;gap: 5px;">
                                         <div class="hh4" id="img-b2"></div>
                                         <p>Публикации:</p>
-                                        <!-- <img src="images/c2.svg" alt="" style="width: 15px; height: 15px;"> -->
                                         <p>0</p>
                                     </div>
-                                    <div class="fg" style="width: 60px; position: relative; justify-content: center; align-items: center; display: flex; flex-wrap: wrap;">
-                                        <div class="hh2"></div>
+                                    <div class="fg" style="border-left: none;">
+                                        <div class="img-strelka"></div>
                                     </div>
-                                    
                                 </label>
-                                <span class="toggler__content-box" style="border-radius: 0 0 10px 10px;">
+                                <span class="dropdown_contentbox" style="border-radius: 0 0 10px 10px;">
                                     <div class="jcsb" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
                                         <div class="lala" style="display: flex; flex-wrap: wrap; justify-content: center;">
                                             <p class="h2-1" style="padding-top: 0; margin-bottom: 0;">Информация недоступна</p>
                                         </div>
-                                        <!-- <img src="images/warning.svg" alt="" style="width: 15px; height: 15px; align-items: center;"> -->
                                     </div>
                                 </span>
                             </div>
@@ -428,51 +614,54 @@
                     </div>
                 </div>
                 <div class="footer_block">
-                    <div class="f_top_block">
-                        <div class="hd_link" style="border-right: 1px solid var(--border); padding: 0 30px; border-radius: 10px 0 0 0;">
-                            <div class="hh"></div>
-                            <p class="text-logo">PTS-STUDIO</p>
+                    <div class="f_top_block" id="img-footer"></div>
+                    <div class="f_center_block">
+                        <div class="f_column_block" style="flex: 220px;">
+                            <div class="spkdwaa" style="display: flex; flex-wrap: wrap; flex-direction: row; width: 100%; align-items: center; margin-bottom: 0; ">
+                                <div class="logotip_block" style="margin-bottom: 10px; width: 60px; height: 60px; border-radius: 5px; border: 1px solid var(--border); padding: 10px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+                                    <div class="hh"></div>
+                                </div>
+                                <div class="lk" style="padding-left: 20px;">
+                                    <h1 class="h2-3" style="margin-bottom: 0;">PTS-STUDIO</h1>
+                                    <p>ПутилинСтудия</p>
+                                </div>
+                            </div>
+                            
+                            <p style="padding-top: 10px; margin-top: 16px; border-top: 1px solid var(--border);">Внимание! Репликация сайта — не просто нарушение правил, а шаг, за который придётся отвечать.</p>
+                            <p style="padding-top: 10px; margin-top: 9px; border-top: 1px solid var(--border);">V. 25П2</p>
                         </div>
-                        <a href="#news">
-                            <img src="images/footer/Exclude.png" alt="" style="width: 100px; height: auto; filter: brightness(80%); margin-right: 30px;">
-                        </a>
-                    </div>
-                    <div class="f_bottom_block">
                         <div class="f_column_block">
-                            <h1 class="h1-2-text" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Документы</h1>
-                            <a href="#" class="f-link">Политика конфиденциальности</a>
-                            <a href="#" class="f-link">Условия использования</a>
-                            <a href="#" class="f-link">Секретный протокол</a>
+                            <h1 class="h2-3" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Навигация</h1>
+                            <a href="1_home.html" class="f-link">Главная</a>
+                            <a href="2_works.html" class="f-link">Портфолио</a>
+                            <a href="3_contacts.html" class="f-link">Контакты</a>
+                            <a href="#" class="f-link">Новости</a>
                         
                         </div>
                         <div class="f_column_block">
-                            <h1 class="h1-2-text" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Навигация</h1>
-                            <a href="#" class="f-link">Главная</a>
+                            <h1 class="h2-3" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Дополнительно</h1>
                             <a href="#" class="f-link">Статистика</a>
                             <a href="#" class="f-link">Отчеты</a>
-                        
-                        </div>
-                        <div class="f_column_block">
-                            <h1 class="h1-2-text" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Дополнительно</h1>
-                            <a href="#" class="f-link">О сайте</a>
                             <a href="#" class="f-link">Справка</a>
                             <a href="#" class="f-link">Оставить отзыв</a>
                         
                         </div>
                         <div class="f_column_block" style="padding-right: 0;">
-                            <h1 class="h1-2-text" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Студия</h1>
-                            <a href="#" class="f-link">О студии</a>
-                            <a href="#" class="f-link">проекты</a>
-                            <a href="#" class="f-link">UT</a>
+                            <h1 class="h2-3" style="margin-bottom: 10px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">Документы</h1>
+                            <a href="#" class="f-link">Помощь</a>
+                            <a href="#" class="f-link">Privacy policy</a>
+                            <a href="#" class="f-link">Terms of use</a>
+                            <a href="#" class="f-link">Anti-spam policy</a>
                         </div>
                     </div>
-                    <p style="color: rgb(190, 190, 190); font-size: 12px; padding: 10px 30px 10px 30px; border-top: 1px solid var(--border); width: 100%; text-align: center;">Copyright © 2025 «PTS-Studio» Все права защищены, включая контент и изображения, которые защищены законом об авторском праве. Любое копирование и использование каких-либо материалов на этом сайте без согласия автора является незаконным.</p>
+                    <div class="f_bottom_block">
+                        <p style="color: #545454; font-size: 12px; display: flex; flex-wrap: wrap; width: 100%;">Copyright © 2025 «PTS-Studio» Все права защищены, включая контент и изображения, которые защищены законом об авторском праве. Любое копирование каких-либо материалов на этом сайте без согласия автора является незаконным.</p>
+                    </div>
+                    
                 </div>
             </main>
         </div>
     </div>
-<!-- <script src="js/home.js"></script>
-<script src="js/news.js"></script> -->
 <script src="js/4_news.js"></script>
     <script>
         const body = document.body;

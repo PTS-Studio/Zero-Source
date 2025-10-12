@@ -1,0 +1,74 @@
+.toggler_heading {
+    width: 185px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    border-right: 1px solid var(--border);
+}
+
+/*
+=============================================================
+    ВЫДВИЖНОЕ МЕНЮ DROPDOWN
+=============================================================
+*/
+.dropdown {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+  z-index: 1;
+}
+.dropdown_up {
+  display: none;
+}
+.dropdown_label {
+  width: 100%;
+  background: var(--block-bg);
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.dropdown_label:checked ~ .icon85 {
+  display: block;
+  position: relative;
+  opacity: 1;
+}
+.dropdown_label:hover {
+  background: var(--hover-bg);
+}
+.dropdown_label::selection {
+  color: none;
+  background: none;
+}
+.dropdown_contentbox  {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+  background: var(--dark-bg);
+  box-shadow: inset 0px 11px 8px -10px rgb(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  color: var(--color);
+  font-size: 14px;
+  z-index: -1;
+}
+.dropdown_up:checked ~ .dropdown_contentbox {
+  display: block;
+  display: block;
+  position: relative;
+  opacity: 1;
+}
+
+/*
+=============================================================
+    Другое
+=============================================================
+*/
