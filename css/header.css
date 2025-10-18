@@ -426,7 +426,7 @@ header.hidden {
   background-image: var(--img-rutube);
 }
 #img-footer {
-  background-image: var(--footer-img);
+  background-image:var(--footer-img);
 }
 /*_Анимация появления меню______________*/
 @keyframes anim {
