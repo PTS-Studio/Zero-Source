@@ -19,6 +19,15 @@
   border-bottom: 1px solid var(--border);
   z-index: 1;
 }
+.dropdown2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+  border: 1px solid var(--border);
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
 .dropdown_up {
   display: none;
 }
@@ -30,6 +39,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -67,6 +77,40 @@
   opacity: 1;
 }
 
+.dropdown_contentbox2  {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 10px 10px;
+  background: var(--dark-bg);
+  box-shadow: inset 0px 11px 8px -10px rgb(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  color: var(--color);
+  font-size: 14px;
+  z-index: -1;
+}
+.dropdown_up:checked ~ .dropdown_contentbox2 {
+  display: block;
+  display: block;
+  position: relative;
+  opacity: 1;
+}
+.jcsb {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.lala {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 /*
 =============================================================
     Другое

@@ -13,3 +13,6 @@ p {
 .text-top5 {
     margin-top: 5px;
 }
+.green {
+  color: rgb(0, 196, 0);
+}

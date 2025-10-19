@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Сайт-Портфолио",
+    "category": "веб-разработка",
+    "description": "Динамичная платформа для показа профессиональных навыков, проектов и достижений.",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+    "link": "https://github.com/PTS-Studio"
+  },
+  {
+    "id": 2,
+    "title": "E-commerce платформа",
+    "category": "веб-разработка",
+    "description": "Современная платформа для онлайн-торговли с интеграцией платежных систем и системой управления заказами.",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+    "link": "#"
+  }
+]
