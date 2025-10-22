@@ -257,7 +257,7 @@ const project2 = [
     year1: "np_11",
     year: "2025",
     projectCount: 0,
-    projectChange: 1,
+    projectChange: 2,
     articleCount: 0,
     articleChange: 1,
     publicationCount: 0,

@@ -16,3 +16,8 @@ p {
 .green {
   color: rgb(0, 196, 0);
 }
+.p11 {
+  font-size: 11px;
+  padding: 5px;
+  text-align: center;
+}

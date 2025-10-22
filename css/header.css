@@ -37,6 +37,7 @@ html {
   --system-theme: url(../images/HeaderMenu/system_theme_l.svg);
   --img-logo: url(../images/HeaderMenu/Group8.svg);
   --img-strelka: url(../images/strelka2.svg);
+  --img-qrcode: url(../images/footer/QR-code.png);
 
   --sidebar-ico: url(../images/Aside/sidebar_w.svg);
 
@@ -78,6 +79,7 @@ html {
   --system-theme: url(../images/HeaderMenu/system_theme_d.svg);
   --img-logo: url(../images/HeaderMenu/logotip2.svg);
   --img-strelka: url(../images/strelka.svg);
+  --img-qrcode: url(../images/footer/QR-code2.png);
 
   --sidebar-ico: url(../images/Aside/sidebar_d.svg);
 
@@ -299,6 +301,14 @@ header.hidden {
   width: 10px;
   height: 10px;
   background: var(--img-strelka);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.img-qrcode {
+  width: 80px;
+  height: 80px;
+  background: var(--img-qrcode);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

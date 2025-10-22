@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="images/Group 8.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/news/1_news_paper_block.css">
+    <link rel="stylesheet" href="css/home/2_education_block.css">
+    <link rel="stylesheet" href="css/home/3_experience_works.css">
+    <link rel="stylesheet" href="css/documentation.css">
+    <link rel="stylesheet" href="css/system_ui.css">
+    <link rel="stylesheet" href="js/4_news.js">
+    <title>Сайт-портфолио</title>
+</head>
+<body>
+    <!-- Шапка HEADER-->
+    <header class="header" id="header">
+        <div class="absorbing_block">
+            <div class="header_block">
+
+                <!-- Ссылка студии -->
+                <div class="hd_sector">
+                    <a href="4_news.html" class="hd_link" id="hd_link1">
+                        <div class="hh"></div>
+                        <p class="text-logo">PTS-STUDIO</p>
+                    </a>
+                </div>
+
+                <!-- Ссылки навигации -->
+                <div class="hd_sector">
+                    <a href="1_home.html" class="hd_link" id="hd_link2">
+                        <p class="text-bright">Главная</p>
+                    </a>
+                    <a href="2_works.html"class="hd_link" id="hd_link3">
+                        <p class="text-bright">Портфолио</p>
+                    </a>
+                    <a href="3_contacts.html" class="hd_link" id="hd_link4">
+                        <p class="text-bright">Контакты</p>
+                    </a>
+                    <a href="4_news.html" class="hd_link" id="hd_link5">
+                        <p class="text-bright">Новости</p>
+                    </a>
+                    <button class="menu-button" id="menuBtn">
+                        <div class="menu-icon"></div>
+                    </button>
+
+                    <!-- Мобильное всплывающее меню -->
+                    <div class="menu" id="menu">
+                        <div class="menu_bagget">
+                            <div class="menu_content">
+                                <a href="1_home.html" class="hd_link_mobile">
+                                    <p class="text-bright">Главная</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="2_works.html" class="hd_link_mobile">
+                                    <p class="text-bright">Портфолио</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="3_contacts.html" class="hd_link_mobile">
+                                    <p class="text-bright">Контакты</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <a href="4_news.html" class="hd_link_mobile">
+                                    <p class="text-bright">Новости</p>
+                                    <div class="img-strelka"></div>
+                                </a>
+                                <div class="button10">
+                                    <p>информация о сайте</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Кнопка смены цветовой темы -->
+                    <div class="menu-theme">
+                        <img id="light-theme" src="images/HeaderMenu/light_theme_l.svg">
+                        <img id="dark-theme" src="images/HeaderMenu/dark_theme_d.svg">
+                        <div class="dropdown_block">
+                            <div class="list_theme">
+                                <button id="lightBtn">
+                                    <div class="img-light-theme"></div>
+                                </button>
+                                <button id="darkBtn">
+                                    <div class="img-dark-theme"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильная боковая панель -->
+    <div class="center_block">
+
+        <!-- Кнопка боковой панели -->
+        <button class="mobile_panel" id="open_aside">
+            <div class="img-sidebar"></div>
+        </button>
+
+        <!-- Всплывающая боковая панель -->
+        <div id="modal2" class="modal_aside">
+            <div class="modal_content_aside">
+                <div class="ed_heading_block">
+                    <div class="ed_heading_content">
+                        <h3>Боковая панель</h3>
+                        <span id="closeModal2" class="close">&times;</span>
+                    </div>
+                </div>
+
+                <!-- Обложка боковой панели -->
+                <div class="aside_heading">
+                    <img src="images/Aside/volna2.svg" alt="Фон" class="volna">
+                    <div class="avatarka"></div>
+                    <div class="link_about">
+                        <div class="a_fio_sector">
+                            <p>Путилин Андрей</p>
+                        </div>
+                        <div class="a_more_sector">
+                            <div class="img-strelka2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Список ссылок боковой панели -->
+                <div class="aside_links">
+                    <div class="height_fix">
+                        <a href="" class="aside_sector_contect" id="a-link1">
+                            <div class="aside_left">
+                                <div class="hh3" id="img-1"></div>
+                            </div>
+                            <div class="aside_right" id="none-850">
+                                <p>Статистика</p>
+                            </div>
+                        </a>
+                        <a href="" class="aside_sector_contect" id="a-link2">
+                            <div class="aside_left">
+                                <div class="hh3" id="img-2"></div>
+                            </div>
+                            <div class="aside_right" id="none-850">
+                                <p href="">Отчеты</p>
+                            </div>
+                        </a>
+                        <a href="" class="aside_sector_contect" id="a-link3">
+                            <div class="aside_left">
+                                <div class="hh3" id="img-3"></div>
+                            </div>
+                            <div class="aside_right" id="none-850">
+                                <p href="">Настройки</p>
+                            </div>
+                        </a>
+                        <a href="" class="aside_sector_contect" id="a-link4">
+                            <div class="aside_left">
+                                <div class="hh3" id="img-4"></div>
+                            </div>
+                            <div class="aside_right" id="none-850">
+                                <p href="">Справка</p>
+                            </div>
+                        </a>
+                        <a href="" class="aside_sector_contect" id="a-link5">
+                            <div class="aside_left">
+                                <div class="hh3" id="img-5"></div>
+                            </div>
+                            <div class="aside_right" id="none-850">
+                                <p href="">Оставить отзыв</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Copyright © 2025 -->
+                <div class="aside_end">
+                    <p class="text-aside-end">© 2025 Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ASIDE + MAIN + FOOTER -->
+        <div class="aside_main_footer">
+            <aside>
+                <div class="aside_block">
+
+                    <!-- Обложка боковой панели -->
+                    <div class="aside_heading">
+                        <img src="images/Aside/volna2.svg" alt="Фон" class="volna">
+                        <div class="avatarka"></div>
+                        <div class="link_about">
+                            <div class="a_fio_sector">
+                                <p>Путилин Андрей</p>
+                            </div>
+                            <div class="a_more_sector">
+                                <div class="img-strelka2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ссылки боковой панели -->
+                    <div class="aside_links">
+                        <div class="height_fix">
+                            <a href="" class="aside_sector_contect" id="a-link1">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-1"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p>Статистика</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link2">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-2"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Отчеты</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link3">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-3"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Настройки</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link4">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-4"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Справка</p>
+                                </div>
+                            </a>
+                            <a href="" class="aside_sector_contect" id="a-link5">
+                                <div class="aside_left">
+                                    <div class="hh3" id="img-5"></div>
+                                </div>
+                                <div class="aside_right" id="none-850">
+                                    <p href="">Оставить отзыв</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Copyright © 2025 -->
+                    <div class="aside_end">
+                        <p class="text-aside-end">© 2025 Все права защищены.</p>
+                    </div>
+                </div>
+            </aside>
+
+            <main>
+                <div class="containers_column">
+                    <div class="container2">
+                        <div class="ew_heading_block">
+                            <h1 class="h1-2-text">Политика конфиденциальности</h1>
+                        </div>
+                        <div class="ew_main_block">
+                            <h1 class="h2-3" style="margin-bottom: 10px;">Общие положения</h1>
+                            <p>1.1. Настоящая Политика в отношении обработки персональных данных (далее – Политика)
+                                составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ 
+                                «О персональных данных» и определяет порядок обработки персональных данных и меры по 
+                                обеспечению безопасности персональных данных</p>
+                            <p>1.2. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности 
+                                соблюдение прав и свобод человека и гражданина при обработке его персональных данных, 
+                                в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
+                            <p>1.3. Настоящая Политика Оператора в отношении обработки персональных данных применяется 
+                                ко всей информации, которую Оператор может получить о посетителях веб-сайта 
+                                https://google.com (далее – Сайт).</p>
+                            <p></p>
+
+                            <h1 class="h2-4">2. Основные понятия, используемые в политике</h1>
+
+                            <p>2.1. Автоматизированная обработка персональных данных – обработка персональных данных 
+                                с помощью средств вычислительной техники.</p>
+                            <p>2.2. Блокирование персональных данных – временное прекращение обработки персональных 
+                                данных (за исключением случаев, если обработка необходима для уточнения персональных 
+                                данных).</p>
+                            <p>2.3. Веб-сайт – совокупность графических и информационных материалов, а также программ 
+                                для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу 
+                                https://google.com.</p>
+                            <p>2.4. Информационная система персональных данных — совокупность содержащихся в базах 
+                                данных персональных данных, и обеспечивающих их обработку информационных технологий и 
+                                технических средств.</p>
+                            <p>2.5. Обезличивание персональных данных — действия, в результате которых невозможно 
+                                определить без использования дополнительной информации принадлежность персональных 
+                                данных конкретному Пользователю или иному субъекту персональных данных.</p>
+                            <p>2.6. Обработка персональных данных – любое действие (операция) или совокупность действий 
+                                (операций), совершаемых с использованием средств автоматизации или без использования 
+                                таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, 
+                                хранение, уточнение (обновление, изменение), извлечение, использование, передачу 
+                                (распространение, предоставление, доступ), обезличивание, блокирование, удаление, 
+                                уничтожение персональных данных.</p>
+                            <p>2.7. Оператор – государственный орган, муниципальный орган, юридическое или физическое лицо, 
+                                самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку 
+                                персональных данных, а также определяющие цели обработки персональных данных, состав 
+                                персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными 
+                                данными.</p>
+                            <p>2.8. Персональные данные – любая информация, относящаяся прямо или косвенно к определенному 
+                                или определяемому Пользователю веб-сайта https://google.com.</p>
+                            <p>2.9. Пользователь – любой посетитель веб-сайта https://google.com.</p>
+                            <p>2.10. Предоставление персональных данных – действия, направленные на раскрытие персональных 
+                                данных определенному лицу или определенному кругу лиц.</p>
+                            <p>2.11. Распространение персональных данных – любые действия, направленные на раскрытие 
+                                персональных данных неопределенному кругу лиц (передача персональных данных) или на 
+                                ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование 
+                                персональных данных в средствах массовой информации, размещение в информационно-
+                                телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо 
+                                иным способом.</p>
+                            <p>2.12. Трансграничная передача персональных данных – передача персональных данных на 
+                                территорию иностранного государства органу власти иностранного государства, иностранному 
+                                физическому или иностранному юридическому лицу.</p>
+                            <p>2.13. Уничтожение персональных данных – любые действия, в результате которых персональные 
+                                данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания 
+                                персональных данных в информационной системе персональных данных и (или) уничтожаются 
+                                материальные носители персональных данных.</p>
+
+                            <h1 class="h2-4">3. Цели сбора персональных данных</h1>
+                            <h2 class="h2-5">3.1. Цели обработки персональных данных Пользователя:</h2>
+                            <ul>
+                                <li>установления с Пользователем обратной связи, включая направление уведомлений, запросов, 
+                                    касающихся использования Сайта, оказания услуг, обработку запросов и заявок от 
+                                    Пользователя;</li>
+                                <li>сбора информации о действиях Пользователей на Сайте, улучшения качества Сайта и его 
+                                    содержания (обезличенные данные).</li>
+                            </ul>
+                            <p>3.2. Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах, 
+                                специальных предложениях и различных событиях. Пользователь всегда может отказаться от 
+                                получения информационных сообщений, направив Оператору письмо на адрес электронной почты 
+                                sbhsac@mail.com с пометкой «Отказ от уведомлений».</p>
+                            <p>3.3. Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, 
+                                служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и 
+                                его содержания.</p>
+                            
+                            <h1 class="h2-4">4. Правовые основания и перечень обрабатываемых персональных данных</h1>
+
+                            <p>4.1. Оператор обрабатывает персональные данные Пользователя только в случае их заполнения 
+                                и/или отправки Пользователем самостоятельно через специальные формы, расположенные на сайте 
+                                https://google.com. Заполняя соответствующие формы и/или отправляя свои персональные данные 
+                                Оператору, Пользователь выражает свое согласие с данной Политикой.</p>
+
+                            <h2 class="h2-5">4.2. Оператор обрабатывает следующие персональные данные Пользователя:</h2>
+                            
+                            <ul>
+                                <li>обезличенные данные о посетителях (в т.ч. файлы «cookie») с помощью сервисов интернет-
+                                    статистики (Яндекс Метрика, Гугл Аналитика и других).</li>
+                            </ul>
+
+                            <h2 class="h2-5">4.3. Обработка персональных данных осуществляется на основе принципов:</h2>
+                            
+                            <ul>
+                                <li>законности и справедливой основы;</li>
+                                <li>ограничения обработки персональных данных достижением конкретных, заранее определенных 
+                                    и законных целей;</li>
+                                <li>недопущения обработки персональных данных, несовместимой с целями сбора персональных 
+                                    данных.</li>
+                            </ul>
+                            <h2 class="h2-5">4.4. Оператор осуществляет обработку персональных данных субъекта только при 
+                                наличии хотя бы одного из следующих условий:</h2>
+                            <ul>
+                                <li>обработка персональных данных осуществляется с согласия субъекта персональных данных 
+                                    на обработку его персональных данных;</li>
+                                <li>обработка персональных данных необходима для исполнения договора, стороной которого 
+                                    либо выгодоприобретателем или поручителем по которому является субъект персональных 
+                                    данных.</li>
+                            </ul>
+
+                            <h1 class="h2-5">5. Заключительные положения</h1>
+
+                            <p>6.1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся 
+                                обработки его персональных данных, обратившись к Оператору с помощью электронной почты 
+                                sbhsac@mail.com.</p>
+                            <p>6.2. В данном документе будут отражены любые изменения политики обработки персональных 
+                                данных Оператором. Политика действует бессрочно до замены ее новой версией.</p>
+                            <p>6.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу 
+                                [ЗДЕСЬ НУЖНО УКАЗАТЬ ССЫЛКУ НА СТРАНИЦУ С ПОЛИТИКОЙ].</p>
+                        </div>
+                    </div>
+                    <div class="container2">
+                        <div class="ew_heading_block">
+                            <h1 class="h1-2-text">Пользовательское соглашение</h1>
+                        </div>
+                        <div class="ew_main_block">
+                            <p>Настоящее Пользовательское Соглашение (Далее Соглашение) регулирует отношения между владельцем 
+                                google.com (далее https://google.com или Администрация) с одной стороны и пользователем сайта 
+                                с другой.</p>
+                            <p>Сайт https://google.com не является средством массовой информации.</p>
+                            <p>Используя сайт, Вы соглашаетесь с условиями данного соглашения.</p>
+                            <p>Если Вы не согласны с условиями данного соглашения, не используйте сайт https://google.com!</p>
+                            <p>Используя сайт, Вы соглашаетесь с условиями данного соглашения.</p>
+                            <p>Пользователь имеет право:</p>
+                            <ul>
+                                <li>осуществлять поиск информации на сайте</li>
+                                <li>получать информацию на сайте</li>
+                                <li>копировать информацию на другие сайты с указанием источника</li>
+                                <li>копировать информацию на другие сайты с разрешения правообладателя</li>
+                                <li>использовать информацию сайта в личных некоммерческих целях</li>
+                            </ul>
+                            <p>Администрация имеет право:</p>
+                            <ul>
+                                <li>по своему усмотрению и необходимости создавать, изменять, отменять правила</li>
+                                <li>ограничивать доступ к любой информации на сайте</li>
+                                <li>создавать, изменять, удалять информацию</li>
+                            </ul>
+                            <p>Пользователь обязуется:</p>
+                            <ul>
+                                <li>не нарушать работоспособность сайта</li>
+                                <li>не использовать скрипты (программы) для автоматизированного сбора информации 
+                                    и/или взаимодействия с Сайтом и его Сервисами</li>
+                            </ul>
+                            <p>Администрация обязуется:</p>
+                            <ul>
+                                <li>поддерживать работоспособность сайта за исключением случаев, когда это невозможно 
+                                    по независящим от Администрации причинам.</li>
+                            </ul>
+                            <h2 class="h2-5">Ответственность сторон</h2>
+                            <p>пользователь лично несет полную ответственность за распространяемую им информацию</p>
+                            <h2 class="h2-5">Условия действия Соглашения</h2>
+                            <p>Данное Соглашение вступает в силу при любом использовании данного сайта.</p>
+                            <p>Соглашение перестает действовать при появлении его новой версии.</p>
+                            <p>Администрация оставляет за собой право в одностороннем порядке изменять данное 
+                                соглашение по своему усмотрению.</p>
+                            <p>Администрация не оповещает пользователей об изменении в Соглашении.</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container">
+                    <div class="sidebar">
+                        <div class="ew_heading_block">
+                            <h1 class="h1-2-text">Документация</h1>
+                        </div>
+                        <div class="links_block">
+                            <button class="link_aside" id="la1">Политика конфиденциальности</button>
+                            <button class="link_aside" id="la2">Пользовательское соглашение</button>
+                            <button class="link_aside" id="la3">Антиспам политика</button>
+                            <button class="link_aside" id="la3">Справка</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                    const sidebar = document.querySelector('.sidebar');
+                    let lastScrollTop = 0;
+
+                    window.addEventListener('scroll', function() {
+                        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                        if (scrollTop > lastScrollTop) {
+                        // Скролл вниз
+                        sidebar.style.transition = 'top 0.2s ease'; // Добавляем плавную анимацию
+                        sidebar.style.top = '20px';
+                        } else {
+                        // Скролл вверх
+                        sidebar.style.transition = 'top 0.2s ease'; // Добавляем плавную анимацию
+                        sidebar.style.top = '100px';
+                        }
+
+                        lastScrollTop = scrollTop;
+                    });
+                    });
+
+                </script>
+                <div class="footer_block">
+                    <div class="f_top_block" id="img-footer"></div>
+                    <div class="f_center_block">
+                        <div class="f_column_block">
+                            <h1 class="h2-3-footer">Навигация</h1>
+                            <a href="1_home.html" class="f-link">Главная</a>
+                            <a href="2_works.html" class="f-link">Портфолио</a>
+                            <a href="3_contacts.html" class="f-link">Контакты</a>
+                            <a href="4_news.html" class="f-link">Новости</a>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h2-3-footer">Дополнительно</h1>
+                            <a href="#" class="f-link">Статистика</a>
+                            <a href="#" class="f-link">Отчеты</a>
+                            <a href="#" class="f-link">Справка</a>
+                            <a href="#" class="f-link">Оставить отзыв</a>
+                        </div>
+                        <div class="f_column_block">
+                            <h1 class="h2-3-footer">Документы</h1>
+                            <a href="5_documentation.html" class="f-link">Просмотр DocPTS</a>
+                            <a href="#" class="f-link">Privacy policy</a>
+                            <a href="#" class="f-link">Terms of use</a>
+                            <a href="#" class="f-link">Anti-spam policy</a>
+                        </div>
+                        <div class="f_column2_block">
+                            <h1 class="h2-3-footer">Студия</h1>
+                            <div class="pop8">
+                                <p class="p11">Отсканируйте QR-код для просмотра СТАТ</p>
+                            </div>
+                            <div class="ppzzqq">
+                                <div class="bl1">
+                                    <div class="bl11">
+                                        <div class="img-qrcode"></div>
+                                    </div>
+                                    <div class="bl12">
+                                        <p class="p11">Для пользователя</p>
+                                    </div>
+                                </div>
+                                <div class="bl1">
+                                    <div class="bl11">
+                                        <div class="img-qrcode"></div>
+                                    </div>
+                                    <div class="bl12">
+                                        <p class="p11">Для админа</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_bottom_block">
+                        <p style="font-size: 12px; display: flex; flex-wrap: wrap; flex: 1 1 100px;">Copyright © 2025 «PTS-Studio» Все права защищены</p>
+                        <a href="#news">
+                            <div class="footer_hh"></div>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+<script src="js/4_news.js"></script>
+    <script>
+        const body = document.body;
+        const img1 = document.getElementById('light-theme');
+        const img2 = document.getElementById('dark-theme');
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
+
+        // Функция для отображения изображения и скрытия другого
+        function showImage(imageToShow, imageToHide) {
+            imageToShow.style.display = 'block';
+            imageToHide.style.display = 'none';
+        }
+
+        // Проверяем наличие сохранённой темы
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark');
+            showImage(img2, img1); // Показываем темную тему
+        } else {
+            body.classList.remove('dark');
+            showImage(img1, img2); // Показываем светлую тему
+        }
+
+        // Обработчики для кнопок
+        lightBtn.addEventListener('click', () => {
+            body.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            showImage(img1, img2); // Показываем светлую тему
+        });
+
+        darkBtn.addEventListener('click', () => {
+            body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            showImage(img2, img1); // Показываем темную тему
+        });
+    </script>
+</body>
+</html>

@@ -18,6 +18,19 @@
     padding: 20px 30px 10px;
     border-bottom: 1px solid var(--border);
 }
+.ew_main_block {
+    width: 100%;
+    padding: 20px 30px;
+}
+.ew_main_block p {
+    margin-bottom: 20px;
+}
+.ew_main_block ul li {
+    list-style: disc;
+    color: var(--color2);
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
 .ew_top_block {
     padding: 20px 30px;
     justify-content: space-between;
