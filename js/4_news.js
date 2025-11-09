@@ -212,6 +212,15 @@ window.addEventListener('click', function(event) {
 const projectdata = [
   {
     id: 1,
+    title: "Система технической поддержки",
+    category: "Веб-разработка",
+    date: "31 Августа 2025",
+    description: "Мы рады сообщить о запуске нашего нового приложения, разработанного специально для того, чтобы сделать процесс обращения в техподдержку максимально удобным и эффективным",
+    technologies: ["С#", "SQL"],
+    link: "1_home.html",
+  },
+  {
+    id: 2,
     title: "Сайт портфолио",
     category: "Веб-разработка",
     date: "31 Августа 2025",
@@ -219,6 +228,7 @@ const projectdata = [
     technologies: ["Figma", "HTML", "CSS", "JS"],
     link: "1_home.html",
   },
+  
 ];
 
 function createProjectCard(project) {
@@ -269,11 +279,11 @@ const project2 = [
     id: 2,
     year1: "np_12",
     year: "2026",
-    projectCount: 1,
+    projectCount: 0,
     projectChange: "",
-    articleCount: 1,
+    articleCount: 0,
     articleChange: "",
-    publicationCount: 1,
+    publicationCount: 0,
     publicationChange: "",
     informationUnavailable: "Информация недоступна",
     text1: "",
@@ -312,7 +322,7 @@ function createDropdownHTML(project2) {
       <span class="dropdown_contentbox2">
         <div class="jcsb">
           <div class="lala">
-            <p class="h2-1">${project2.informationUnavailable}</p>
+            <p class="h2-19">${project2.informationUnavailable}</p>
             <p>${project2.text1}</p>
           </div>
         </div>

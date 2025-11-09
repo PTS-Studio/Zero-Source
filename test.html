@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Документация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        /* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sidebar {
+    width: 25%;
+    min-height: calc(100vh - 50px); /* Отнимаем высоту шапки */
+    background-color: #fff;
+    overflow-y: scroll;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding-top: 10px;
+}
+
+.content {
+    width: 75%;
+    padding-left: 20px;
+    background-color: #fff;
+    min-height: calc(100vh - 50px);
+}
+
+#tree ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+#tree li > span,
+#tree a {
+    cursor: pointer;
+    display: block;
+    padding: 8px 12px;
+    transition: all .2s ease-in-out;
+}
+
+#tree a:hover,
+#tree li > span:hover {
+    background-color: #eee;
+}
+
+#tree li ul {
+    display: none;
+}
+
+#tree li.active > ul {
+    display: block;
+}
+    </style>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <h1>Документация проекта</h1>
+    </header>
+    
+    <!-- Боковая панель -->
+    <div class="container">
+        <aside class="sidebar">
+            <ul id="tree">
+                <li><a href="#">Главная страница</a></li>
+                <li>
+                    <span>Каталог 1</span>
+                    <ul>
+                        <li><a href="#">Подкаталог 1.1</a></li>
+                        <li><a href="#">Подкаталог 1.2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Каталог 2</span>
+                    <ul>
+                        <li><a href="#">Подкаталог 2.1</a></li>
+                        <li><a href="#">Подкаталог 2.2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        
+        <!-- Основная область содержимого -->
+        <main class="content">
+            <p>Здесь отображается основная документация.</p>
+        </main>
+        <script>
+document.querySelectorAll('#tree li').forEach(function(item){
+    item.addEventListener('click', function(e){
+        if (!item.classList.contains('active')) {
+            // Если элемент кликнутый и закрыт, открываем его
+            this.classList.toggle('active');
+        }
+    });
+});
+</script>
+    </div>
+</body>
+</html>

@@ -12,6 +12,14 @@ const projects = [
         technologies: ["React", "Node.js", "MongoDB", "Stripe"],
         link: "https://github.com/PTS-Studio",
     },
+    {
+        id: 2,
+        title: "Система технической поддержки",
+        category: "мобильные приложения",
+        description: "Приложение, помогающее организовать систему технической поддержки внутри предприятия",
+        technologies: ["C#", "SQL"],
+        link: "https://github.com/PTS-Studio",
+    },
     // {
     //     id: 1,
     //     title: "E-commerce платформа",

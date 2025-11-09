@@ -85,7 +85,7 @@ main {
 .aside_main_footer {
     display: flex;
     flex-wrap: wrap;
-    width: 1280px;
+    width: 1400px;
     margin: 0 20px 0px 20px;
     border-radius: 10px;
     gap: 20px;
