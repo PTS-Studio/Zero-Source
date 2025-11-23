@@ -28,8 +28,7 @@
 }
 
 .category-select {
-    flex: 1 1 220px;
-    width: auto;
+    width: 250px;
     height: 60px;
     padding: 12px 20px;
     border: 0;
