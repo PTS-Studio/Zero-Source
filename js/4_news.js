@@ -267,7 +267,7 @@ const project2 = [
     year1: "np_11",
     year: "2025",
     projectCount: 0,
-    projectChange: 2,
+    projectChange: +2,
     articleCount: 0,
     articleChange: 1,
     publicationCount: 0,
@@ -279,15 +279,15 @@ const project2 = [
     id: 2,
     year1: "np_12",
     year: "2026",
-    projectCount: 0,
+    projectCount: 2,
     projectChange: "",
-    articleCount: 0,
+    articleCount: 1,
     articleChange: "",
-    publicationCount: 0,
+    publicationCount: 1,
     publicationChange: "",
     informationUnavailable: "Информация недоступна",
     text1: "",
-  }
+  },
 ];
 function createDropdownHTML(project2) {
   return `
@@ -342,7 +342,7 @@ document.getElementById('np_page3').innerHTML = dropdownsHTML;
 const updates = [
   {
     id: 1,
-    versionTitle: "Версия 25П2 - Локальная (Первый запуск)",
+    versionTitle: "Версия 25П2Л (Первый запуск)",
     dropdowns: [
       {
         idDropdown: "npm1",

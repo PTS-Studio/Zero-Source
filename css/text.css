@@ -8,13 +8,20 @@ p {
   color: var(--color);
 }
 .text-top10 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 .text-top5 {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 .green {
   color: rgb(0, 196, 0);
+}
+.red {
+  /* color: rgb(230, 44, 23); */
+  color: orange;
+}
+.orange {
+  color: orange;
 }
 .p11 {
   font-size: 11px;

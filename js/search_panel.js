@@ -9,7 +9,7 @@ const projects = [
         title: "Сайт-Портфолио",
         category: "веб-разработка",
         description: "Динамичная платформа для показа профессиональных навыков, проектов и достижений.",
-        technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+        technologies: ["HTML", "CSS", "JS"],
         link: "https://github.com/PTS-Studio",
     },
     {
@@ -137,7 +137,6 @@ function createProjectCard(project) {
             <div class="project-tech">
                 ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
             </div>
-            <a href="${project.link}" class="project-link" target="_blank">Подробнее →</a>
         </div>
     `;
 }
@@ -145,20 +144,8 @@ function createProjectCard(project) {
 // Функция отображения проектов
 function displayProjects(projectsToShow = projects) {
     projectsGrid.innerHTML = projectsToShow.map(createProjectCard).join('');
-    updateResultsInfo(projectsToShow.length);
 }
 
-// Функция обновления информации о результатах
-function updateResultsInfo(count) {
-    if (count === 0) {
-        resultsInfo.style.display = 'none';
-        noResults.style.display = 'block';
-    } else {
-        resultsInfo.style.display = 'block';
-        noResults.style.display = 'none';
-        resultsInfo.textContent = `Найдено проектов: ${count}`;
-    }
-}
 
 // Функция поиска и фильтрации
 function searchAndFilter() {

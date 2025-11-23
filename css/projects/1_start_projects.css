@@ -3,53 +3,42 @@
 }
 
 .search-form {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 60px;
     background: var(--block-bg);
     border: 1px solid var(--border);
     box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
     border-radius: 10px;
-    display: flex;
-    /* gap: 15px; */
-    flex-wrap: wrap;
-    align-items: center;
 }
 
 .search-input {
-    flex: 2;
+    flex: 1 1 220px;
     height: 60px;
-    min-width: 250px;
     padding: 12px 20px;
     border: 0;
-    /* border: 1px solid #e1e5e9; */
     border-radius: 10px 0 0 10px;
     font-size: 16px;
     transition: all 0.3s ease;
     background: var(--block-bg);
     color: var(--color);
 }
-
 .search-input:focus {
     outline: none;
-    /* border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); */
 }
 
 .category-select {
-    flex: 1;
+    flex: 1 1 220px;
+    width: auto;
     height: 60px;
-    min-width: 200px;
     padding: 12px 20px;
     border: 0;
     border-left: 1px solid var(--border);
-    /* border-radius: 10px; */
-    /* font-size: 16px; */
     background: var(--block-bg);
     color: var(--color);
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .category-select:focus {
     outline: none;
 }
@@ -57,18 +46,13 @@
 .search-btn {
     height: 60px;
     padding: 12px 25px;
-    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
     background: var(--block-bg);
     color: var(--color);
     border: 0;
     border-left: 1px solid var(--border);
-    /* border-radius: 10px; */
-    /* font-size: 16px; */
     cursor: pointer;
     transition: all 0.3s ease;
-    /* font-weight: 600; */
 }
-
 .search-btn:hover {
     background: var(--hover-bg);
 }
@@ -78,17 +62,13 @@
     padding: 12px 25px;
     border-left: 1px solid var(--border);
     background: var(--block-bg);
-    /* background: #6c757d; */
     color: var(--color);
     border: 0;
     border-left: 1px solid var(--border);
     border-radius: 0 10px 10px 0;
-    /* font-size: 16px; */
     cursor: pointer;
     transition: all 0.3s ease;
-    /* font-weight: 600; */
 }
-
 .clear-btn:hover {
     background: var(--hover-bg);
 }
@@ -121,17 +101,15 @@
 }
 
 .project-title {
-    /* font-size: 1.4rem; */
-    /* font-weight: 700; */
     color: var(--color);
     margin-bottom: 10px;
 }
 
 .project-category {
+    margin-top: 15px;
     display: inline-block;
-    background: #bbc7ff;
-    /* border-top: 1px solid var(--color); */
-    color: var(--color);
+    background: linear-gradient(to bottom right, rgb(54, 64, 74, 0.7));
+    color: white;
     padding: 2px 10px;
     border-radius: 5px;
     font-size: 0.85rem;
@@ -161,7 +139,8 @@
 
 .project-link {
     display: inline-block;
-    color: #667eea;
+    color: var(--color);
+    border-bottom: 2px dotted var(--color);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -181,62 +160,6 @@
     border-radius: 15px;
     backdrop-filter: blur(10px);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 970px) {
-    .search-form {
-        height: auto;
-        background: var(--block-bg);
-        border-radius: 10px;
-
-    }
-    .search-input {
-        width: 100%;
-        border-radius: 10px 10px 0 0;
-        border-bottom: 1px solid var(--border);
-    }
-    .category-select {
-        width: 100%;
-        /* border-left: 0; */
-        border-bottom: 1px solid var(--border);
-    }
-    .search-btn {
-        width: 50%;
-        border-left: 0;
-        border-radius: 0 0 0 10px;
-    }
-    .clear-btn {
-        width: 50%;
-        border-radius: 0 0 10px 0;
-    }
-}
-@media (max-width: 850px) {
-    .projects-grid {
-        margin-top: 10px;
-        gap: 10px;
-    }
-}
-@media (max-width: 470px) {
-    .category-select {
-        width: 100%;
-        border-left: 0;
-    }
-}
 #radio-button-1, #radio-button-2, #radio-button-3 {
     display: none;
 }
@@ -244,7 +167,7 @@
     border-radius: 10px 0 0 10px;
 }
 #pm_button3 {
-    /* border-radius: 0 10px 10px 0; */
+    border-radius: 0 10px 10px 0;
 }
 .radio-button {
     display: flex;
@@ -332,4 +255,39 @@
     cursor: default;
     color: #fff;
     background-color: #1c1c22;
+}
+
+
+
+
+@media (max-width: 950px) {
+    #categorySelect {
+        width: 100%;
+    }
+    .category-select {
+        flex: none;
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+        border-radius: 0 10px 0 0;
+        border-left: 0;
+    }
+    .search-input {
+        flex: none;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        border-bottom: 1px solid var(--border);
+    }
+    .search-btn {
+        width: 50%;
+        border-left: 0;
+        border-radius: 0 0 0 10px;
+    }
+    .clear-btn {
+        width: 50%;
+        border-radius: 0 0 10px 0;
+    }
+    .projects-grid {
+        margin-top: 10px;
+        gap: 10px;
+    }
 }

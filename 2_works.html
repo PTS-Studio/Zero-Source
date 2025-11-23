@@ -255,12 +255,7 @@
             <main>
                 <div class="search-panel">
                     <div class="search-form">
-                        <input 
-                            type="text" 
-                            id="searchInput" 
-                            class="search-input" 
-                            placeholder="Введите название проекта или ключевое слово..."
-                        >
+                        <input type="text" id="searchInput" class="search-input" placeholder="Найти">
                         <select id="categorySelect" class="category-select">
                             <option value="">Все категории</option>
                             <option value="веб-разработка">Веб-разработка</option>
@@ -273,10 +268,9 @@
                         <button type="button" id="searchBtn" class="search-btn">Поиск</button>
                         <button type="button" id="clearBtn" class="clear-btn">Очистить</button>
                     </div>
-                    <!-- <div class="results-info" id="resultsInfo"></div> -->
-                    <div class="projects-grid" id="projectsGrid">
-                        <!-- Проекты будут добавлены через JavaScript -->
-                    </div>
+                    
+                    <!-- Проекты -->
+                    <div class="projects-grid" id="projectsGrid"></div>
                 </div>
                 <div class="footer_block">
                     <div class="f_top_block" id="img-footer"></div>
@@ -337,17 +331,14 @@
             </main>
             <script>
                 function showTab(tabId) {
-                // Сначала скрываем все вкладки
-                let tabs = document.querySelectorAll('.tab-content');
-                tabs.forEach(tab => tab.classList.remove('active'));
-
-                // Затем показываем нужную вкладку
-                document.getElementById(tabId).classList.add('active');
+                    // Сначала скрываем все вкладки
+                    let tabs = document.querySelectorAll('.tab-content');
+                    tabs.forEach(tab => tab.classList.remove('active'));
                 }
 
                 // Показать первую вкладку при загрузке страницы
                 document.addEventListener('DOMContentLoaded', () => {
-                showTab('content-1'); // По умолчанию отображаем content-1
+                    showTab('content-1'); // По умолчанию отображаем content-1
                 });
             </script>
         </div>
