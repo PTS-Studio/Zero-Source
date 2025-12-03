@@ -2,10 +2,10 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* background: var(--block-bg); */
-    /* border: 1px solid var(--border); */
+    background: var(--bg-contact);
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
     border-radius: 10px;
-    gap: 20px;
 }
 .secutity_block {
     width: 100%;
@@ -92,10 +92,5 @@
     #border-r-b {
         border-right: none;
         border-bottom: 1px solid var(--border);
-    }
-}
-@media (max-width: 850px) {
-    .contacts_block {
-        gap: 10px;
     }
 }

@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/contacts/contact_form.css">
     <link rel="stylesheet" href="css/system_ui.css">
     <link rel="stylesheet" href="js/3_contacts.js">
+    <link rel="stylesheet" href="css/contacts/cont.css">
+    <link rel="stylesheet" href="css/contacts/toggler.css">
     <title>Сайт-портфолио</title>
 </head>
 <body>
@@ -255,44 +257,219 @@
             </aside>
             <main>
                 <div class="contacts_block">
-                    <!-- <div class="ew_heading_block">
-                        <h1 class="h1-2-text">Контактная информация</h1>
-                    </div> -->
-                    <div class="secutity_block">
-                        <div class="cf_left_block">
-                            <div class="cube">
-                                <div class="hh5" id="img-security" style="width: 20px; height: 20px;"></div>
+                    <div class="form-wrapper">
+
+                        <!-- Поле навигации -->
+                        <div class="progress-bar">
+                            <div class="progress-step active" data-step="1">
+                                <div class="step-number">1</div>
+                                <div class="step-label">О себе</div>
+                            </div>
+                            <div class="progress-step" data-step="2">
+                                <div class="step-number">2</div>
+                                <div class="step-label">Связь</div>
+                            </div>
+                            <div class="progress-step" data-step="3">
+                                <div class="step-number">3</div>
+                                <div class="step-label">Сообщение</div>
+                            </div>
+                            <div class="progress-step" data-step="4">
+                                <div class="step-number">4</div>
+                                <div class="step-label">Подтверждение</div>
                             </div>
                         </div>
-                        <div class="cf_right_block">
-                            <p class="h2-3">ВНИМАНИЕ</p>
-                            <p class="text-top5">В целях обеспечения безопасности и защиты личных данных пользователей, прямая связь через контактные формы временно недоступна. Вместо этого вы можете найти меня на указанных ниже платформах или в социальных сетях.</p>
+
+                        
+                        <form id="contactForm" class="multi-step-form">
+
+                            <!-- Личные данные -->
+                            <div class="form-step active" data-step="1">
+                                <!-- <h1 class="h1-2" style="border-bottom: 2px solid var(--border); padding-bottom: 5px; margin-bottom: 5px;">Расскажите о себе</h1>
+                                <p class="step-description">Начнем с основной информации</p> -->
+
+                                <div class="form-group">
+                                    <label for="firstName">Имя</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                    <span class="error-message"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lastName">Фамилия</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                    <span class="error-message"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="company">Компания (необязательно)</label>
+                                    <input type="text" id="company" name="company">
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-next">Далее</button>
+                                </div>
+                            </div>
+
+                            <!-- Контакты -->
+                            <div class="form-step" data-step="2">
+                                <h2>Как с вами связаться?</h2>
+                                <p class="step-description">Укажите контактные данные</p>
+
+                                <div class="switcher">
+                                    <!-- Сначала поля, потом метки -->
+                                    <input type="radio" id="email" name="contact-method" value="email" checked>
+                                    <label class="switcher-option" for="email">ФКС</label>
+                                    
+                                    <input type="radio" id="phone" name="contact-method" value="phone">
+                                    <label class="switcher-option" for="phone">Max</label>
+                                    
+                                    <input type="radio" id="messenger" name="contact-method" value="messenger">
+                                    <label class="switcher-option" for="messenger">VK ID</label>
+                                </div>
+
+                                <div class="content">
+                                    <div id="email-content" class="content-block active">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" required>
+                                            <span class="error-message"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Телефон</label>
+                                            <input type="tel" id="phone" name="phone" required>
+                                            <span class="error-message"></span>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="preferredContact">Предпочтительный способ связи</label>
+                                            <select id="preferredContact" name="preferredContact" required>
+                                                <option value="">Выберите...</option>
+                                                <option value="email">Email</option>
+                                                <option value="phone">Телефон</option>
+                                                <option value="any">Любой</option>
+                                            </select>
+                                            <span class="error-message"></span>
+                                        </div>
+                                    </div>
+
+                                    <div id="phone-content" class="content-block">
+                                        <h3>Телефон</h3>
+                                        <input type="tel" placeholder="Ваш номер телефона">
+                                        <button>Позвонить</button>
+                                    </div>
+
+                                    <div id="messenger-content" class="content-block">
+                                        <h3>Мессенджер</h3>
+                                        <select>
+                                            <option value="telegram">Telegram</option>
+                                            <option value="whatsapp">WhatsApp</option>
+                                            <option value="viber">Viber</option>
+                                        </select>
+                                        <textarea placeholder="Ваше сообщение"></textarea>
+                                        <button>Отправить сообщение</button>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-prev">Назад</button>
+                                    <button type="button" class="btn btn-next">Далее</button>
+                                </div>
+                            </div>
+
+                            <!-- Сообщение -->
+                            <div class="form-step" data-step="3">
+                                <h2>Ваше сообщение</h2>
+                                <p class="step-description">Расскажите, чем мы можем помочь</p>
+
+                                <div class="form-group">
+                                    <label for="subject">Тема обращения</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Выберите тему...</option>
+                                        <option value="general">Общий вопрос</option>
+                                        <option value="support">Техническая поддержка</option>
+                                        <option value="sales">Коммерческое предложение</option>
+                                        <option value="partnership">Партнерство</option>
+                                    </select>
+                                    <span class="error-message"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Сообщение</label>
+                                    <textarea id="message" name="message" rows="6" required></textarea>
+                                    <span class="error-message"></span>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-prev">Назад</button>
+                                    <button type="button" class="btn btn-next">Далее</button>
+                                </div>
+                            </div>
+
+                            <!-- Проверка -->
+                            <div class="form-step" data-step="4">
+                                <h2>Проверьте данные</h2>
+                                <p class="step-description">Убедитесь, что все верно</p>
+
+                                <div class="summary-section">
+                                    <h3>Личные данные</h3>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Имя:</span>
+                                        <span class="summary-value" id="summaryFirstName"></span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Фамилия:</span>
+                                        <span class="summary-value" id="summaryLastName"></span>
+                                    </div>
+                                    <div class="summary-item" id="summaryCompanyItem">
+                                        <span class="summary-label">Компания:</span>
+                                        <span class="summary-value" id="summaryCompany"></span>
+                                    </div>
+                                </div>
+
+                                <div class="summary-section">
+                                    <h3>Контакты</h3>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Email:</span>
+                                        <span class="summary-value" id="summaryEmail"></span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Телефон:</span>
+                                        <span class="summary-value" id="summaryPhone"></span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Способ связи:</span>
+                                        <span class="summary-value" id="summaryPreferredContact"></span>
+                                    </div>
+                                </div>
+
+                                <div class="summary-section">
+                                    <h3>Сообщение</h3>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Тема:</span>
+                                        <span class="summary-value" id="summarySubject"></span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <span class="summary-label">Текст:</span>
+                                        <span class="summary-value" id="summaryMessage"></span>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="btn btn-prev">Назад</button>
+                                    <button type="submit" class="btn btn-submit">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Отправка завершена -->
+                        <div class="success-message" id="successMessage">
+                            <div class="success-icon">✓</div>
+                            <h2>Спасибо за обращение!</h2>
+                            <p>Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.</p>
+                            <button type="button" class="btn btn-next" id="resetForm">Отправить еще одно сообщение</button>
                         </div>
                     </div>
-                    <!-- <div class="cf_links_block"> -->
-                        <a href="https://github.com/PTS-Studio" target="_blank" class="cf_category" id="border-r-b">
-                            <div class="cf_left_block" style="align-items: center;">
-                                <div class="cube">
-                                    <div class="hh5" id="img-github"></div>
-                                </div>
-                            </div>
-                            <div class="cf_right_block">
-                                <p class="h2-3">Github</p>
-                                <p>Вы можете просмотреть весь исходный код на платформе GitHub, где хранятся мои работы и проекты</p>
-                            </div>
-                        </a>
-                        <a href="https://rutube.ru/" target="_blank" class="cf_category">
-                            <div class="cf_left_block" style="align-items: center;">
-                                <div class="cube">
-                                    <div class="hh5" id="img-rutube"></div>
-                                </div>
-                            </div>
-                            <div class="cf_right_block">
-                                <p class="h2-3">Rutube</p>
-                                <p>Видео хостиг, в котором я выкладываю отчеты о тестировании моих проектов перед их публикацией в интернет</p>
-                            </div>
-                        </a>
-                    <!-- </div> -->
+                    <div class="form-wrapper2" style="display: flex; flex: 1 1 450px; flex-wrap: wrap;">
+                        
+                    </div>
                 </div>
                 <div class="footer_block">
                     <div class="f_top_block" id="img-footer"></div>

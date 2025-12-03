@@ -130,14 +130,14 @@ const noResults = document.getElementById('noResults');
 // Функция создания карточки проекта
 function createProjectCard(project) {
     return `
-        <div class="project-card" data-category="${project.category}" data-title="${project.title.toLowerCase()}" data-description="${project.description.toLowerCase()}">
+        <a href="${project.link}" class="project-card" data-category="${project.category}" data-title="${project.title.toLowerCase()}" data-description="${project.description.toLowerCase()}">
             <h3 class="project-title">${project.title}</h3>
             <span class="project-category">${project.category}</span>
             <p class="project-description">${project.description}</p>
             <div class="project-tech">
                 ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
             </div>
-        </div>
+        </a href="">
     `;
 }
 
