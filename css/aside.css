@@ -1,39 +1,105 @@
+/* Стили заставки */
 #splash-screen {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #121212;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 99999999;
+    width: 100%;
+    height: 100%;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* Плавное исчезновение */
-}
-#logo {
     display: flex;
     flex-wrap: wrap;
+    z-index: 999999999;
+    transition: opacity 0.5s ease, visibility 0.7s ease;
+    background-color: var(--block-bg);
+}
+.loaded_block {
+    width: 1280px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.animation_logotip {
+    width: 100%;
+    flex: 1 1 220px;
     align-items: center;
-    gap: 20px;
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    width: 80px;
-    height: 80px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.loaded_bottom_block {
+    width: 100%;
+}
+.load_line {
+    height: 30px;
+    margin: 10px;
+    border: 1px solid var(--color);
+}
+.load_level {
+    gap: 5px;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.loaded_copyright_block {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.level_up {
+    display: flex; 
+    flex-wrap: wrap;
+    flex: 1 1 220px;
+    margin: 20px 10px 10px 10px;
+    gap: 10px;
+}
+
+.loader {
+    --n:10;
+    --s:100px;
+    --g:5px;
+    width:calc(var(--n)*(var(--s) + var(--g)) - var(--g));
+    height: 20px;
+    border: 1px solid var(--color);
+    background:
+        repeating-linear-gradient(90deg,
+        currentColor  0 var(--s),
+        #0000 0 calc(var(--s) + var(--g))
+        ) left / calc((var(--n) + 1)*(var(--s) + var(--g))) 100% 
+        no-repeat content-box;
+    animation: load 3s steps(calc(var(--n) + 1)) infinite;
+}
+@keyframes load {
+    0% {background-size: 0% 100%}
+}
+.loader_column {
+    display: flex;
+    flex: 1 1 20px;
+    background: var(--color);
+}
+.logo {
+    width: 100px;
+    height: 100px;
     background: var(--img-logo);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    animation: pulse 0.5s infinite alternate;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    animation: pulse 2s infinite alternate;
 }
 
 #copyright {
     font-size: 0.8em;
-    position: absolute;
     bottom: 20px;
+    max-width: 350px;
+    margin: 20px;
 }
 
 /* Стили содержимого страницы */
@@ -42,16 +108,162 @@
     display: none; /* Скрыто до исчезновения заставки */
 }
 
+.wave {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105px;
+    height: 105px;
+    border: 10px solid rgba(255, 255, 255, 0.075);
+    border-radius: 50%;
+    animation: pulse2 2s linear infinite;
+    opacity: 0;
+}
+
+.wave:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.wave:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.wave:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.wave:nth-child(4) {
+    animation-delay: 3s;
+}
+.wave:nth-child(5) {
+    animation-delay: 4s;
+}
+.loader_column {
+    animation: loaded 2s linear infinite;
+    opacity: 0;
+}
+.loader_column:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.loader_column:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.loader_column:nth-child(3) {
+    animation-delay: 0.8s;
+}
+.loader_column:nth-child(4) {
+    animation-delay: 1.1s;
+}
+.loader_column:nth-child(5) {
+    animation-delay: 1.4s;
+}
+.loader_column:nth-child(6) {
+    animation-delay: 1.7s;
+}
+.loader_column:nth-child(7) {
+    animation-delay: 2s;
+}
+.loader_column:nth-child(8) {
+    animation-delay: 2.3s;
+}
+
+.animated-text {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex: 1 1 50px;
+    /* height: auto; */
+    /* margin: 0 20px 20px 20px; */
+    height: 30px;
+    margin: 0 10px 10px 10px;
+    color: var(--color);
+    animation: loaded2 2s linear infinite;
+    opacity: 0;
+    /* background: green; */
+}
+.animated-text:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.animated-text:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.animated-text:nth-child(3) {
+    animation-delay: 0.8s;
+}
+.animated-text:nth-child(4) {
+    animation-delay: 1.2s;
+}
+.animated-text:nth-child(5) {
+    animation-delay: 1.5s;
+}
+.animated-text:nth-child(6) {
+    animation-delay: 1.8s;
+}
+.animated-text:nth-child(7) {
+    animation-delay: 2.1s;
+}
+.animated-text:nth-child(8) {
+    animation-delay: 2.4s;
+}
+.animated-text:nth-child(9) {
+    animation-delay: 2.7s;
+}
+@keyframes changeText {
+    /* 0% { content: "Шаг 1"; }
+    10% { content: "Шаг 2"; }
+    20% { content: "Шаг 3"; }
+    30% { content: "Шаг 4"; }
+    40% { content: "Шаг 5"; }
+    50% { content: "Шаг 5"; }
+    60% { content: "Шаг 6"; }
+    70% { content: "Шаг 7"; }
+    100% { content: "Шаг 8"; } */
+}
+
+.animated-text::before {
+    /* content: "Шаг 1"; */
+    animation: changeText 3s steps(1, end) forwards;
+}
+@keyframes loaded {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes loaded2 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes pulse2 {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(2.5);
+        opacity: 0;
+    }
+}
 /* Анимация пульсации логотипа */
 @keyframes pulse {
     0% {
         transform: scale(1);
+        transform: translate(1);
     }
     100% {
         transform: scale(1.1);
+        transform: translate(5);
     }
 }
 
+
+/* Стили боковой панели */
 .noise::before {
     position: fixed;
     width: 100%;

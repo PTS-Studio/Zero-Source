@@ -286,7 +286,7 @@
 }
 
 .btn-prev:hover {
-    background: var(--bg-color);
+    background: var(--hover-bg);
     border-color: var(--text-secondary);
 }
 

@@ -1,3 +1,61 @@
+/*
+=============================================================
+    АНИМАЦИЯ ЗАГРУЗКИ СТРАНИЦЫ
+=============================================================
+*/
+document.addEventListener('DOMContentLoaded', function() {
+    const splashScreen = document.getElementById('splash-screen');
+    const content = document.getElementById('content');
+
+    function hideSplashScreen() {
+        splashScreen.style.opacity = '0';
+        setTimeout(() => {
+            splashScreen.style.display = 'none';
+            content.style.display = 'block';
+            document.body.style.overflow = 'auto';
+        }, 500);
+    }
+
+    setTimeout(hideSplashScreen, 2500);
+});
+window.addEventListener('load', function() {
+    const logo = document.querySelector('.logo'); // Получаем ссылку на элемент логотипа
+
+    function toggleAnimation() {
+        if (logo.classList.contains('static')) {
+            logo.classList.remove('static'); // Включаем анимацию
+        } else {
+            logo.classList.add('static'); // Отключаем анимацию
+        }
+    }
+
+    // Функция для задержки смены анимации
+    function delay(ms) {
+      return new Promise(res => setTimeout(res, ms));
+    }
+
+    async function animateLogo() {
+      while(true) {
+        logo.classList.remove('static');
+        await delay(3000);
+        logo.classList.add('static');
+        await delay(3000);
+      }
+    }
+
+    animateLogo();
+
+
+    setTimeout(function() {
+        document.body.classList.add('loaded');
+        document.body.style.overflow = 'auto';
+    }, 6000); // Показать контент после 6 секунд (общее время пульсации + статики)
+});
+/*
+=============================================================
+    БОКОВАЯ ПАНЕЛЬ
+=============================================================
+*/
 const mobile_panel_header = document.getElementById('open_aside')
 const menuBtn = document.getElementById('menuBtn');
 const menu = document.getElementById('menu');
