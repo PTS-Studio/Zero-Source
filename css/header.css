@@ -33,6 +33,7 @@ html {
   --color: #000000;
   --color2: #545454;
   --bg-contact: #f8f8f8;
+  --green: green;
 
   --menu-active: url(../images/HeaderMenu/menu_active_l.svg);
   --menu-passive: url(../images/HeaderMenu/menu_passive_l.svg);
@@ -82,6 +83,7 @@ html {
   --color: #ffffff;
   --color2: #d7d7d7;
   --bg-contact: #121212;
+  --green: rgb(0, 255, 0);
 
   --menu-active: url(../images/HeaderMenu/menu_active_d.svg);
   --menu-passive: url(../images/HeaderMenu/menu_passive_d.svg);
@@ -119,6 +121,7 @@ body {
   background-color: var(--body-bg);
   color: var(--color);
   transition: background-color 0.5s, color 0.5s;
+  overflow: hidden;
 }
 .center_block {
   display: flex;

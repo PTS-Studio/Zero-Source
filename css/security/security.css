@@ -1,0 +1,36 @@
+.security_banner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 1px solid #57C785;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    background: #57C785;
+    background: linear-gradient(90deg,rgb(65, 143, 97) 0%, rgba(68, 158, 117, 1) 50%, rgba(57, 135, 108, 1) 73%);
+}
+
+.security_update {
+    width: 100%;
+    height: auto;
+    background: var(--block-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+.security_card {
+    margin: 0 20px 30px 20px;
+}
+.card_proper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 20px 0 20px;
+    border: 1px solid var(--green);
+    background: #83ff8b14;
+    border-radius: 10px;
+    gap: 20px;
+}

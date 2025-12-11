@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="images/Group 8.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/news/1_news_paper_block.css">
     <link rel="stylesheet" href="css/home/2_education_block.css">
-    <link rel="stylesheet" href="css/home/4_question_block.css">
     <link rel="stylesheet" href="css/home/3_experience_works.css">
-    <link rel="stylesheet" href="css/system_ui.css">
+    <link rel="stylesheet" href="css/security/security.css">
     <link rel="stylesheet" href="js/4_news.js">
-    <title>Сайт-портфолио</title>
+    <title>Document</title>
 </head>
 <body>
     <!-- Проверка и анализ -->
@@ -71,7 +68,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Шапка HEADER-->
     <header class="header" id="header">
         <div class="absorbing_block">
@@ -79,7 +76,7 @@
 
                 <!-- Ссылка студии -->
                 <div class="hd_sector">
-                    <a href="4_news.html" class="hd_link" id="hd_link1">
+                    <a href="1_home.html" class="hd_link" id="hd_link1">
                         <div class="hh"></div>
                         <p class="text-logo">PTS-STUDIO</p>
                     </a>
@@ -132,8 +129,10 @@
 
                     <!-- Кнопка смены цветовой темы -->
                     <div class="menu-theme">
+
                         <img id="light-theme" src="images/HeaderMenu/light_theme_l.svg">
                         <img id="dark-theme" src="images/HeaderMenu/dark_theme_d.svg">
+
                         <div class="dropdown_block">
                             <div class="list_theme">
                                 <button id="lightBtn">
@@ -141,6 +140,9 @@
                                 </button>
                                 <button id="darkBtn">
                                     <div class="img-dark-theme"></div>
+                                </button>
+                                <button id="systemBtn" style="color: var(--color);">
+                                    <div class="img-system-theme"></div>
                                 </button>
                             </div>
                         </div>
@@ -159,12 +161,12 @@
         </button>
 
         <!-- Всплывающая боковая панель -->
-        <div id="modal2" class="modal_aside">
+        <div id="modal3" class="modal_aside">
             <div class="modal_content_aside">
                 <div class="ed_heading_block">
                     <div class="ed_heading_content">
                         <h3>Боковая панель</h3>
-                        <span id="closeModal2" class="close">&times;</span>
+                        <span id="closeModal3" class="close">&times;</span>
                     </div>
                 </div>
 
@@ -306,55 +308,40 @@
                     </div>
                 </div>
             </aside>
-
             <main>
-                <!-- Блок категорий новостей -->
-                 
-                <div class="news_paper_block">
-                    <div class="img-news-fon" style="padding: 0 30px; width: 100%; height: 200px; display: flex; flex-wrap: wrap; align-items: center; border-bottom: 1px solid var(--border); border-radius: 10px 10px 0 0;">
-                        <!-- <div class="lcq" style="width: 100%; height: auto; display: flex; flex-wrap: wrap;">
-                            <h1 style="font-size: 24px; color: rgb(77, 77, 77); width: 100%;">Будьте в курсе событий!</h1>
-                            <p style="margin-top: 20px; color: rgb(116, 116, 116);">Самые важные события собраны на одной странице. Узнавайте о новых обновлениях и приложений прямо здесь.</p>
-                        </div> -->
+                <div class="security_update">
+                    <div class="ew_heading_block" style="border-bottom: none;">
+                        <h1 class="h1-2-text">Улучшения безопасности</h1>
                     </div>
-                    <button class="np_category" data-block="np_page1">
-                        <h1 class="h2-3">Обновления сайта</h1>
-                        <p class="text-top10">
-                            В данном разделе представлена актуальная информация о ключевых 
-                            нововведениях и улучшениях, внедренных на сайте
-                        </p>
-                    </button>
-                    <button class="np_category" data-block="np_page2">
-                        <h1 class="h2-3">Релизы</h1>
-                        <p class="text-top10">
-                            Здесь публикуются анонсы о выпуске новых продуктов, версий 
-                            программного обеспечения или других значимых релизов
-                        </p>
-                    </button>
-                    <button class="np_category" data-block="np_page3">
-                        <h1 class="h2-3">Итоги года</h1>
-                        <p class="text-top10">В этом разделе подводятся итоги деятельности 
-                            за прошедший год, включая проекты, достижения, и обновления</p>
-                    </button>
-                </div>
-
-                <div style="width: 100%;">
-                    <!-- Новости обновлений сайта -->
-                    <div class="news_page_block" id="np_page1">
-                        <!-- Обновления -->
-                    </div>
-
-                    <!-- Новости релизов -->
-                    <div class="news_page_block" id="np_page2">
-                        <!-- Релизы -->
-                    </div>
-                    
-                    <!-- Новости итогов года -->
-                    <div class="news_page_block" id="np_page3">
-                        <!-- Итоги года -->
+                    <div class="security_card">
+                        <div class="card_proper">
+                            <div class="sec_column" style="flex: 1 1 300px; gap: 20px; display: flex; flex-wrap: wrap;">
+                                <img src="images/check.svg" alt="" width="40px" height="auto">
+                                <div class="colla">
+                                    <h1>АнтиСкрипты</h1>
+                                    <p>Внедрены антискрипты припятствующие изменению дизайна и взлома сайта через блоки ввода</p>
+                                </div>
+                            </div>
+                            <div class="sec_column" style="width: 100px;">
+                                <h1>Значение</h1>
+                                <p>Высокое</p>
+                            </div>
+                            <div class="sec_column_bottom" style="width: 100%; border-top: 1px solid var(--green); padding: 20px 0 20px 0; justify-content: space-between; display: flex; flex-wrap: wrap; align-items: center;">
+                                <p>11 Декабря 2025</p>
+                                <div class="cvcva" style="border: 1px solid #77bf95; background: #77bf9535; color: var(--green); border-radius: 5px; padding: 5px 10px;">Внедрено</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+                <div class="security_banner">
+                    <div class="dfqwq">
+                        <h1 style="color: white;">Система защищена</h1>
+                        <p style="color: whitesmoke;">Все критические компоненты находятся под наблюдением</p>
+                    </div>
+                    <div class="dfqwq" style="position: absolute; width: 80px; height: auto; right: 30px;">
+                        <img src="images/security.svg" alt="" style="width: 100%; height: auto;">
+                    </div>
+                </div>
                 <div class="footer_block">
                     <div class="f_top_block" id="img-footer"></div>
                     <div class="f_center_block">
@@ -396,8 +383,7 @@
                 </div>
             </main>
         </div>
-    </div>
-<script src="js/4_news.js"></script>
+    <script src="js/4_news.js"></script>
     <script>
         const body = document.body;
         const img1 = document.getElementById('light-theme');
@@ -434,5 +420,5 @@
             showImage(img2, img1); // Показываем темную тему
         });
     </script>
-</body>
+    </body>
 </html>

@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
         splashScreen.style.opacity = '0';
         setTimeout(() => {
             splashScreen.style.display = 'none';
-            content.style.display = 'block';
             document.body.style.overflow = 'auto';
         }, 500);
     }
