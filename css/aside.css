@@ -177,7 +177,7 @@
     height: 30px;
     margin: 0 10px 10px 10px;
     color: var(--color);
-    animation: loaded2 2s linear infinite;
+    animation: loaded 2s linear infinite;
     opacity: 0;
     /* background: green; */
 }

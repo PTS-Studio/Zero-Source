@@ -132,8 +132,9 @@
                     <!-- Кнопка смены цветовой темы -->
                     <div class="menu-theme">
 
-                        <img id="light-theme" src="images/HeaderMenu/light_theme_l.svg">
-                        <img id="dark-theme" src="images/HeaderMenu/dark_theme_d.svg">
+                        <div class="img-light-theme"></div>
+                        <div class="img-dark-theme"></div>
+                        <div class="img-system-theme"></div>
 
                         <div class="dropdown_block">
                             <div class="list_theme">
@@ -621,41 +622,81 @@
             </main>
         </div>
     </div>
-<script src="js/1_home.js"></script>
+    <script src="js/1_home.js"></script>
     <script>
-        const body = document.body;
-        const img1 = document.getElementById('light-theme');
-        const img2 = document.getElementById('dark-theme');
-        const lightBtn = document.getElementById('lightBtn');
-        const darkBtn = document.getElementById('darkBtn');
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightBtn = document.getElementById('lightBtn');
+            const darkBtn = document.getElementById('darkBtn');
+            const systemBtn = document.getElementById('systemBtn');
+            const body = document.body;
 
-        // Функция для отображения изображения и скрытия другого
-        function showImage(imageToShow, imageToHide) {
-            imageToShow.style.display = 'block';
-            imageToHide.style.display = 'none';
-        }
+            // Получаем ссылки на новые div элементы
+            const lightThemeDiv = document.querySelector('.img-light-theme');
+            const darkThemeDiv = document.querySelector('.img-dark-theme');
+            const systemThemeDiv = document.querySelector('.img-system-theme');
 
-        // Проверяем наличие сохранённой темы
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            body.classList.add('dark');
-            showImage(img2, img1); // Показываем темную тему
-        } else {
-            body.classList.remove('dark');
-            showImage(img1, img2); // Показываем светлую тему
-        }
+            // Функция для отображения одного div и скрытия остальных
+            function showDiv(divToShow) {
+                lightThemeDiv.style.display = 'none';
+                darkThemeDiv.style.display = 'none';
+                systemThemeDiv.style.display = 'none';
+                divToShow.style.display = 'block';
+            }
 
-        // Обработчики для кнопок
-        lightBtn.addEventListener('click', () => {
-            body.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-            showImage(img1, img2); // Показываем светлую тему
-        });
+            function setTheme(theme) {
+                if (theme === 'light') {
+                    body.classList.remove('dark');
+                    showDiv(lightThemeDiv); // Показываем светлую тему
+                } else if (theme === 'dark') {
+                    body.classList.add('dark');
+                    showDiv(darkThemeDiv); // Показываем темную тему
+                } else {
+                    // System theme
+                    showDiv(systemThemeDiv); // Всегда показываем иконку системной темы
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        body.classList.add('dark');
+                    } else {
+                        body.classList.remove('dark');
+                    }
+                }
 
-        darkBtn.addEventListener('click', () => {
-            body.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-            showImage(img2, img1); // Показываем темную тему
+                // Save theme to localStorage
+                localStorage.setItem('theme', theme);
+            }
+
+            // Check for saved theme in localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme);
+            } else {
+                // If no theme is saved, default to system theme
+                setTheme('system');
+            }
+
+            lightBtn.addEventListener('click', () => {
+                setTheme('light');
+            });
+
+            darkBtn.addEventListener('click', () => {
+                setTheme('dark');
+            });
+
+            systemBtn.addEventListener('click', () => {
+                setTheme('system');
+            });
+
+            // Listen for changes in system theme preference
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                if (localStorage.getItem('theme') === 'system') {
+                    showDiv(systemThemeDiv); // Всегда показываем иконку системной темы
+
+                    if (event.matches) {
+                        body.classList.add('dark');
+                    } else {
+                        body.classList.remove('dark');
+                    }
+                }
+            });
         });
     </script>
 </body>

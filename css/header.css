@@ -121,7 +121,6 @@ body {
   background-color: var(--body-bg);
   color: var(--color);
   transition: background-color 0.5s, color 0.5s;
-  overflow: hidden;
 }
 .center_block {
   display: flex;
@@ -363,11 +362,6 @@ header.hidden {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-}
-#light-theme, #dark-theme {
-  display: none;
-  width: 18px;
-  height: 18px;
 }
 .img-light-theme {
   width: 18px;
@@ -661,8 +655,9 @@ header.hidden {
 #darkBtn {
   width: 100%;
   padding: 20px 0;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0;
   border: 0;
+  border-bottom: 1px solid var(--border);
   background: var(--block-bg);
   display: flex;
   flex-wrap: wrap;
