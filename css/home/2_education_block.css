@@ -134,7 +134,7 @@
 .h1-2-text {
   color: var(--color);
   font-size: 15px;
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 .sections {
   width: 100%;

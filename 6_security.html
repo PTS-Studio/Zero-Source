@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/home/2_education_block.css">
     <link rel="stylesheet" href="css/home/3_experience_works.css">
     <link rel="stylesheet" href="css/security/security.css">
+    <link rel="stylesheet" href="css/system_ui.css">
     <link rel="stylesheet" href="js/4_news.js">
     <title>Document</title>
 </head>
@@ -162,12 +163,12 @@
         </button>
 
         <!-- Всплывающая боковая панель -->
-        <div id="modal3" class="modal_aside">
+        <div id="modal2" class="modal_aside">
             <div class="modal_content_aside">
                 <div class="ed_heading_block">
                     <div class="ed_heading_content">
                         <h3>Боковая панель</h3>
-                        <span id="closeModal3" class="close">&times;</span>
+                        <span id="closeModal2" class="close">&times;</span>
                     </div>
                 </div>
 
@@ -310,16 +311,76 @@
                 </div>
             </aside>
             <main>
+                <div class="loaded_categores">
+                    <div class="load_category">
+                        <div class="cat_column" style="width: 100%;">
+                            <p style="margin-bottom: 20px;">Проверок пройдено</p>
+                            <div class="justify-content-space-between" style="display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%;">
+                                <p style="font-size: 24px; font-weight: 900;">10</p>
+                                <div class="display-flex" style="display: flex; flex-wrap: wrap;">
+                                    <img src="images/HeaderMenu/birga.svg" alt="" style="width: 20px; height: auto;">
+                                    <p class="green">10</p>
+                                </div>
+                            </div>
+                            <p style="margin-top: 10px;">За последний месяц</p>
+                        </div>
+                    </div>
+                    <div class="load_category">
+                        <div class="cat_column" style="width: 100%;">
+                            <p style="margin-bottom: 20px;">Внедрено технологий</p>
+                            <div class="justify-content-space-between" style="display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%;">
+                                <p style="font-size: 24px; font-weight: 900;">2</p>
+                                <div class="display-flex" style="display: flex; flex-wrap: wrap;">
+                                    <img src="images/HeaderMenu/birga.svg" alt="" style="width: 20px; height: auto;">
+                                    <p class="green">2</p>
+                                </div>
+                            </div>
+                            <p style="margin-top: 10px;">За все время</p>
+                        </div>
+                    </div>
+                    <div class="load_category">
+                        <div class="cat_column" style="width: 100%;">
+                            <p style="margin-bottom: 20px;">Общий уровень безопасности</p>
+                            <div class="justify-content-space-between" style="display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%;">
+                                <p style="font-size: 20px; font-weight: 900;">Высокий</p>
+                                <div class="display-flex" style="display: flex; flex-wrap: wrap;">
+                                    <img src="images/HeaderMenu/birga.svg" alt="" style="width: 20px; height: auto;">
+                                    <p class="green">0%</p>
+                                </div>
+                            </div>
+                            <p style="margin-top: 10px;">От предыдущего периода</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="security_update">
-                    <div class="ew_heading_block" style="border-bottom: none;">
-                        <h1 class="h1-2-text">Улучшения безопасности</h1>
+                    <div class="ew_heading_block">
+                        <p class="h1-2-text">Улучшения безопасности</p>
                     </div>
                     <div class="security_card">
                         <div class="card_proper">
                             <div class="sec_column" style="flex: 1 1 300px; gap: 20px; display: flex; flex-wrap: wrap;">
                                 <img src="images/check.svg" alt="" width="40px" height="auto">
                                 <div class="colla">
-                                    <h1>АнтиСкрипты</h1>
+                                    <h1>SSL сертификат (HTTPS)</h1>
+                                    <p>Введен SSL сертификат, позволяющий защитить канал шифрования и обработки данных</p>
+                                </div>
+                            </div>
+                            <div class="sec_column" style="width: 100px;">
+                                <h1>Значение</h1>
+                                <p>Высокое</p>
+                            </div>
+                            <div class="sec_column_bottom" style="width: 100%; border-top: 1px solid var(--green); padding: 20px 0 20px 0; justify-content: space-between; display: flex; flex-wrap: wrap; align-items: center;">
+                                <p>11 Декабря 2025</p>
+                                <div class="cvcva" style="border: 1px solid #77bf95; background: #77bf9535; color: var(--green); border-radius: 5px; padding: 5px 10px;">Внедрено</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="security_card">
+                        <div class="card_proper">
+                            <div class="sec_column" style="flex: 1 1 300px; gap: 20px; display: flex; flex-wrap: wrap;">
+                                <img src="images/check.svg" alt="" width="40px" height="auto">
+                                <div class="colla">
+                                    <h1>Content Security Policy (CSP)</h1>
                                     <p>Внедрены антискрипты припятствующие изменению дизайна и взлома сайта через блоки ввода</p>
                                 </div>
                             </div>
@@ -336,7 +397,7 @@
                 </div>
                 <div class="security_banner">
                     <div class="dfqwq">
-                        <h1 style="color: white;">Система защищена</h1>
+                        <h1 style="color: white;">Сайт защищен</h1>
                         <p style="color: whitesmoke;">Все критические компоненты находятся под наблюдением</p>
                     </div>
                     <div class="dfqwq" style="position: absolute; width: 80px; height: auto; right: 30px;">
