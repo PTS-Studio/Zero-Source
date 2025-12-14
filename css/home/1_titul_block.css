@@ -180,7 +180,6 @@
     position: relative;
     border-radius: 10px 10px 0 0;
     background:var(--cover-bg);
-    /* background-image: url(.../6674f0cdb5b7b401612cf065_noise-50.png); */
     border: 1px solid var(--border);
 }
 .header_titul_block {

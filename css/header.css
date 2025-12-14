@@ -119,7 +119,6 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--body-bg);
-  background-image: url(/images/6674f0cdb5b7b401612cf065_noise-50.png);
   color: var(--color);
   transition: background-color 0.5s, color 0.5s;
 }
@@ -484,7 +483,6 @@ header.hidden {
   box-shadow: 0 5px 8px rgb(0, 0, 0, 0.1);
   border-radius: 10px;
   z-index: 9999;
-  /* background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png); */
   background-size: 200px 200px;
   border: 1px solid var(--border);
   background-color: var(--block-bg);
@@ -528,7 +526,6 @@ header.hidden {
   align-items: center;
   border-radius: 10px;
   overflow: auto;
-  background-image: url(../6674f0cdb5b7b401612cf065_noise-50.png);
   background-size: 200px 200px;
   border: 1px solid var(--border);
   background-color: var(--block-bg);

@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="images/Group 8.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTracker - Курсы криптовалют</title>
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/aside.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/news/1_news_paper_block.css">
     <link rel="stylesheet" href="css/home/2_education_block.css">
-    <link rel="stylesheet" href="css/home/4_question_block.css">
     <link rel="stylesheet" href="css/home/3_experience_works.css">
     <link rel="stylesheet" href="css/system_ui.css">
+    <link rel="stylesheet" href="css/statistics/7_statistics.css">
+    <link rel="stylesheet" href="js/7_statistics.js">
     <link rel="stylesheet" href="js/4_news.js">
-    <title>Сайт-портфолио</title>
 </head>
 <body>
-    <!-- Проверка и анализ -->
+<!-- Проверка и анализ -->
     <div id="splash-screen">
         <div class="center_block"></div>
             <div class="loaded_block">
@@ -71,7 +70,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Шапка HEADER-->
     <header class="header" id="header">
         <div class="absorbing_block">
@@ -79,7 +78,7 @@
 
                 <!-- Ссылка студии -->
                 <div class="hd_sector">
-                    <a href="4_news.html" class="hd_link" id="hd_link1">
+                    <a href="1_home.html" class="hd_link" id="hd_link1">
                         <div class="hh"></div>
                         <p class="text-logo">PTS-STUDIO</p>
                     </a>
@@ -191,7 +190,7 @@
                 <!-- Список ссылок боковой панели -->
                 <div class="aside_links">
                     <div class="height_fix">
-                        <a href="" class="aside_sector_contect" id="a-link1">
+                        <a href="7_statistics.html" class="aside_sector_contect" id="a-link1">
                             <div class="aside_left">
                                 <div class="hh3" id="img-1"></div>
                             </div>
@@ -205,14 +204,6 @@
                             </div>
                             <div class="aside_right" id="none-850">
                                 <p href="">Отчеты</p>
-                            </div>
-                        </a>
-                        <a href="" class="aside_sector_contect" id="a-link3">
-                            <div class="aside_left">
-                                <div class="hh3" id="img-3"></div>
-                            </div>
-                            <div class="aside_right" id="none-850">
-                                <p href="">Настройки</p>
                             </div>
                         </a>
                         <a href="" class="aside_sector_contect" id="a-link4">
@@ -263,7 +254,7 @@
                     <!-- Ссылки боковой панели -->
                     <div class="aside_links">
                         <div class="height_fix">
-                            <a href="" class="aside_sector_contect" id="a-link1">
+                            <a href="7_statistics.html" class="aside_sector_contect" id="a-link1">
                                 <div class="aside_left">
                                     <div class="hh3" id="img-1"></div>
                                 </div>
@@ -277,14 +268,6 @@
                                 </div>
                                 <div class="aside_right" id="none-850">
                                     <p href="">Отчеты</p>
-                                </div>
-                            </a>
-                            <a href="" class="aside_sector_contect" id="a-link3">
-                                <div class="aside_left">
-                                    <div class="hh3" id="img-3"></div>
-                                </div>
-                                <div class="aside_right" id="none-850">
-                                    <p href="">Настройки</p>
                                 </div>
                             </a>
                             <a href="" class="aside_sector_contect" id="a-link4">
@@ -312,50 +295,99 @@
                     </div>
                 </div>
             </aside>
+            <main style="display: flex; flex-wrap: wrap; gap: 20px;">
 
-            <main>
-                <!-- Блок категорий новостей -->
-                 
-                <div class="news_paper_block">
-                    <div class="img-news-fon" style="padding: 0 30px; width: 100%; height: 200px; display: flex; flex-wrap: wrap; align-items: center; border-bottom: 1px solid var(--border); border-radius: 10px 10px 0 0;"></div>
-                    <button class="np_category" data-block="np_page1">
-                        <h1 class="h2-3">Обновления сайта</h1>
-                        <p class="text-top10">
-                            В данном разделе представлена актуальная информация о ключевых 
-                            нововведениях и улучшениях, внедренных на сайте
-                        </p>
-                    </button>
-                    <button class="np_category" data-block="np_page2">
-                        <h1 class="h2-3">Релизы</h1>
-                        <p class="text-top10">
-                            Здесь публикуются анонсы о выпуске новых продуктов, версий 
-                            программного обеспечения или других значимых релизов
-                        </p>
-                    </button>
-                    <button class="np_category" data-block="np_page3">
-                        <h1 class="h2-3">Итоги года</h1>
-                        <p class="text-top10">В этом разделе подводятся итоги деятельности 
-                            за прошедший год, включая проекты, достижения, и обновления</p>
-                    </button>
-                </div>
-
-                <div style="width: 100%;">
-                    <!-- Новости обновлений сайта -->
-                    <div class="news_page_block" id="np_page1">
-                        <!-- Обновления -->
+                <div class="market-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Общая капитализация</div>
+                        <div class="stat-value">$2.45T</div>
+                        <div class="stat-change positive">+2.34%</div>
                     </div>
-
-                    <!-- Новости релизов -->
-                    <div class="news_page_block" id="np_page2">
-                        <!-- Релизы -->
+                    <div class="stat-card">
+                        <div class="stat-label">24ч объем торгов</div>
+                        <div class="stat-value">$89.2B</div>
+                        <div class="stat-change negative">-5.67%</div>
                     </div>
-                    
-                    <!-- Новости итогов года -->
-                    <div class="news_page_block" id="np_page3">
-                        <!-- Итоги года -->
+                    <div class="stat-card">
+                        <div class="stat-label">Доминация BTC</div>
+                        <div class="stat-value">42.3%</div>
+                        <div class="stat-change positive">+0.12%</div>
                     </div>
                 </div>
 
+                <section class="crypto-section">
+                    <div class="section-header">
+                        <div class="search-container">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" id="searchInput" placeholder="Поиск валют..." class="search-input">
+                        </div>
+                    </div>
+
+                    <div class="crypto-grid">
+                        <div class="crypto-main" style="flex: 1 1 750px;">
+                            <div class="crypto-table-container">
+                                <table class="crypto-table" id="cryptoTable">
+                                    <thead>
+                                        <tr>
+                                            <th>№</th>
+                                            <th>Проект</th>
+                                            <th id="mobile_none">Шифр</th>
+                                            <th>Вход</th>
+                                            <th>Актив</th>
+                                            <th id="mobile_none">Рын. кап.</th>
+                                            <th id="mobile_none">Объем</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cryptoTableBody">
+                                        <!-- Данные будут заполнены JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="crypto-sidebar">
+                            <h3 class="sidebar-title">Список валют</h3>
+                            <div class="crypto-list" id="cryptoList">
+                                <!-- Список будет заполнен JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="coin-details" id="coinDetails" style="display: none;">
+                    <div class="details-header">
+                        <button class="back-btn" id="backBtn">
+                            <i class="fas fa-arrow-left"></i>
+                            Назад к списку
+                        </button>
+                        <h2 class="coin-name" id="coinName"></h2>
+                    </div>
+
+                    <!-- <div class="details-grid">
+                        <div class="chart-section">
+                            <div class="chart-container">
+                                <canvas id="priceChart"></canvas>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="stats-section">
+                            <div class="coin-stats" id="coinStats">
+                                
+                            </div>
+                        </div> -->
+                    <!-- </div> -->
+
+                    <!-- <div class="additional-charts">
+                        <div class="chart-card">
+                            <h3>Объем торгов</h3>
+                            <canvas id="volumeChart"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <h3>Распределение холдеров</h3>
+                            <canvas id="holdersChart"></canvas>
+                        </div>
+                    </div> -->
+                </section>
                 <div class="footer_block">
                     <div class="f_top_block" id="img-footer"></div>
                     <div class="f_center_block">
@@ -397,7 +429,8 @@
                 </div>
             </main>
         </div>
-    </div>
+        
+    <script src="js/7_statistics.js"></script>
     <script src="js/4_news.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
