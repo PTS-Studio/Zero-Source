@@ -1,236 +1,3 @@
-// Данные криптовалют
-const cryptoData = [
-    {
-        id: 1,
-        name: 'QuantumCoin',
-        symbol: 'PTS',
-        price: 'SW-PT',
-        change24h: 0.01,
-        change7d: 0,
-        marketCap: 876543210987,
-        volume24h: 23456789012,
-        color: '#f59e0b',
-        description: 'Революционная квантовая криптовалюта',
-    },
-    {
-        id: 2,
-        name: 'CyberToken',
-        symbol: 'CBT',
-        price: 'MP-PW',
-        change24h: -5.67,
-        change7d: 8.45,
-        marketCap: 234567890123,
-        volume24h: 8765432109,
-        color: '#8b5cf6',
-        description: 'Токен для кибербезопасности',
-    },
-    {
-        id: 3,
-        name: 'EcoGreen',
-        symbol: 'ECO',
-        price: 'RT-PT',
-        change24h: 12.89,
-        change7d: 23.45,
-        marketCap: 98765432109,
-        volume24h: 3456789012,
-        color: '#10b981',
-        description: 'Экологически чистая криптовалюта',
-    },
-    {
-        id: 4,
-        name: 'MetaVerse',
-        symbol: 'META',
-        price: 'MU-PT',
-        change24h: -8.23,
-        change7d: -15.67,
-        marketCap: 45678901234,
-        volume24h: 1234567890,
-        color: '#ef4444',
-        description: 'Токен виртуальной реальности',
-    },
-    {
-        id: 5,
-        name: 'ArtisticNFT',
-        symbol: 'ART',
-        price: 'SL-PT',
-        change24h: 15.78,
-        change7d: 34.12,
-        marketCap: 12345678901,
-        volume24h: 567890123,
-        color: '#f97316',
-        description: 'Платформа для NFT искусства',
-    },
-    {
-        id: 6,
-        name: 'GameFi',
-        symbol: 'GAME',
-        price: 'SH-PLT',
-        change24h: 6.78,
-        change7d: -2.34,
-        marketCap: 8765432109,
-        volume24h: 345678901,
-        color: '#06b6d4',
-        description: 'Игровая криптовалюта',
-    },
-    {
-        id: 7,
-        name: 'CloudCoin',
-        symbol: 'CLD',
-        price: 'SWF-PTF',
-        change24h: -3.45,
-        change7d: 11.23,
-        marketCap: 54321098765,
-        volume24h: 2345678901,
-        color: '#8b5cf6',
-        description: 'Облачные вычисления на блокчейне',
-    },
-    {
-        id: 8,
-        name: 'HealthChain',
-        symbol: 'HLT',
-        price: 'OO-XX',
-        change24h: 9.12,
-        change7d: 18.45,
-        marketCap: 23456789012,
-        volume24h: 890123456,
-        color: '#10b981',
-        description: 'Медицинские данные на блокчейне',
-    }
-];
-
-let currentCoin = null;
-let priceChart = null;
-let volumeChart = null;
-let holdersChart = null;
-
-// Инициализация
-document.addEventListener('DOMContentLoaded', function() {
-    renderCryptoList();
-    renderCryptoTable();
-    setupEventListeners();
-});
-
-// Обработчики событий
-function setupEventListeners() {
-    const searchInput = document.getElementById('searchInput');
-    const backBtn = document.getElementById('backBtn');
-    
-    searchInput.addEventListener('input', handleSearch);
-    backBtn.addEventListener('click', showMainView);
-}
-
-// Поиск
-function handleSearch(e) {
-    const query = e.target.value.toLowerCase();
-    const filteredData = cryptoData.filter(coin => 
-        coin.name.toLowerCase().includes(query) || 
-        coin.symbol.toLowerCase().includes(query)
-    );
-    renderCryptoTable(filteredData);
-    renderCryptoList(filteredData);
-}
-
-// Отображение списка криптовалют
-function renderCryptoList(data = cryptoData) {
-    const cryptoList = document.getElementById('cryptoList');
-    
-    cryptoList.innerHTML = data.map(coin => `
-        <div class="crypto-item" onclick="showCoinDetails(${coin.id})">
-            <div class="crypto-icon" style="background: ${coin.color}">
-                ${coin.symbol.substring(0, 2)}
-            </div>
-            <div class="crypto-info">
-                <h4>${coin.name}</h4>
-                <span>${coin.symbol}</span>
-            </div>
-        </div>
-    `).join('');
-}
-
-// Отображение таблицы криптовалют
-function renderCryptoTable(data = cryptoData) {
-    const tableBody = document.getElementById('cryptoTableBody');
-    
-    tableBody.innerHTML = data.map((coin, index) => `
-        <tr onclick="showCoinDetails(${coin.id})" style="cursor: pointer;">
-            <td>${index + 1}</td>
-
-            <td>
-                <div class="coin-info">
-                    <div class="coin-logo" style="background: ${coin.color}">
-                        ${coin.symbol.substring(0, 2)}
-                    </div>
-                    <div class="coin-details-info">
-                        <h4 id="mobile_none">${coin.name}</h4>
-                        <span>${coin.symbol}</span>
-                    </div>
-                </div>
-            </td>
-
-            <td class="price" id="mobile_none">${coin.price.substring(0, 8)}</td>
-
-            <td>
-                <span class="change ${coin.change24h >= 0 ? 'positive' : 'negative'}">
-                    ${coin.change24h >= 0 ? '+' : ''}${coin.change24h.toFixed(2)}%
-                </span>
-            </td>
-
-            <td>
-                <span class="change ${coin.change7d >= 1 ? 'positive' : 'negative'}">
-                    ${coin.change7d >= 0 ? '+' : ''}${coin.change7d.toFixed(2)}%
-                </span>
-            </td>
-
-            <td id="mobile_none">${formatLargeNumber(coin.marketCap)} ₽</td>
-            <td id="mobile_none">${formatLargeNumber(coin.volume24h)} ₽</td>
-        </tr>
-    `).join('');
-}
-
-// Показать детали монеты
-function showCoinDetails(coinId) {
-    currentCoin = cryptoData.find(coin => coin.id === coinId);
-    if (!currentCoin) return;
-    
-    document.querySelector('.crypto-section').style.display = 'none';
-    document.getElementById('coinDetails').style.display = 'block';
-    
-    // Обновить заголовок
-    document.getElementById('coinName').textContent = `${currentCoin.name} (${currentCoin.symbol})`;
-}
-
-// Показать основной вид
-function showMainView() {
-    document.querySelector('.crypto-section').style.display = 'block';
-    document.getElementById('coinDetails').style.display = 'none';
-    
-    // Уничтожить графики
-    if (priceChart) priceChart.destroy();
-    if (volumeChart) volumeChart.destroy();
-    if (holdersChart) holdersChart.destroy();
-}
-
-// Утилиты форматирования
-function formatNumber(num) {
-    return new Intl.NumberFormat('ru-RU', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    }).format(num);
-}
-
-function formatLargeNumber(num) {
-    if (num >= 1e12) {
-        return (num / 1e12).toFixed(2) + 'T';
-    } else if (num >= 1e9) {
-        return (num / 1e9).toFixed(2) + 'B';
-    } else if (num >= 1e6) {
-        return (num / 1e6).toFixed(2) + 'M';
-    } else if (num >= 1e3) {
-        return (num / 1e3).toFixed(2) + 'K';
-    }
-    return num.toString();
-}
-
 /*
 =============================================================
     АНИМАЦИЯ ЗАГРУЗКИ СТРАНИЦЫ
@@ -283,7 +50,6 @@ window.addEventListener('load', function() {
         document.body.style.overflow = 'auto';
     }, 6000); // Показать контент после 6 секунд (общее время пульсации + статики)
 });
-
 /*
 =============================================================
     БОКОВАЯ ПАНЕЛЬ
@@ -347,6 +113,42 @@ menuBtn.addEventListener('click', () => {
         toggleScroll(false);
         fadeMainContent(true);
     }
+});
+
+/*
+=============================================================
+    ПРОКРУТКА СТРАНИЦЫ ДО НОВОСТЕЙ
+=============================================================
+*/
+
+const buttons = document.querySelectorAll('.np_category');
+const blocks = document.querySelectorAll('.news_page_block');
+
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const blockId = this.getAttribute('data-block');
+
+        // Скрываем все блоки
+        blocks.forEach(block => {
+            block.style.display = 'none';
+            block.classList.remove('fade-in'); // Удаляем класс анимации
+        });
+
+        // Отображаем выбранный блок
+        const selectedBlock = document.getElementById(blockId);
+        selectedBlock.style.display = 'flex';
+        selectedBlock.classList.add('fade-in'); // Добавляем класс анимации
+
+        // Определяем отступ в зависимости от ширины экрана
+        let offset = window.innerWidth >= 950 ? 20 : 10; // 20 - отступ на ПК; 10 - отступ для MOBILE
+
+        // Плавно прокручиваем страницу к блоку с отступом
+        const blockPosition = selectedBlock.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+            top: blockPosition - offset,
+            behavior: 'smooth'
+        });
+    });
 });
 
 /*
@@ -432,3 +234,208 @@ let lastScrollTop = 0;
   });
 });
 
+/*
+=============================================================
+    МОДАЛЬНОЕ ОКНО
+=============================================================
+*/
+
+const openModalButton = document.getElementById('open_aside');
+const modal = document.getElementById('modal2');
+const modalContentAside = document.querySelector('.modal_content_aside'); // Более надежный селектор
+const closeModalButton = document.getElementById('closeModal2');
+
+openModalButton.addEventListener('click', function() {
+  modal.classList.add('show');
+  modalContentAside.classList.add('show'); // Добавляем класс и к content
+  document.body.style.overflow = 'hidden';
+});
+
+closeModalButton.addEventListener('click', function() {
+  modal.classList.remove('show');
+  modalContentAside.classList.remove('show'); // Удаляем класс и у content
+  document.body.style.overflow = 'auto';
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target === modal) {  // Строгое сравнение
+    modal.classList.remove('show');
+    modalContentAside.classList.remove('show'); // И здесь
+    document.body.style.overflow = 'auto';
+  }
+});
+
+// Данные криптовалют
+const cryptoData = [
+    {
+        id: 1,
+        name: 'Web-Portfolio',
+        symbol: 'PTS-WSP',
+        price: 'PTS-WSP',
+        change24h: 0.01,
+        change7d: 0,
+        marketCap: 0,
+        volume24h: 'разработка',
+        color: '#f59e0b',
+        description: 'Революционная квантовая криптовалюта',
+    },
+    {
+        id: 2,
+        name: 'Web-Documentation',
+        symbol: 'PTS-DOC',
+        price: 'PTS-DOC',
+        change24h: 0,
+        change7d: 0,
+        marketCap: 0,
+        volume24h: 'ожидание',
+        color: '#8b5cf6',
+        description: 'Токен для кибербезопасности',
+    },
+    {
+        id: 3,
+        name: 'ЦОАД',
+        symbol: 'SEC-TY',
+        price: 'SEC-TY',
+        change24h: 0,
+        change7d: 0,
+        marketCap: 0,
+        volume24h: 'ожидание',
+        color: '#10b981',
+        description: 'Экологически чистая криптовалюта',
+    },
+];
+let currentCoin = null;
+let priceChart = null;
+let volumeChart = null;
+let holdersChart = null;
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Инициализация первого комплекса
+    initCryptoApp();
+    // Инициализация второго комплекса
+    initSplashScreen();
+    initLogoAnimation();
+    initAsideAnimation();
+    initHeaderAnimation();
+});
+
+// ------------- Первый комплекс (криптовалюты) -------------
+
+function initCryptoApp() {
+    renderCryptoList();
+    renderCryptoTable();
+    setupEventListeners();
+}
+
+function setupEventListeners() {
+    const searchInput = document.getElementById('searchInput');
+    const backBtn = document.getElementById('backBtn');
+
+    searchInput.addEventListener('input', handleSearch);
+    backBtn.addEventListener('click', showMainView);
+}
+
+function handleSearch(e) {
+    const query = e.target.value.toLowerCase();
+    const filteredData = cryptoData.filter(coin => 
+        coin.name.toLowerCase().includes(query) || 
+        coin.symbol.toLowerCase().includes(query)
+    );
+    renderCryptoTable(filteredData);
+    renderCryptoList(filteredData);
+}
+
+function renderCryptoList(data = cryptoData) {
+    const cryptoList = document.getElementById('cryptoList');
+     cryptoList.innerHTML = data.map(coin => `
+        <div class="crypto-item" onclick="showCoinDetails(${coin.id})">
+            <div class="crypto-icon" style="background: ${coin.color}">
+                ${coin.symbol.substring(0, 2)}
+            </div>
+            <div class="crypto-info">
+                <h4>${coin.name}</h4>
+                <span>${coin.symbol}</span>
+            </div>
+        </div>
+    `).join('');
+}
+
+function renderCryptoTable(data = cryptoData) {
+    const tableBody = document.getElementById('cryptoTableBody');
+
+    tableBody.innerHTML = data.map((coin, index) => `
+        <tr onclick="showCoinDetails(${coin.id})" style="cursor: pointer;">
+            <td>${index + 1}</td>
+
+            <td>
+                <div class="coin-info">
+                    <div class="coin-logo" style="background: ${coin.color}">
+                        ${coin.symbol.substring(0, 2)}
+                    </div>
+                    <div class="coin-details-info">
+                        <h4 id="mobile_none">${coin.name}</h4>
+                        <span>${coin.symbol}</span>
+                    </div>
+                </div>
+            </td>
+
+            <td class="price" id="mobile_none">${coin.price.substring(0, 8)}</td>
+
+            <td>
+                <span class="change ${coin.change24h >= 0.01 ? 'positive' : 'negative'}">
+                    ${coin.change24h >= 0 ? '+' : ''}${coin.change24h.toFixed(2)}%
+                </span>
+            </td>
+
+            <td>
+                <span class="change ${coin.change7d >= 1 ? 'positive' : 'negative'}">
+                    ${coin.change7d >= 0 ? '+' : ''}${coin.change7d.toFixed(2)}%
+                </span>
+            </td>
+
+            <td id="mobile_none">${formatLargeNumber(coin.marketCap)} ₽</td>
+            <td id="mobile_none">${coin.volume24h.substring(0, 10)}</td>
+        </tr>
+    `).join('');
+}
+
+function showCoinDetails(coinId) {
+    currentCoin = cryptoData.find(coin => coin.id === coinId);
+    if (!currentCoin) return;
+
+    document.querySelector('.crypto-section').style.display = 'none';
+    document.getElementById('coinDetails').style.display = 'block';
+
+    // Обновить заголовок
+    document.getElementById('coinName').textContent = `${currentCoin.name} (${currentCoin.symbol})`;
+}
+
+function showMainView() {
+    document.querySelector('.crypto-section').style.display = 'block';
+    document.getElementById('coinDetails').style.display = 'none';
+
+    // Уничтожить графики
+    if (priceChart) priceChart.destroy();
+    if (volumeChart) volumeChart.destroy();
+    if (holdersChart) holdersChart.destroy();
+}
+
+function formatNumber(num) {
+    return new Intl.NumberFormat('ru-RU', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    }).format(num);
+}
+
+function formatLargeNumber(num) {
+    if (num >= 1e12) {
+        return (num / 1e12).toFixed(2) + 'T';
+    } else if (num >= 1e9) {
+        return (num / 1e9).toFixed(2) + 'B';
+    } else if (num >= 1e6) {
+        return (num / 1e6).toFixed(2) + 'M';
+    } else if (num >= 1e3) {
+        return (num / 1e3).toFixed(2) + 'K';
+    }
+    return num.toString();
+}

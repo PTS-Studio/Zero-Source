@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/system_ui.css">
     <link rel="stylesheet" href="css/statistics/7_statistics.css">
     <link rel="stylesheet" href="js/7_statistics.js">
-    <link rel="stylesheet" href="js/4_news.js">
+    <!-- <link rel="stylesheet" href="js/4_news.js"> -->
 </head>
 <body>
 <!-- Проверка и анализ -->
@@ -295,23 +295,23 @@
                     </div>
                 </div>
             </aside>
-            <main style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <main style="display: flex; flex-wrap: wrap;">
 
                 <div class="market-stats">
                     <div class="stat-card">
-                        <div class="stat-label">Общая капитализация</div>
-                        <div class="stat-value">$2.45T</div>
-                        <div class="stat-change positive">+2.34%</div>
+                        <div class="stat-label">Топ активность</div>
+                        <div class="stat-value">PTS-WSP</div>
+                        <div class="stat-change positive">+100.0%</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-label">24ч объем торгов</div>
-                        <div class="stat-value">$89.2B</div>
-                        <div class="stat-change negative">-5.67%</div>
+                        <div class="stat-label">Разработка в этом месяце</div>
+                        <div class="stat-value">13 856</div>
+                        <div class="stat-change positive">+29.8%</div> <!-- negative для отрицательных хначений-->
                     </div>
                     <div class="stat-card">
-                        <div class="stat-label">Доминация BTC</div>
-                        <div class="stat-value">42.3%</div>
-                        <div class="stat-change positive">+0.12%</div>
+                        <div class="stat-label">Продажа/донат</div>
+                        <div class="stat-value">0.000</div>
+                        <div class="stat-change negative">0%</div>
                     </div>
                 </div>
 
@@ -319,7 +319,7 @@
                     <div class="section-header">
                         <div class="search-container">
                             <i class="fas fa-search search-icon"></i>
-                            <input type="text" id="searchInput" placeholder="Поиск валют..." class="search-input">
+                            <input type="text" id="searchInput" placeholder="Поиск проекта..." class="search-input">
                         </div>
                     </div>
 
@@ -334,8 +334,8 @@
                                             <th id="mobile_none">Шифр</th>
                                             <th>Вход</th>
                                             <th>Актив</th>
-                                            <th id="mobile_none">Рын. кап.</th>
-                                            <th id="mobile_none">Объем</th>
+                                            <th id="mobile_none">Цена</th>
+                                            <th id="mobile_none">Статус</th>
                                         </tr>
                                     </thead>
                                     <tbody id="cryptoTableBody">
@@ -346,7 +346,7 @@
                         </div>
 
                         <div class="crypto-sidebar">
-                            <h3 class="sidebar-title">Список валют</h3>
+                            <h3 class="sidebar-title">Список проектов</h3>
                             <div class="crypto-list" id="cryptoList">
                                 <!-- Список будет заполнен JavaScript -->
                             </div>
@@ -431,7 +431,7 @@
         </div>
         
     <script src="js/7_statistics.js"></script>
-    <script src="js/4_news.js"></script>
+    <!-- <script src="js/4_news.js"></script> -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const lightBtn = document.getElementById('lightBtn');
