@@ -25,20 +25,19 @@
     padding-left: 20px;
 }
 .f_top_block {
-    position: relative;
-    border-bottom: 1px solid var(--border);
+    gap: 20px;
+    width: 100%;
+    height: 60px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    position: relative;
     justify-content: space-between;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    /* position: relative; */
-    gap: 20px;
-    width: 100%;
-    height: 60px;
     border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid var(--border);
 }
 .f_center_block {
     padding: 30px 30px;

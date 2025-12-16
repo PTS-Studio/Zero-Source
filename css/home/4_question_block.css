@@ -69,9 +69,6 @@
   color: none;
   background: none;
 }
-/* #lab-t {
-  border-radius: 10px 10px 0 0;
-} */
 .toggler__content-box  {
   width: 100%;
   display: flex;
@@ -109,9 +106,9 @@
   gap: 20px;
 }
 .edu_title {
-    width: 100%;
-    border-bottom: 1px solid var(--border);
-    padding: 10px 20px;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 20px;
 }
 .icon85 {
   width: 10px;

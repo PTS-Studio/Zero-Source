@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/home/2_education_block.css">
     <link rel="stylesheet" href="css/home/3_experience_works.css">
     <link rel="stylesheet" href="css/home/4_question_block.css">
-    <link rel="stylesheet" href="js/1_home.js">
     <title>Сайт-портфолио</title>
 </head>
 <body>
@@ -80,7 +79,7 @@
                 <div class="hd_sector">
                     <a href="1_home.html" class="hd_link" id="hd_link1">
                         <div class="hh"></div>
-                        <p class="text-logo">ПТС-СТУДИЯ</p>
+                        <p class="text-logo">PTS-WSP</p>
                     </a>
                 </div>
 
@@ -164,12 +163,12 @@
         </button>
 
         <!-- Всплывающая боковая панель -->
-        <div id="modal3" class="modal_aside">
+        <div id="modal2" class="modal_aside">
             <div class="modal_content_aside">
                 <div class="ed_heading_block">
                     <div class="ed_heading_content">
                         <h3>Боковая панель</h3>
-                        <span id="closeModal3" class="close">&times;</span>
+                        <span id="closeModal2" class="close">&times;</span>
                     </div>
                 </div>
 
@@ -203,7 +202,7 @@
                                 <div class="hh3" id="img-2"></div>
                             </div>
                             <div class="aside_right" id="none-850">
-                                <p>Отчеты</p>
+                                <p href="">Отчеты</p>
                             </div>
                         </a>
                         <!-- <a href="" class="aside_sector_contect" id="a-link3">
@@ -275,17 +274,17 @@
                                     <div class="hh3" id="img-2"></div>
                                 </div>
                                 <div class="aside_right" id="none-850">
-                                    <p href="6_security.html">Отчеты</p>
+                                    <p href="">Отчеты</p>
                                 </div>
                             </a>
-                            <a href="" class="aside_sector_contect" id="a-link3">
+                            <!-- <a href="" class="aside_sector_contect" id="a-link3">
                                 <div class="aside_left">
                                     <div class="hh3" id="img-3"></div>
                                 </div>
                                 <div class="aside_right" id="none-850">
                                     <p href="">Настройки</p>
                                 </div>
-                            </a>
+                            </a> -->
                             <a href="" class="aside_sector_contect" id="a-link4">
                                 <div class="aside_left">
                                     <div class="hh3" id="img-4"></div>
@@ -312,6 +311,7 @@
                 </div>
             </aside>
             <main>
+
                 <div class="titul_block">
                     <div class="cover_block">
                         <div class="header_titul_block">
@@ -592,24 +592,24 @@
                         </div>
                         <div class="f_column_block">
                             <h1 class="h2-3-footer">Дополнительно</h1>
-                            <a href="#" class="f-link">Статистика</a>
-                            <a href="#" class="f-link">Отчеты</a>
-                            <a href="#" class="f-link">Справка</a>
-                            <a href="#" class="f-link">Оставить отзыв</a>
+                            <a href="7_statistics.html" class="f-link">Статистика</a>
+                            <a href="6_security.html" class="f-link">Отчеты</a>
+                            <a href="5_documentation.html" class="f-link">Справка</a>
+                            <a href="3_contacts.html" class="f-link">Оставить отзыв</a>
                         </div>
                         <div class="f_column_block">
                             <h1 class="h2-3-footer">Документы</h1>
-                            <a href="doctest.html" class="f-link">all documentation</a>
-                            <a href="#" class="f-link">Privacy policy</a>
-                            <a href="#" class="f-link">Terms of use</a>
-                            <a href="#" class="f-link">Anti-spam policy</a>
+                            <a href="5_documentation.html" class="f-link">all documentation</a>
+                            <a href="5_documentation.html" class="f-link">Privacy policy</a>
+                            <a href="5_documentation.html" class="f-link">Terms of use</a>
+                            <a href="5_documentation.html" class="f-link">Anti-spam policy</a>
                         </div>
                         <div class="f_column_block">
                             <h1 class="h2-3-footer">Студия</h1>
-                            <a href="doctest.html" class="f-link">Разработка</a>
-                            <a href="doctest.html" class="f-link">HostProgPTS</a>
-                            <a href="doctest.html" class="f-link">DocPTS</a>
-                            <a href="doctest.html" class="f-link">PT Store</a>
+                            <a href="7_statistics.html" class="f-link">PTS-WSP</a>
+                            <a href="7_statistics.html" class="f-link">PTS-DOC</a>
+                            <a href="7_statistics.html" class="f-link">PTS-ЦОАД</a>
+                            <a href="7_statistics.html" class="f-link">PTS-STORE</a>
                         </div>
                     </div>
                     <div class="f_bottom_block">
@@ -622,82 +622,7 @@
             </main>
         </div>
     </div>
+    <script src="js/HeaderAsideLoadedTheme.js"></script>
     <script src="js/1_home.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const lightBtn = document.getElementById('lightBtn');
-            const darkBtn = document.getElementById('darkBtn');
-            const systemBtn = document.getElementById('systemBtn');
-            const body = document.body;
-
-            // Получаем ссылки на новые div элементы
-            const lightThemeDiv = document.querySelector('.img-light-theme');
-            const darkThemeDiv = document.querySelector('.img-dark-theme');
-            const systemThemeDiv = document.querySelector('.img-system-theme');
-
-            // Функция для отображения одного div и скрытия остальных
-            function showDiv(divToShow) {
-                lightThemeDiv.style.display = 'none';
-                darkThemeDiv.style.display = 'none';
-                systemThemeDiv.style.display = 'none';
-                divToShow.style.display = 'block';
-            }
-
-            function setTheme(theme) {
-                if (theme === 'light') {
-                    body.classList.remove('dark');
-                    showDiv(lightThemeDiv); // Показываем светлую тему
-                } else if (theme === 'dark') {
-                    body.classList.add('dark');
-                    showDiv(darkThemeDiv); // Показываем темную тему
-                } else {
-                    // System theme
-                    showDiv(systemThemeDiv); // Всегда показываем иконку системной темы
-                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                        body.classList.add('dark');
-                    } else {
-                        body.classList.remove('dark');
-                    }
-                }
-
-                // Save theme to localStorage
-                localStorage.setItem('theme', theme);
-            }
-
-            // Check for saved theme in localStorage
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                setTheme(savedTheme);
-            } else {
-                // If no theme is saved, default to system theme
-                setTheme('system');
-            }
-
-            lightBtn.addEventListener('click', () => {
-                setTheme('light');
-            });
-
-            darkBtn.addEventListener('click', () => {
-                setTheme('dark');
-            });
-
-            systemBtn.addEventListener('click', () => {
-                setTheme('system');
-            });
-
-            // Listen for changes in system theme preference
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-                if (localStorage.getItem('theme') === 'system') {
-                    showDiv(systemThemeDiv); // Всегда показываем иконку системной темы
-
-                    if (event.matches) {
-                        body.classList.add('dark');
-                    } else {
-                        body.classList.remove('dark');
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 </html>

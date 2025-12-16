@@ -177,7 +177,6 @@ header.hidden {
   z-index: 9999;
   border: 1px solid var(--border);
   background-color: var(--block-bg);
-  /* background-image: url(../images/new_year.svg); */
   color: var(--color);
 }
 .hd_sector {
@@ -254,7 +253,7 @@ header.hidden {
   font-size: 24px;
   padding: 5px;
   transition: color 0.3s;
-  color: var(--text-color); /* Цвет текста кнопки */
+  color: var(--text-color);
 }
 /* Выпадающий список */
 .theme-dropdown {
@@ -283,16 +282,14 @@ header.hidden {
   padding: 8px 15px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  color: var(--text-color); /* Цвет текста в списке */
+  color: var(--text-color);
 }
 .theme-dropdown li:hover {
   background-color: #eee;
 }
-/* Иконки */
 .fas, .fa {
   margin-right: 5px;
 }
-
 /*
 =============================================================
   ИЗОБРАЖЕНИЯ
@@ -337,13 +334,11 @@ header.hidden {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  /* transform: rotate(90deg); */
 }
 .img-news-fon {
   width: 100%;
   height: auto;
   background: var(--news-fon);
-  /* transform: rotate(90deg); */
 }
 .img-strelka2 {
   width: 10px;
@@ -473,7 +468,6 @@ header.hidden {
   ШАПКА САЙТА (MOBILE)
 =============================================================
 */
-
 .header_block_mobile {
   display: none;
   flex-wrap: wrap;
@@ -516,7 +510,6 @@ header.hidden {
   opacity: 1;
   pointer-events: auto;
 }
-/* Контент внутри меню */
 .menu_bagget {
   margin: 10px;
   padding: 20px;
@@ -594,7 +587,6 @@ header.hidden {
 .menu-theme:hover {
   background-color: var(--hover-bg);
 }
-/* Самое выпадающее меню, скрытое по умолчанию */
 .dropdown_block {
   position: absolute;
   top: 100%;
@@ -603,7 +595,6 @@ header.hidden {
   width: 60px;
   z-index: 999999;
 }
-/* Показать при наведении на родительский пункт */
 .menu-theme:hover .dropdown_block {
   display: block;
 }
@@ -712,7 +703,6 @@ header.hidden {
     margin: 0 20px 0 20px;
   }
 }
-/*_Изменение шапки на Мобильную версию__*/
 @media (max-width: 850px) {
   .absorbing_block {
     height: 60px;

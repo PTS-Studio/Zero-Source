@@ -104,7 +104,6 @@
         padding-bottom: 20px;
     }
 }
-
 @media (max-width: 1076px) {
     #re {
         justify-content: flex-start;

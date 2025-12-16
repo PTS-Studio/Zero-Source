@@ -21,7 +21,6 @@
     transition: 0.1s;
     cursor: pointer;
 }
-
 .search_column {
     display: flex;
     flex-wrap: wrap;
@@ -77,12 +76,12 @@
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    display: none; /* Изначально скрываем все блоки */
+    display: none;
 }
 .button {
     padding: 10px 20px;
     margin: 0 10px;
-    background-color: #4CAF50; /* Зеленый */
+    background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;

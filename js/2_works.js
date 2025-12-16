@@ -1,119 +1,219 @@
 /*
 =============================================================
-    АНИМАЦИЯ ЗАГРУЗКИ СТРАНИЦЫ
+  БАЗА ДАННЫХ ПРОЕКТОВ
 =============================================================
 */
+const projects = [
+    {
+        id: 1,
+        title: "Сайт-Портфолио",
+        category: "веб-разработка",
+        description: "Динамичная платформа для показа профессиональных навыков, проектов и достижений.",
+        technologies: ["HTML", "CSS", "JS"],
+        link: "https://github.com/PTS-Studio",
+    },
+    {
+        id: 2,
+        title: "Система технической поддержки",
+        category: "мобильные приложения",
+        description: "Приложение, помогающее организовать систему технической поддержки внутри предприятия",
+        technologies: ["C#", "SQL"],
+        link: "https://github.com/PTS-Studio",
+    },
+    // {
+    //     id: 1,
+    //     title: "E-commerce платформа",
+    //     category: "веб-разработка",
+    //     description: "Современная платформа для онлайн-торговли с интеграцией платежных систем и системой управления заказами.",
+    //     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 2,
+    //     title: "Мобильное приложение для фитнеса",
+    //     category: "мобильные приложения",
+    //     description: "Приложение для отслеживания тренировок, питания и прогресса с социальными функциями.",
+    //     technologies: ["React Native", "Firebase", "Redux"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 3,
+    //     title: "Чат-бот с ИИ",
+    //     category: "искусственный интеллект",
+    //     description: "Интеллектуальный чат-бот для автоматизации клиентской поддержки с обработкой естественного языка.",
+    //     technologies: ["Python", "TensorFlow", "OpenAI API", "Flask"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 4,
+    //     title: "2D платформер",
+    //     category: "игры",
+    //     description: "Увлекательная 2D игра-платформер с уникальной механикой и красочной графикой.",
+    //     technologies: ["Unity", "C#", "Photoshop"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 5,
+    //     title: "Система дизайна",
+    //     category: "дизайн",
+    //     description: "Комплексная система дизайна для корпоративных приложений с библиотекой компонентов.",
+    //     technologies: ["Figma", "Sketch", "Storybook", "CSS"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 6,
+    //     title: "DeFi протокол",
+    //     category: "блокчейн",
+    //     description: "Децентрализованный протокол для кредитования и заимствования криптовалют.",
+    //     technologies: ["Solidity", "Web3.js", "Ethereum", "React"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 7,
+    //     title: "CRM система",
+    //     category: "веб-разработка",
+    //     description: "Система управления взаимоотношениями с клиентами для малого и среднего бизнеса.",
+    //     technologies: ["Vue.js", "Laravel", "MySQL", "Docker"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 8,
+    //     title: "Приложение для медитации",
+    //     category: "мобильные приложения",
+    //     description: "Мобильное приложение с гайдами по медитации, звуками природы и трекингом прогресса.",
+    //     technologies: ["Flutter", "Dart", "Firebase"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 9,
+    //     title: "Система распознавания изображений",
+    //     category: "искусственный интеллект",
+    //     description: "ИИ-система для автоматического распознавания и классификации изображений в реальном времени.",
+    //     technologies: ["Python", "PyTorch", "OpenCV", "FastAPI"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 10,
+    //     title: "Многопользовательская онлайн-игра",
+    //     category: "игры",
+    //     description: "MMO игра с открытым миром, системой гильдий и PvP сражениями.",
+    //     technologies: ["Unreal Engine", "C++", "PostgreSQL"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 11,
+    //     title: "UI Kit для мобильных приложений",
+    //     category: "дизайн",
+    //     description: "Набор готовых UI компонентов и шаблонов для быстрой разработки мобильных приложений.",
+    //     technologies: ["Figma", "Principle", "Adobe XD"],
+    //     link: "#"
+    // },
+    // {
+    //     id: 12,
+    //     title: "NFT маркетплейс",
+    //     category: "блокчейн",
+    //     description: "Платформа для создания, покупки и продажи NFT с интеграцией различных блокчейнов.",
+    //     technologies: ["Solidity", "React", "IPFS", "Polygon"],
+    //     link: "#"
+    // }
+];
 
-document.addEventListener('DOMContentLoaded', function() {
-    const splashScreen = document.getElementById('splash-screen');
-    const content = document.getElementById('content');
+// Элементы DOM
+const searchInput = document.getElementById('searchInput');
+const categorySelect = document.getElementById('categorySelect');
+const searchBtn = document.getElementById('searchBtn');
+const clearBtn = document.getElementById('clearBtn');
+const projectsGrid = document.getElementById('projectsGrid');
+const resultsInfo = document.getElementById('resultsInfo');
+const noResults = document.getElementById('noResults');
 
-    function hideSplashScreen() {
-        splashScreen.style.opacity = '0';
-        setTimeout(() => {
-            splashScreen.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }, 500);
-    }
-
-    setTimeout(hideSplashScreen, 2500);
-});
-window.addEventListener('load', function() {
-    const logo = document.querySelector('.logo'); // Получаем ссылку на элемент логотипа
-
-    function toggleAnimation() {
-        if (logo.classList.contains('static')) {
-            logo.classList.remove('static'); // Включаем анимацию
-        } else {
-            logo.classList.add('static'); // Отключаем анимацию
-        }
-    }
-
-    // Функция для задержки смены анимации
-    function delay(ms) {
-      return new Promise(res => setTimeout(res, ms));
-    }
-
-    async function animateLogo() {
-      while(true) {
-        logo.classList.remove('static');
-        await delay(3000);
-        logo.classList.add('static');
-        await delay(3000);
-      }
-    }
-
-    animateLogo();
-
-
-    setTimeout(function() {
-        document.body.classList.add('loaded');
-        document.body.style.overflow = 'auto';
-    }, 6000); // Показать контент после 6 секунд (общее время пульсации + статики)
-});
-
-/*
-=============================================================
-    ДР
-=============================================================
-*/
-
-const menuBtn = document.getElementById('menuBtn');
-const menu = document.getElementById('menu');
-const mainContent = document.querySelector('main');
-const menuIcon = menuBtn.querySelector('menu-icon');
-
-menuBtn.addEventListener('click', function() {
-  this.classList.toggle('active');
-});
-
-// Функция для управления прокруткой
-function toggleScroll(shouldDisable) {
-    if (shouldDisable) {
-        document.body.style.overflow = 'hidden'; // отключить скролл
-        // Сохраняем текущую позицию прокрутки
-        const scrollY = window.scrollY;
-        document.body.dataset.scrollY = scrollY; // сохраняем
-    } else {
-        document.body.style.overflow = ''; // вернуть прокрутку
-        // Восстановить позицию прогрутки
-        const scrollY = document.body.dataset.scrollY;
-        if (scrollY !== undefined) {
-            window.scrollTo(0, parseInt(scrollY));
-        }
-        delete document.body.dataset.scrollY;
-    }
+function showTab(tabId) {
+    // Сначала скрываем все вкладки
+    let tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
 }
-// Функция для плавного скрытия/показа основного контента
-function fadeMainContent(show) {
-    if (show) {
-      mainContent.style.transition = 'opacity 0.5s ease';
-      mainContent.style.opacity = '1';
-      mainContent.style.pointerEvents = 'auto';
-    } else {
-      mainContent.style.transition = 'opacity 0.5s ease';
-      mainContent.style.opacity = '0';
-      mainContent.style.pointerEvents = 'none';
-    }
+
+// Показать первую вкладку при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    showTab('content-1'); // По умолчанию отображаем content-1
+});
+
+// Функция создания карточки проекта
+function createProjectCard(project) {
+    return `
+        <a href="${project.link}" class="project-card" data-category="${project.category}" data-title="${project.title.toLowerCase()}" data-description="${project.description.toLowerCase()}">
+            <h3 class="project-title">${project.title}</h3>
+            <span class="project-category">${project.category}</span>
+            <p class="project-description">${project.description}</p>
+            <div class="project-tech">
+                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+            </div>
+        </a href="">
+    `;
 }
-// Переключение меню и управление скроллом/анимацией
-menuBtn.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-    if (isOpen) {
-        toggleScroll(true);
-        fadeMainContent(false);
-    } else {
-        toggleScroll(false);
-        fadeMainContent(true);
+
+// Функция отображения проектов
+function displayProjects(projectsToShow = projects) {
+    projectsGrid.innerHTML = projectsToShow.map(createProjectCard).join('');
+}
+
+
+// Функция поиска и фильтрации
+function searchAndFilter() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const selectedCategory = categorySelect.value;
+
+    let filteredProjects = projects;
+
+    // Фильтрация по категории
+    if (selectedCategory) {
+        filteredProjects = filteredProjects.filter(project => 
+            project.category === selectedCategory
+        );
+    }
+
+    // Поиск по тексту
+    if (searchTerm) {
+        filteredProjects = filteredProjects.filter(project => 
+            project.title.toLowerCase().includes(searchTerm) ||
+            project.description.toLowerCase().includes(searchTerm) ||
+            project.technologies.some(tech => tech.toLowerCase().includes(searchTerm))
+        );
+    }
+
+    displayProjects(filteredProjects);
+}
+
+// Функция очистки поиска
+function clearSearch() {
+    searchInput.value = '';
+    categorySelect.value = '';
+    displayProjects();
+}
+
+// Обработчики событий
+searchBtn.addEventListener('click', searchAndFilter);
+clearBtn.addEventListener('click', clearSearch);
+
+// Поиск в реальном времени при вводе текста
+searchInput.addEventListener('input', searchAndFilter);
+categorySelect.addEventListener('change', searchAndFilter);
+
+// Поиск по Enter
+searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        searchAndFilter();
     }
 });
+
+// Инициализация - показать все проекты
+displayProjects();
 
 /*
 =============================================================
     ПРОКРУТКА СТРАНИЦЫ ДО НОВОСТЕЙ
 =============================================================
 */
-
 const buttons = document.querySelectorAll('.np_category');
 const blocks = document.querySelectorAll('.news_page_block');
 
@@ -142,118 +242,4 @@ buttons.forEach(button => {
             behavior: 'smooth'
         });
     });
-});
-
-/*
-=============================================================
-    АНИМАЦИЯ ЗАПОЛНЕНИЯ ASIDE
-=============================================================
-*/
-const mobilePanelButton = document.querySelector('.mobile_panel');
-const modalAside = document.querySelector('.modal_aside');
-
-mobilePanelButton.addEventListener('click', () => {
-  modalAside.classList.toggle('show');
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-const asideBlock = document.querySelector('.aside_block');
-let lastScrollTop = 0;
-const scrollThreshold = 1;
-
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (Math.abs(scrollTop - lastScrollTop) <= scrollThreshold) {
-    return;
-    }
-
-    if (scrollTop > lastScrollTop) {
-    // Вниз
-    asideBlock.classList.add('scrolled');
-    } else {
-    // Вверх
-    asideBlock.classList.remove('scrolled');
-    }
-    lastScrollTop = scrollTop;
-});
-});
-
-/*
-=============================================================
-    АНИМАЦИЯ СКРЫТИЯ HEADER
-=============================================================
-*/
-
-let lastScrollTop = 0;
-const header = document.getElementById('header');
-
-window.addEventListener('scroll', function() {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
-    // Пользователь листает вниз
-    header.classList.add('hidden');
-  } else {
-    // Пользователь листает вверх
-    header.classList.remove('hidden');
-  }
-
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
-
-/*
-=============================================================
-    АНИМАЦИЯ СКРЫТИЯ MOBILE PANEL
-=============================================================
-*/
-
-document.addEventListener('DOMContentLoaded', function() {
-const openAsideButton = document.getElementById('open_aside');
-let lastScrollTop = 0;
-
-  window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-    // Прокрутка вниз
-    openAsideButton.style.left = '-80px';
-    } else {
-    // Прокрутка вверх
-    openAsideButton.style.left = '0';
-    }
-    lastScrollTop = scrollTop;
-  });
-});
-
-/*
-=============================================================
-    АНИМАЦИЯ ЗАПОЛНЕНИЯ ASIDE
-=============================================================
-*/
-
-const openModalButton = document.getElementById('open_aside');
-const modal = document.getElementById('modal2');
-const modalContentAside = document.querySelector('.modal_content_aside'); // Более надежный селектор
-const closeModalButton = document.getElementById('closeModal2');
-
-openModalButton.addEventListener('click', function() {
-  modal.classList.add('show');
-  modalContentAside.classList.add('show'); // Добавляем класс и к content
-  document.body.style.overflow = 'hidden';
-});
-
-closeModalButton.addEventListener('click', function() {
-  modal.classList.remove('show');
-  modalContentAside.classList.remove('show'); // Удаляем класс и у content
-  document.body.style.overflow = 'auto';
-});
-
-window.addEventListener('click', function(event) {
-  if (event.target === modal) {  // Строгое сравнение
-    modal.classList.remove('show');
-    modalContentAside.classList.remove('show'); // И здесь
-    document.body.style.overflow = 'auto';
-  }
 });

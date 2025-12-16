@@ -14,9 +14,6 @@
     flex: 1 1 220px;
     border-right: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    /* background: var(--block-bg); */
-    /* border: 1px solid var(--border); */
-    /* border-radius: 10px; */
 }
 .dfp {
     margin-top: 20px;
@@ -50,8 +47,6 @@
     background: var(--dark-bg);
     border-radius: 10px;
     gap: 20px;
-    /* box-shadow: inset 0 0 8px rgb(0, 0, 0, 0.1); */
-    /* box-shadow: 0 0px 8px rgba(130, 153, 125, 0.2); */
 }
 .security_banner {
     position: relative;

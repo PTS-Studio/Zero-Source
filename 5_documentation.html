@@ -13,10 +13,64 @@
     <link rel="stylesheet" href="css/home/3_experience_works.css">
     <link rel="stylesheet" href="css/documentation.css">
     <link rel="stylesheet" href="css/system_ui.css">
-    <link rel="stylesheet" href="js/4_news.js">
     <title>Документация PTS</title>
 </head>
 <body>
+    <!-- Проверка и анализ -->
+    <div id="splash-screen">
+        <div class="center_block"></div>
+            <div class="loaded_block">
+
+                <!-- Логотип -->
+                <div class="animation_logotip">
+                    <div class="logo"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+
+                <!-- Загрузочный блок -->
+                <div class="loaded_bottom_block">
+                    <div class="load_line">
+                        <div class="load_level">
+                            <div class="loader_column"></div>
+                            <div class="loader_column"></div>
+                            <div class="loader_column"></div>
+                            <div class="loader_column"></div>
+                            <div class="loader_column"></div>
+                            <div class="loader_column"></div>
+                            <div class="loader_column"></div>
+                            <div class="loader_column"></div>
+                        </div>
+                    </div>
+
+                    <!-- Copyright -->
+                    <div class="loaded_copyright_block">
+                        <div id="copyright">
+                            <p>The verification of digital objects is a complex process that involves analyzing multiple factors, including checking the integrity of structural elements, comparing checksums, and identifying potential threats.
+                            </p>
+                        </div>
+
+                        <!-- Этапы проверки и анализа -->
+                        <div class="level_up">
+                            <div class="animated-text">Безопасность</div>
+                            <div class="animated-text">Интерфейс</div>
+                            <div class="animated-text">Скрипты</div>
+                            <div class="animated-text">Библиотеки</div>
+                            <div class="animated-text">Проверка</div>
+                            <div class="animated-text">Анимации</div>
+                            <div class="animated-text">Браузер</div>
+                            <div class="animated-text">Темы</div>
+                            <div class="animated-text">Вход</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Шапка HEADER-->
     <header class="header" id="header">
         <div class="absorbing_block">
@@ -26,7 +80,7 @@
                 <div class="hd_sector">
                     <a href="4_news.html" class="hd_link" id="hd_link1">
                         <div class="hh"></div>
-                        <p class="text-logo">PTS-STUDIO</p>
+                        <p class="text-logo">PTS-WSP</p>
                     </a>
                 </div>
 
@@ -223,14 +277,14 @@
                                     <p href="">Отчеты</p>
                                 </div>
                             </a>
-                            <a href="" class="aside_sector_contect" id="a-link3">
+                            <!-- <a href="" class="aside_sector_contect" id="a-link3">
                                 <div class="aside_left">
                                     <div class="hh3" id="img-3"></div>
                                 </div>
                                 <div class="aside_right" id="none-850">
                                     <p href="">Настройки</p>
                                 </div>
-                            </a>
+                            </a> -->
                             <a href="" class="aside_sector_contect" id="a-link4">
                                 <div class="aside_left">
                                     <div class="hh3" id="img-4"></div>
@@ -447,29 +501,7 @@
                         </div>
                     </div>
                 </div>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                    const sidebar = document.querySelector('.sidebar');
-                    let lastScrollTop = 0;
 
-                    window.addEventListener('scroll', function() {
-                        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-                        if (scrollTop > lastScrollTop) {
-                        // Скролл вниз
-                        sidebar.style.transition = 'top 0.2s ease'; // Добавляем плавную анимацию
-                        sidebar.style.top = '20px';
-                        } else {
-                        // Скролл вверх
-                        sidebar.style.transition = 'top 0.2s ease'; // Добавляем плавную анимацию
-                        sidebar.style.top = '100px';
-                        }
-
-                        lastScrollTop = scrollTop;
-                    });
-                    });
-
-                </script>
                 <div class="footer_block">
                     <div class="f_top_block" id="img-footer"></div>
                     <div class="f_center_block">
@@ -529,82 +561,7 @@
             </main>
         </div>
     </div>
-<script src="js/4_news.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const lightBtn = document.getElementById('lightBtn');
-            const darkBtn = document.getElementById('darkBtn');
-            const systemBtn = document.getElementById('systemBtn');
-            const body = document.body;
-
-            // Получаем ссылки на новые div элементы
-            const lightThemeDiv = document.querySelector('.img-light-theme');
-            const darkThemeDiv = document.querySelector('.img-dark-theme');
-            const systemThemeDiv = document.querySelector('.img-system-theme');
-
-            // Функция для отображения одного div и скрытия остальных
-            function showDiv(divToShow) {
-                lightThemeDiv.style.display = 'none';
-                darkThemeDiv.style.display = 'none';
-                systemThemeDiv.style.display = 'none';
-                divToShow.style.display = 'block';
-            }
-
-            function setTheme(theme) {
-                if (theme === 'light') {
-                    body.classList.remove('dark');
-                    showDiv(lightThemeDiv); // Показываем светлую тему
-                } else if (theme === 'dark') {
-                    body.classList.add('dark');
-                    showDiv(darkThemeDiv); // Показываем темную тему
-                } else {
-                    // System theme
-                    showDiv(systemThemeDiv); // Всегда показываем иконку системной темы
-                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                        body.classList.add('dark');
-                    } else {
-                        body.classList.remove('dark');
-                    }
-                }
-
-                // Save theme to localStorage
-                localStorage.setItem('theme', theme);
-            }
-
-            // Check for saved theme in localStorage
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                setTheme(savedTheme);
-            } else {
-                // If no theme is saved, default to system theme
-                setTheme('system');
-            }
-
-            lightBtn.addEventListener('click', () => {
-                setTheme('light');
-            });
-
-            darkBtn.addEventListener('click', () => {
-                setTheme('dark');
-            });
-
-            systemBtn.addEventListener('click', () => {
-                setTheme('system');
-            });
-
-            // Listen for changes in system theme preference
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-                if (localStorage.getItem('theme') === 'system') {
-                    showDiv(systemThemeDiv); // Всегда показываем иконку системной темы
-
-                    if (event.matches) {
-                        body.classList.add('dark');
-                    } else {
-                        body.classList.remove('dark');
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="js/HeaderAsideLoadedTheme.js"></script>
+    <script src="js/5_documentation.js"></script>
 </body>
 </html>
