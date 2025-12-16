@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoTracker - Курсы криптовалют</title>
+    <link rel="icon" href="images/logotip2v2.ico" type="image/x-icon">
+    <title>Статистика</title>
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/aside.css">
@@ -14,6 +15,8 @@
     <link rel="stylesheet" href="css/statistics/7_statistics.css">
     <link rel="stylesheet" href="js/7_statistics.js">
     <!-- <link rel="stylesheet" href="js/4_news.js"> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 <!-- Проверка и анализ -->
@@ -354,13 +357,20 @@
                     </div>
                 </section>
 
-                <section class="coin-details" id="coinDetails" style="display: none;">
+                <section class="coin-details" id="coinDetails" style="display: none; width: 100%;">
                     <div class="details-header">
                         <button class="back-btn" id="backBtn">
-                            <i class="fas fa-arrow-left"></i>
-                            Назад к списку
+                            ← Назад
                         </button>
-                        <h2 class="coin-name" id="coinName"></h2>
+                        <p class="coin-name" id="coinName"></p>
+                    </div>
+                    <div class="details-grid">
+                        <p class="coin-name" id="coinSymbol"></p>
+                        <p class="coin-name" id="coinPrice"></p>
+                        <p class="coin-name" id="coinChange24h"></p>
+                        <p class="coin-name" id="coincHange7d"></p>
+                        <p class="coin-name" id="coinMarketCap"></p>
+                        <p class="coin-name" id="coinDescription"></p>
                     </div>
 
                     <!-- <div class="details-grid">

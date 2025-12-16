@@ -406,8 +406,17 @@ function showCoinDetails(coinId) {
     document.querySelector('.crypto-section').style.display = 'none';
     document.getElementById('coinDetails').style.display = 'block';
 
-    // Обновить заголовок
-    document.getElementById('coinName').textContent = `${currentCoin.name} (${currentCoin.symbol})`;
+    // Заголовок
+    document.getElementById('coinName').textContent = `${currentCoin.name}`;
+    
+    document.getElementById('coinSymbol').textContent = `${currentCoin.symbol}`;
+    document.getElementById('coinPrice').textContent = `${currentCoin.price}`;
+    document.getElementById('coinSymbol').textContent = `${currentCoin.symbol}`;
+    document.getElementById('coinChange24h').textContent = `${currentCoin.change24h}`;
+    document.getElementById('coincHange7d').textContent = `${currentCoin.change7d}`;
+    document.getElementById('coinMarketCap').textContent = `${currentCoin.marketCap}`;
+    document.getElementById('coinDescription').textContent = `${currentCoin.description}`;
+    
 }
 
 function showMainView() {
