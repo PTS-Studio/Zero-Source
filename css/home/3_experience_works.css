@@ -98,6 +98,7 @@
     padding: 0 20px 0 30px;
     display: flex;
     flex-wrap: wrap;
+    border-right: 1px solid var(--border);
 }
 @media (max-width: 1080px) {
     .ew_text {

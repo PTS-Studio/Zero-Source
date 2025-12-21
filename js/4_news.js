@@ -170,7 +170,7 @@ document.getElementById('np_page3').innerHTML = dropdownsHTML;
 const updates = [
   {
     id: 1,
-    versionTitle: "Версия 25П2Л (Первый запуск)",
+    versionTitle: "Версия 25П2",
     dropdowns: [
       {
         idDropdown: "npm1",
@@ -235,13 +235,13 @@ function createUpdateHTML(update) {
         <div class="dropdown">
           <input type="checkbox" id="checkbox-np${dropdown.idDropdown}" class="dropdown_up">
           <label for="checkbox-np${dropdown.idDropdown}" class="dropdown_label" id="lab-t">
-            <div class="toggler_heading">
+            <div class="toggler_heading" id="hm-1">
               <p>${dropdown.launchVersion}</p>
             </div>
-            <div class="height-max" id="hm-2">
+            <div class="height-max2">
               <p>${dropdown.testStatus}</p>
             </div>
-            <div class="height-max">
+            <div class="height-max" id="hm-1">
               <p>${dropdown.date}</p>
             </div>
             <div class="fg">
