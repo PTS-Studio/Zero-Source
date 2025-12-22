@@ -1,3 +1,71 @@
+let selectedRating = 0;
+const boxes = document.querySelectorAll('.rating-box');
+const submitBtn = document.getElementById('submitBtn');
+const successMessage = document.getElementById('successMessage');
+const ratingCard = document.querySelector('.rating-card');
+
+boxes.forEach(box => {
+  box.addEventListener('click', function() {
+    const rating = parseInt(this.dataset.rating);
+    selectedRating = rating;
+
+    boxes.forEach(b => {
+      b.classList.remove('selected', 'active');
+    });
+
+    boxes.forEach((b, index) => {
+      if (index < rating) {
+        b.classList.add('active');
+      }
+    });
+
+    this.classList.add('selected');
+    submitBtn.disabled = false;
+  });
+
+  box.addEventListener('mouseenter', function() {
+    if (!this.classList.contains('selected')) {
+      const rating = parseInt(this.dataset.rating);
+      boxes.forEach((b, index) => {
+        if (index < rating) {
+          b.classList.add('hover');
+        } else {
+          b.classList.remove('hover');
+        }
+      });
+    }
+  });
+});
+
+document.getElementById('ratingBoxes').addEventListener('mouseleave', function() {
+  boxes.forEach(b => b.classList.remove('hover'));
+});
+
+submitBtn.addEventListener('click', function() {
+  if (selectedRating > 0) {
+    this.classList.add('loading');
+    this.disabled = true;
+
+    setTimeout(() => {
+      ratingCard.classList.add('submitted');
+
+      setTimeout(() => {
+        successMessage.classList.add('show');
+
+        setTimeout(() => {
+          boxes.forEach(b => {
+            b.classList.remove('selected', 'active');
+          });
+          selectedRating = 0;
+          submitBtn.classList.remove('loading');
+          submitBtn.disabled = true;
+          ratingCard.classList.remove('submitted');
+          successMessage.classList.remove('show');
+        }, 3000);
+      }, 400);
+    }, 1500);
+  }
+});
 /*
 =============================================================
     МОДАЛЬНЫЕ ОКНА
