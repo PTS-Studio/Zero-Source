@@ -1,0 +1,81 @@
+Как сделать так, чтобы при нажатии на кнопку submit-btn появлялся блок open_complete, в котором есть анимация появления svg и текста? open_complete должен иметь фон в котором и распологается контент.
+HTML:
+<div class="rating-boxes" id="ratingBoxes">
+    <button class="submit-btn" id="submitBtn" disabled>
+        <span class="btn-text">Отправить оценку</span>
+        <span class="btn-loading">
+            <span class="spinner"></span>
+            Отправка...
+        </span>
+    </button>
+</div>
+<div class="open_complete">
+    <div class="success-message" id="successMessage">
+        <svg class="checkmark" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+        <p>Спасибо за вашу оценку!</p>
+    </div>
+</div>
+CSS:
+.open_complete {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: green;
+}
+.success-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+JS:
+let selectedRating = 0;
+const boxes = document.querySelectorAll('.rating-box');
+const submitBtn = document.getElementById('submitBtn');
+const successMessage = document.getElementById('successMessage');
+const ratingCard = document.querySelector('.rating-card');
+
+boxes.forEach(box => {
+  box.addEventListener('click', function() {
+    const rating = parseInt(this.dataset.rating);
+    selectedRating = rating;
+
+    boxes.forEach(b => {
+      b.classList.remove('selected', 'active');
+    });
+
+    boxes.forEach((b, index) => {
+      if (index < rating) {
+        b.classList.add('active');
+      }
+    });
+
+    this.classList.add('selected');
+    submitBtn.disabled = false;
+  });
+
+  box.addEventListener('mouseenter', function() {
+    if (!this.classList.contains('selected')) {
+      const rating = parseInt(this.dataset.rating);
+      boxes.forEach((b, index) => {
+        if (index < rating) {
+          b.classList.add('hover');
+        } else {
+          b.classList.remove('hover');
+        }
+      });
+    }
+  });
+});
+
+document.getElementById('ratingBoxes').addEventListener('mouseleave', function() {
+  boxes.forEach(b => b.classList.remove('hover'));
+});

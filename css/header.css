@@ -34,6 +34,10 @@ html {
   --color2: #545454;
   --bg-contact: #f8f8f8;
   --green: green;
+  --color-main: linear-gradient(90deg, rgba(201, 201, 201, 1) 0%, rgba(227, 227, 227, 1) 50%, rgba(201, 201, 201, 1) 100%);
+  --bg-success: linear-gradient(90deg,rgb(216, 255, 216) 0%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 70%, rgb(216, 255, 216) 100%);
+  --bg-rating: linear-gradient(90deg,rgb(219, 155, 155) 0%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 70%, rgb(143, 204, 151) 100%);
+  --brightnes: brightness(110%);
 
   --menu-active: url(../images/HeaderMenu/menu_active_l.svg);
   --menu-passive: url(../images/HeaderMenu/menu_passive_l.svg);
@@ -84,6 +88,10 @@ html {
   --color2: #d7d7d7;
   --bg-contact: #121212;
   --green: rgb(0, 255, 0);
+  --color-main: linear-gradient(90deg, rgba(28, 28, 28, 1) 0%, rgba(41, 41, 41, 1) 50%, rgba(28, 28, 28, 1) 100%);
+  --bg-success: linear-gradient(90deg,rgba(38, 48, 38, 1) 0%, rgba(22, 22, 22, 1) 30%, rgba(22, 22, 22, 1) 70%, rgba(38, 48, 38, 1) 100%);
+  --bg-rating: linear-gradient(90deg,rgba(48, 38, 38, 1) 0%, rgba(22, 22, 22, 1) 30%, rgba(22, 22, 22, 1) 70%, rgba(38, 48, 38, 1) 100%);
+  --brightnes: brightness(50%);
 
   --menu-active: url(../images/HeaderMenu/menu_active_d.svg);
   --menu-passive: url(../images/HeaderMenu/menu_passive_d.svg);
@@ -311,6 +319,16 @@ header.hidden {
   background-repeat: no-repeat;
   background-position: center;
 }
+.img-logo7 {
+  height: 25px;
+  width: 75px;
+  /* border-right: 1px solid var(--border);
+  margin-right: 30px; */
+  background: var(--img-logo7);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .img-strelka {
   width: 10px;
   height: 10px;
@@ -523,6 +541,7 @@ header.hidden {
   background-size: 200px 200px;
   border: 1px solid var(--border);
   background-color: var(--block-bg);
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
 }
 .menu_content {
   width: 100%;

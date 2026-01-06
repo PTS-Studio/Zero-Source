@@ -59,8 +59,8 @@ submitBtn.addEventListener('click', function() {
           selectedRating = 0;
           submitBtn.classList.remove('loading');
           submitBtn.disabled = true;
-          ratingCard.classList.remove('submitted');
-          successMessage.classList.remove('show');
+          // ratingCard.classList.remove('submitted'); НЕ УДАЛЯТЬ!!!!!!!!!!!!!!!!!!!
+          // successMessage.classList.remove('show');  НЕ УДАЛЯТЬ!!!!!!!!!!!!!!!!!!!
         }, 3000);
       }, 400);
     }, 1500);
@@ -77,10 +77,14 @@ const closeModalButton1 = document.getElementById('closeModal1');
 openModalButton1.onclick = function() {
   modal1.classList.add('show');
   document.body.style.overflow = 'hidden';
+
+  window.scrollBy(0, -1);
 };
 closeModalButton1.onclick = function() {
   modal1.classList.remove('show');
   document.body.style.overflow = 'auto';
+
+  window.scrollBy(0, 0);
 };
 
 const openModalButton2 = document.getElementById('open_modal2');
@@ -89,8 +93,12 @@ const closeModalButton2 = document.getElementById('closeModal2');
 openModalButton2.onclick = function() {
   modal2.classList.add('show');
   document.body.style.overflow = 'hidden';
+
+  window.scrollBy(0, -1);
 };
 closeModalButton2.onclick = function() {
   modal2.classList.remove('show');
   document.body.style.overflow = 'auto';
+
+  window.scrollBy(0, 1);
 };
