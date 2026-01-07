@@ -189,7 +189,7 @@ function setupEventListeners() {
 
           form.style.display = 'none';
           document.querySelector('.progress-bar').style.display = 'none';
-          document.getElementById('successMessage').classList.add('show');
+          document.getElementById('successMessage2').classList.add('show');
       }
   });
 
@@ -197,7 +197,7 @@ function setupEventListeners() {
       form.reset();
       currentStep = 1;
 
-      document.getElementById('successMessage').classList.remove('show');
+      document.getElementById('successMessage2').classList.remove('show');
       document.querySelector('.progress-bar').style.display = 'flex';
       form.style.display = 'block';
 
