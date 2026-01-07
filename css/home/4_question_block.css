@@ -106,7 +106,7 @@
   border-top: 1px solid var(--border);
   background: var(--dark-bg);
   box-shadow: inset 0px 11px 8px -10px rgb(0, 0, 0, 0.2);
-  padding: 20px 30px;
+  padding: 30px;
   display: none;
   position: absolute;
   opacity: 0;

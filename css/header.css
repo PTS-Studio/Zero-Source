@@ -17,6 +17,7 @@ html {
   scroll-behavior: smooth;
 }
 :root {
+  --link: #664fff;
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
   --bg-tertiary: #f1f3f5;
@@ -30,7 +31,7 @@ html {
   --border-color: #e9ecef;
   --border-but: #cdcdcd;
   --footer-bg: #d0d0d0;
-  --color: #000000;
+  --color: #545454;
   --color2: #545454;
   --bg-contact: #f8f8f8;
   --green: green;
@@ -71,6 +72,7 @@ html {
 }
 
 .dark {
+  --link: #877fb7;
   --bg-primary: #0d1117;
   --bg-secondary: #161b22;
   --bg-tertiary: #21262d;
@@ -84,12 +86,12 @@ html {
   --border-color: #30363d;
   --border-but: #161616;
   --footer-bg: #1c1c1c;
-  --color: #ffffff;
-  --color2: #d7d7d7;
+  --color: #a4a4a4;
+  --color2: #9c9c9c;
   --bg-contact: #121212;
   --green: rgb(0, 255, 0);
   --color-main: linear-gradient(90deg, rgba(28, 28, 28, 1) 0%, rgba(41, 41, 41, 1) 50%, rgba(28, 28, 28, 1) 100%);
-  --bg-success: linear-gradient(90deg,rgba(38, 48, 38, 1) 0%, rgba(22, 22, 22, 1) 30%, rgba(22, 22, 22, 1) 70%, rgba(38, 48, 38, 1) 100%);
+  --bg-success: linear-gradient(90deg,rgb(50, 50, 50) 0%, rgba(22, 22, 22, 1) 30%, rgba(22, 22, 22, 1) 70%, rgb(50, 50, 50) 100%);
   --bg-rating: linear-gradient(90deg,rgba(48, 38, 38, 1) 0%, rgba(22, 22, 22, 1) 30%, rgba(22, 22, 22, 1) 70%, rgba(38, 48, 38, 1) 100%);
   --brightnes: brightness(50%);
 

@@ -537,9 +537,9 @@ main.hidden {
     margin-top: 10px; 
     font-size: 15px;
 }
-#modal2 {
+/* #modal2 {
     display: none;
-}
+} */
 @media (max-width: 1080px) {
     .mobile_panel {
         z-index: 30;
@@ -560,9 +560,9 @@ main.hidden {
     }
 }
 @media (max-width: 950px) {
-    #modal2 {
+    /* #modal2 {
         display: flex;
-    }
+    } */
     .modal_aside {
         display: flex;
     }

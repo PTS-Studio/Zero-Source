@@ -110,16 +110,6 @@
     background: var(--block-bg);
     box-shadow: 0 5px 8px rgb(0, 0, 0, 0.2);
 }
-.text-h2p {
-    color: #e2e8f0;
-    width: 100%;
-    font-size: 16px;
-}
-.text-pp {
-    font-size: 14px;
-    color: #94a3b8;
-    line-height: 1.4rem;
-}
 .description {
     margin-top: 16px;
 }
@@ -143,15 +133,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.date {
-    width: 100px;
-    color: var(--color2);
-    font-size: 12px;
-}
-.color-purple {
-    font-size: 14px;
-    color: rgb(75, 195, 75);
-}
 @media (max-width: 1080px) {
     .services_block {
         width: 100%;
@@ -169,25 +150,12 @@
         width: 100%;
         height: auto;
     }
-    .text-h1 {
-        font-size: 7vw;
-    }
-    .text-h2 {
-        font-size: 7vw;
-    }
-    .text-p {
-        width: 100%;
-    }
     .block_right {
         width: 100%;
         margin-top: 0px;
     }
     .relize_card {
         display: block;
-    }
-    .date {
-        width: 100%;
-        margin-bottom: 10px;
     }
     .works_block {
         height: auto;

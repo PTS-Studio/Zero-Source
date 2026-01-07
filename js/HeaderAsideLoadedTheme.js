@@ -263,7 +263,7 @@ let lastScrollTop = 0;
 
     if (scrollTop > lastScrollTop) {
     // Прокрутка вниз
-    openAsideButton.style.left = '-80px';
+    openAsideButton.style.left = '-1px';
     } else {
     // Прокрутка вверх
     openAsideButton.style.left = '0';
@@ -277,25 +277,25 @@ let lastScrollTop = 0;
 =============================================================
 */
 const openModalButton = document.getElementById('open_aside');
-const modal = document.getElementById('modal2');
+const modal_aside = document.getElementById('modal_aside');
 const modalContentAside = document.querySelector('.modal_content_aside');
-const closeModalButton = document.getElementById('closeModal2');
+const closeModalButton = document.getElementById('closeModal_aside');
 
 openModalButton.addEventListener('click', function() {
-  modal.classList.add('show');
+  modal_aside.classList.add('show');
   modalContentAside.classList.add('show');
   document.body.style.overflow = 'hidden';
 });
 
 closeModalButton.addEventListener('click', function() {
-  modal.classList.remove('show');
+  modal_aside.classList.remove('show');
   modalContentAside.classList.remove('show');
   document.body.style.overflow = 'auto';
 });
 
 window.addEventListener('click', function(event) {
-  if (event.target === modal) {
-    modal.classList.remove('show');
+  if (event.target === modal_aside) {
+    modal_aside.classList.remove('show');
     modalContentAside.classList.remove('show');
     document.body.style.overflow = 'auto';
   }

@@ -100,5 +100,5 @@ closeModalButton2.onclick = function() {
   modal2.classList.remove('show');
   document.body.style.overflow = 'auto';
 
-  window.scrollBy(0, 1);
+  window.scrollBy(0, 0);
 };

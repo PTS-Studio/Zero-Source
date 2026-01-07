@@ -57,6 +57,7 @@
     border-radius: 50%;
     border: 8px solid var(--block-bg);
     object-fit: cover;
+    /* filter: var(--brightnes); */
 }
 .avatar2 {
     position: absolute;

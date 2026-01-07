@@ -392,8 +392,6 @@
 }
 
 .success-message p {
-    font-size: 20px;
-    font-weight: 600;
     color: #4caf50;
 }
 @media (max-width: 1080px) {
@@ -406,7 +404,6 @@
     .ew_heading_block2 {
         border-top: 0;
         padding: 20px 30px 10px 30px;
-        margin-bottom: 5px;
     }
     .display_flex {
         gap: 10px;
