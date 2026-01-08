@@ -279,7 +279,7 @@
     justify-content: space-between;
     margin-bottom: 15px;
     padding: 0 30px;
-    background: var(--bg-rating);
+    /* background: var(--bg-rating); */
 }
 .submit-btn {
     width: 100%;

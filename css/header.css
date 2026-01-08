@@ -36,7 +36,7 @@ html {
   --bg-contact: #f8f8f8;
   --green: green;
   --color-main: linear-gradient(90deg, rgba(201, 201, 201, 1) 0%, rgba(227, 227, 227, 1) 50%, rgba(201, 201, 201, 1) 100%);
-  --bg-success: linear-gradient(90deg,rgb(216, 255, 216) 0%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 70%, rgb(216, 255, 216) 100%);
+  --bg-success: linear-gradient(90deg,rgb(214, 214, 214) 0%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 70%, rgb(214, 214, 214) 100%);
   --bg-rating: linear-gradient(90deg,rgb(219, 155, 155) 0%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 70%, rgb(143, 204, 151) 100%);
   --brightnes: brightness(110%);
 

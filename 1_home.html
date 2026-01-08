@@ -321,12 +321,15 @@
                             <div class="header_titul_block_right">
                                 <div class="titul_link2">
                                     <p class="h2-3" style="margin-bottom: 0;">Статьи</p>
+                                    <span class="tooltip-text">Раздел в разработке</span>
                                 </div>
-                                <div class="titul_link">
+                                <div class="titul_link2" id="titul_link">
                                     <p class="h2-3" style="margin-bottom: 0;">Публикации</p>
+                                    <span class="tooltip-text">Раздел в разработке</span>
                                 </div>
-                                <div class="titul_link3">
+                                <div class="titul_link2" id="titul_link3">
                                     <p class="h2-3" style="margin-bottom: 0;">Резюме</p>
+                                    <span class="tooltip-text">Раздел в разработке</span>
                                 </div>
                             </div>
                         </div>
@@ -334,8 +337,8 @@
                     <div class="titul_sector_bottom"> 
                         <div class="sector_block_left">
                             <div class="ew_heading_block">
-                                <p class="h2-3" id="text-center">Путилин Андрей Андреевич</p>
-                                <!-- <p>Путилин Андрей Андреевич</p> -->
+                                <!-- <img src="images/userd.svg" alt="" width="18px" height="18px" style="border: 1.5px solid var(--color); border-radius: 50%;"> -->
+                                <p class="h2-3" id="text-center">★ Путилин Андрей Андреевич ★</p>
                             </div>
                             <div class="ew_text">
                                 <div class="ghf">
@@ -429,7 +432,7 @@
                         </div>
 
                         <div id="modal1" class="modal_block">
-                            <div class="modal_content">
+                            <!-- <div class="modal_content">
                                 <div class="ed_heading_block">
                                     <div class="ed_heading_content">
                                         <h3>Учебные проекты</h3>
@@ -446,22 +449,36 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div> -->
+                            <div class="modal_content" style="max-height: 200px;">
+                                <div class="sdghlsl" style="flex-direction: column; width: 100%; display: flex;">
+                                    <div class="ed_heading_block">
+                                        <div class="ed_heading_content">
+                                            <h3>Учебные проекты</h3>
+                                            <span id="closeModal1" class="close">&times;</span>
+                                        </div>
+                                        <div class="ew_t" style="align-items: center; justify-content: center; display: flex; height: 130px; width: 100%; gap: 0;">
+                                            <div class="sdougosrew" style="justify-content: center; display: flex; flex-wrap: wrap; gap: 10px;">
+                                                <img src="images/warning.svg" alt="" width="30px" height="auto">
+                                                <p style="padding: 0 30px; text-align: center; width: 100%;">На данный момент учебные проекты недоступны</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id="modal2" class="modal_block">
-                            <div class="modal_content">
-                                <div class="ed_heading_block">
-                                    <div class="ed_heading_content">
-                                        <h3>Дипломный проект</h3>
-                                        <span id="closeModal2" class="close">&times;</span>
-                                    </div>
-                                    <div class="ed_top_block2">
-                                        <div class="ed_project_card" style="margin-top: 0;">
-                                            <h1 class="h1-heading-ed">Калькулятор</h1>
-                                            <p class="p-text-ed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, fugit nobis. Tempore sequi fugit ad aspernatur quibusdam deleniti adipisci? Officiis itaque at saepe tempore eveniet, quae amet non a quo.</p>
-                                            <div class="ed_list_tecnology">
-                                                <p class="button_titul">С#</p>
-                                                <p class="button_titul">С#</p>
+                            <div class="modal_content" style="max-height: 200px;">
+                                <div class="sdghlsl" style="flex-direction: column; width: 100%; display: flex;">
+                                    <div class="ed_heading_block">
+                                        <div class="ed_heading_content">
+                                            <h3>Дипломный проект</h3>
+                                            <span id="closeModal2" class="close">&times;</span>
+                                        </div>
+                                        <div class="ew_t" style="align-items: center; justify-content: center; display: flex; height: 130px; width: 100%; gap: 0;">
+                                            <div class="sdougosrew" style="justify-content: center; display: flex; flex-wrap: wrap; gap: 10px;">
+                                                <img src="images/warning.svg" alt="" width="30px" height="auto">
+                                                <p style="padding: 0 30px; text-align: center; width: 100%;">На данный момент дипломный проект недоступен</p>
                                             </div>
                                         </div>
                                     </div>
@@ -539,13 +556,11 @@
                             <div class="ew_text" style="padding-top: 0;">
                                 <div class="display_flex" style="align-items: center;">
                                     <img src="images/KSKd.png" class="img-ksk" id="padding-right20" alt="">
-                                    <p class="h2-1" style="padding: 20px 0 20px 10px; flex: 1 1 50px; margin-bottom: 0;">ГК КСК «Компьютерные Системы и Компоненты»</p>
+                                    <p class="h2-1" style="padding: 20px 0 20px 10px; flex: 1 1 50px; margin-bottom: 0; font-weight: 100;">ГК КСК «Компьютерные Системы и Компоненты»</p>
                                 </div>
                                 <div class="woughwl">
                                     <p class="h2-2">Должность</p>
                                     <p>Должность: Специалист технической поддержки / Техник</p>
-                                <!-- </div> -->
-                                <!-- <div class="display_flex" style="padding: 15px 0; border-bottom: none;"> -->
                                     <p class="h2-2">Обязанность</p>
                                     <p>Обязанность: Помощь в устранении технических проблем оборудования и его настройки в рамках производственной деятельности компании КСК</p>
                                 </div>
@@ -608,7 +623,7 @@
                             </div>
                         </label>
                         <span class="toggler__content-box">
-                            <p>В процессе разработки планируется продолжение выпуска проектов и обновлений для общей мотивации и опыта разработки в сферах дизайна и программирования</p>
+                            <p>В процессе разработки планируется продолжение выпуска новых проектов и обновлений для получения опыта в разработке программ и приложений</p>
                         </span>
                     </div>
                 </div>

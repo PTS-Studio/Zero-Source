@@ -43,7 +43,7 @@ const projectdata = [
     title: "Система технической поддержки",
     category: "Веб-разработка",
     date: "31 Августа 2025",
-    description: "Мы рады сообщить о запуске нашего нового приложения, разработанного специально для того, чтобы сделать процесс обращения в техподдержку максимально удобным и эффективным",
+    description: "В результате обучения была разработана программа HELP-DESC, необходимая для решения проблем внутри организации путём подачи и распределения заявок.",
     technologies: ["С#", "SQL"],
     link: "1_home.html",
   },
@@ -125,19 +125,19 @@ function createDropdownHTML(project2) {
         <div class="height-max" id="re">
           <p>Итоги ${project2.year} года</p>
         </div>
-        <div class="height-max" id="hm-1">
+        <div class="height-max" id="hm-3">
           <div class="hh4" id="img-b1"></div>
           <p>Проекты:</p>
           <p>${project2.projectCount}</p>
           <p class="${project2.projectChange > 0 ? 'green' : 'red'}">${project2.projectChange > 0 ? '+' : ''}${project2.projectChange}</p>
         </div>
-        <div class="height-max" id="hm-1">
+        <div class="height-max" id="hm-3">
           <div class="hh4" id="img-b3"></div>
           <p>Статьи:</p>
           <p>${project2.articleCount}</p>
           <p class="${project2.articleChange > 0 ? 'green' : 'red'}">${project2.articleChange > 0 ? '+' : ''}${project2.articleChange}</p>
         </div>
-        <div class="height-max" id="hm-1">
+        <div class="height-max" id="hm-3">
           <div class="hh4" id="img-b2"></div>
           <p>Публикации:</p>
           <p>${project2.publicationCount}</p>
@@ -238,10 +238,10 @@ function createUpdateHTML(update) {
             <div class="toggler_heading" id="hm-1">
               <p>${dropdown.launchVersion}</p>
             </div>
-            <div class="height-max2">
+            <div class="height-max5" id="hm-1">
               <p>${dropdown.testStatus}</p>
             </div>
-            <div class="height-max" id="hm-1">
+            <div class="height-max" id="hm-3">
               <p>${dropdown.date}</p>
             </div>
             <div class="fg">

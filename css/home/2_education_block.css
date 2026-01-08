@@ -210,7 +210,7 @@ img {vertical-align: middle;}
   pointer-events: none;
   z-index: 9999;
   transition: opacity 0.5s ease, visibility 0.7s ease;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 .modal_block.show {
   opacity: 1;

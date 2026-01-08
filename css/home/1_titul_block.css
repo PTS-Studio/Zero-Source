@@ -208,8 +208,9 @@
     justify-content: center;
     display: flex;
 }
-.titul_link {
+#titul_link {
     border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -219,6 +220,7 @@
     cursor: pointer;
 }
 .titul_link2 {
+    position: relative;
     border-left: 1px solid var(--border);
     border-radius: 0;
     display: flex;
@@ -229,6 +231,53 @@
     flex: 1 1 220px;
     cursor: pointer;
 }
+
+
+
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px; /* Задайте желаемую ширину */
+  background-color: var(--block-bg);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Позиционирование tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Размещаем над элементом */
+  left: 50%;
+  margin-left: -60px; /* Смещаем влево на половину ширины tooltip */
+  opacity: 0;
+  transition: opacity 0.3s; /* Плавное появление */
+}
+
+/* Стрелочка (необязательно) */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--block-bg) transparent transparent transparent;
+}
+
+/* Показываем tooltip при наведении */
+.titul_link2:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+.titul_link2:hover {
+    background: var(--hover-bg);
+}
+
+
+
+
 .titul_link3 {
     border-left: 1px solid var(--border);
     border-radius: 0 10px 0 0;
@@ -239,15 +288,6 @@
     transition: 0.2s;
     flex: 1 1 220px;
     cursor: pointer;
-}
-.titul_link:hover {
-    background: var(--hover-bg);
-}
-.titul_link2:hover {
-    background: var(--hover-bg);
-}
-.titul_link3:hover {
-    background: var(--hover-bg);
 }
 .block_tt2 {
     width: 42%;
@@ -391,11 +431,11 @@
         width: 100%;
         border-left: none;
     }
-    .titul_link2 {
+    /* .titul_link2 {
         border-radius: 10px 0 0 0;
         border-left: none;
-    }
-    .titul_link3 {
+    } */
+    #titul_link3 {
         border-radius: 0 10px 0 0;
     }
     .block_tt2 {
