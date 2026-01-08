@@ -263,7 +263,7 @@ let lastScrollTop = 0;
 
     if (scrollTop > lastScrollTop) {
     // Прокрутка вниз
-    openAsideButton.style.left = '-1px';
+    openAsideButton.style.left = '-80px';
     } else {
     // Прокрутка вверх
     openAsideButton.style.left = '0';
